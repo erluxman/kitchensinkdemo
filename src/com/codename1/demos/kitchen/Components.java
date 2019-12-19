@@ -22,11 +22,16 @@
  */
 package com.codename1.demos.kitchen;
 
+import com.codename1.components.FloatingHint;
+import com.codename1.components.ScaleImageLabel;
+import com.codename1.components.SpanLabel;
 import com.codename1.ui.Button;
 import com.codename1.ui.Component;
 import com.codename1.ui.Container;
 import com.codename1.ui.Image;
 import com.codename1.ui.Label;
+import com.codename1.ui.events.ActionEvent;
+import com.codename1.ui.events.ActionListener;
 import com.codename1.ui.layouts.BorderLayout;
 import com.codename1.ui.layouts.BoxLayout;
 import com.codename1.ui.layouts.FlowLayout;
@@ -71,27 +76,116 @@ public class Components extends Demo {
     private void resetMargin(Container c) {
         // Cleaver how the container implements List of Components but compositions won't be that bad either.
         // Coz this is really going to be there for forever.
-        for(Component cc : c) {
+        for (Component cc : c) {
             cc.setUIID(cc.getUIID());
         }
     }
 
     public Container createDemo() {
 
-        Label borderLayout = new Label("Border");
-        Button borderAbsoluteLayout = new Button("Border - Absolute");
-        Button boxYLayout = new Button("Box Y");
-        Button boxXLayout = new Button("Box X");
-        Button flowLayout = new Button("Flow");
-        Button flowCenterLayout = new Button("Flow Center");
-        Button gridLayout = new Button("Grid");
-        Button tableLayout = new Button("Table");
-        Button layeredLayout = new Button("Layered");
-        Container selection = BoxLayout.encloseY(flowLayout, flowCenterLayout, borderLayout, borderAbsoluteLayout, boxYLayout, boxXLayout, gridLayout, tableLayout, layeredLayout);
+        Container selection = BoxLayout.encloseY(
+                labelContainer(),
+                buttonsContainer(),
+                toggleContainer(),
+                toggleListContainer(),
+                selectionContainer(),
+                textFieldContainer(),
+                mediaContainer(),
+                mapsContainer(),
+                containersContainer(),
+                dialogsContainer(),
+                progressContainer(),
+                advancedContainer(),
+                chartsContainer(),
+                toolbarContainer()
+        );
         selection.setScrollableY(true);
 
         return selection;
     }
+
+    Container labelContainer() {
+        Button labelTitle = new Button("Labels", "subComponent");
+        Container labelsBody = BoxLayout.encloseY(
+                new Container(BoxLayout.y()).add(
+                        new Label("Hello there")
+                ).add(new SpanLabel("Span Label"))
+        );
+
+        labelTitle.addActionListener(evt -> {
+            System.out.println("labels list is visible "+labelsBody.isVisible());
+            labelsBody.setVisible(!labelsBody.isVisible());
+            labelsBody.animate();
+        });
+
+        return BoxLayout.encloseY(labelTitle,labelsBody);
+    }
+
+    Container buttonsContainer() {
+        SpanLabel borderLayout = new SpanLabel("Buttons", "subComponent");
+        return BoxLayout.encloseY(borderLayout);
+    }
+
+    Container toggleContainer() {
+        SpanLabel borderLayout = new SpanLabel("Toggles", "subComponent");
+        return BoxLayout.encloseY(borderLayout);
+    }
+
+    Container toggleListContainer() {
+        SpanLabel borderLayout = new SpanLabel("Toggle List", "subComponent");
+        return BoxLayout.encloseY(borderLayout);
+    }
+
+    Container selectionContainer() {
+        SpanLabel borderLayout = new SpanLabel("Selection", "subComponent");
+        return BoxLayout.encloseY(borderLayout);
+    }
+
+    Container textFieldContainer() {
+        SpanLabel borderLayout = new SpanLabel("Text Fields", "subComponent");
+        return BoxLayout.encloseY(borderLayout);
+    }
+
+    Container mediaContainer() {
+        SpanLabel borderLayout = new SpanLabel("Media", "subComponent");
+        return BoxLayout.encloseY(borderLayout);
+    }
+
+    Container mapsContainer() {
+        SpanLabel borderLayout = new SpanLabel("Maps", "subComponent");
+        return BoxLayout.encloseY(borderLayout);
+    }
+
+    Container containersContainer() {
+        SpanLabel borderLayout = new SpanLabel("Containers", "subComponent");
+        return BoxLayout.encloseY(borderLayout);
+    }
+
+    Container dialogsContainer() {
+        SpanLabel borderLayout = new SpanLabel("Dialogs / Prompts", "subComponent");
+        return BoxLayout.encloseY(borderLayout);
+    }
+
+    Container progressContainer() {
+        SpanLabel borderLayout = new SpanLabel("Progress", "subComponent");
+        return BoxLayout.encloseY(borderLayout);
+    }
+
+    Container advancedContainer() {
+        SpanLabel borderLayout = new SpanLabel("Advanced", "subComponent");
+        return BoxLayout.encloseY(borderLayout);
+    }
+
+    Container chartsContainer() {
+        SpanLabel borderLayout = new SpanLabel("Charts", "subComponent");
+        return BoxLayout.encloseY(borderLayout);
+    }
+
+    Container toolbarContainer() {
+        SpanLabel borderLayout = new SpanLabel("Toolbar", "subComponent");
+        return BoxLayout.encloseY(borderLayout);
+    }
+
 
     @Override
     public String getDescription() {
@@ -100,4 +194,5 @@ public class Components extends Demo {
                 + "complex layouts such as MiG, Group, GridBag etc. that aren't fully represented here...";
     }
 }
+
 
