@@ -25,9 +25,13 @@ package com.codename1.demos.kitchen;
 import com.codename1.components.FloatingHint;
 import com.codename1.components.ScaleImageLabel;
 import com.codename1.components.SpanLabel;
+import com.codename1.demos.kitchen.components.ComponentDemo;
+import com.codename1.io.FileSystemStorage;
+import com.codename1.io.Log;
 import com.codename1.ui.Button;
 import com.codename1.ui.Component;
 import com.codename1.ui.Container;
+import com.codename1.ui.FontImage;
 import com.codename1.ui.Image;
 import com.codename1.ui.Label;
 import com.codename1.ui.events.ActionEvent;
@@ -39,6 +43,13 @@ import com.codename1.ui.layouts.GridLayout;
 import com.codename1.ui.layouts.LayeredLayout;
 import com.codename1.ui.plaf.Style;
 import com.codename1.ui.table.TableLayout;
+import com.codename1.ui.tree.Tree;
+import com.codename1.ui.tree.TreeModel;
+import com.codename1.xml.Element;
+
+import java.io.IOException;
+import java.util.Arrays;
+import java.util.Vector;
 
 import static com.codename1.ui.CN.CENTER;
 import static com.codename1.ui.CN.CENTER_BEHAVIOR_CENTER;
@@ -105,20 +116,24 @@ public class Components extends Demo {
     }
 
     Container labelContainer() {
-        Button labelTitle = new Button("Labels", "subComponent");
-        Container labelsBody = BoxLayout.encloseY(
-                new Container(BoxLayout.y()).add(
-                        new Label("Hello there")
-                ).add(new SpanLabel("Span Label"))
-        );
-
-        labelTitle.addActionListener(evt -> {
-            System.out.println("labels list is visible "+labelsBody.isVisible());
-            labelsBody.setVisible(!labelsBody.isVisible());
-            labelsBody.animate();
-        });
-
-        return BoxLayout.encloseY(labelTitle,labelsBody);
+//        Container mainDemoContainer = new Container(BoxLayout.y());
+////
+////        Button labelTitle = new Button("Labels", "componentTitle");
+////        Container labelDemo = new Container(
+////                BoxLayout.y(), "demoContent")
+////                .add(new Label("Hello there"));
+////        mainDemoContainer
+////                .add(labelDemo);
+////        return new Container(BoxLayout.y(), "subComponent")
+////                .add(labelTitle)
+////                .add(new Container(BoxLayout.y(), "demoArea")
+////                        .add(mainDemoContainer)
+////                        .add(new Label("Label", "subComponentLabel"))
+////                );
+        return new ComponentDemo("Labels")
+                .addSubComponent("Label",new Label("This is label"))
+                .addSubComponent("Span Label",new SpanLabel("This is Span Label"))
+                .generate();
     }
 
     Container buttonsContainer() {
@@ -194,5 +209,3 @@ public class Components extends Demo {
                 + "complex layouts such as MiG, Group, GridBag etc. that aren't fully represented here...";
     }
 }
-
-

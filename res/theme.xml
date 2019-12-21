@@ -23,6 +23,24 @@
     <image name="RedCard.borderTop_1.png" type="multi"  />
     <image name="RedCard.borderTopL_1.png" type="multi"  />
     <image name="RedCard.borderTopR_1.png" type="multi"  />
+    <image name="subComponent.borderBottom_1.png" type="multi"  />
+    <image name="subComponent.borderBottom_2.png" type="multi"  />
+    <image name="subComponent.borderBottomL_1.png" type="multi"  />
+    <image name="subComponent.borderBottomL_2.png" type="multi"  />
+    <image name="subComponent.borderBottomR_1.png" type="multi"  />
+    <image name="subComponent.borderBottomR_2.png" type="multi"  />
+    <image name="subComponent.borderCenter_1.png" type="multi"  />
+    <image name="subComponent.borderCenter_2.png" type="multi"  />
+    <image name="subComponent.borderLeft_1.png" type="multi"  />
+    <image name="subComponent.borderLeft_2.png" type="multi"  />
+    <image name="subComponent.borderRight_1.png" type="multi"  />
+    <image name="subComponent.borderRight_2.png" type="multi"  />
+    <image name="subComponent.borderTop_1.png" type="multi"  />
+    <image name="subComponent.borderTop_2.png" type="multi"  />
+    <image name="subComponent.borderTopL_1.png" type="multi"  />
+    <image name="subComponent.borderTopL_2.png" type="multi"  />
+    <image name="subComponent.borderTopR_1.png" type="multi"  />
+    <image name="subComponent.borderTopR_2.png" type="multi"  />
     <theme name="Theme">
         <val key="@includeNativeBool" value="true" />
         <val key="@menuImageSize" value="4" />
@@ -71,6 +89,13 @@
         <font key="CenterText1.press#font" type="ttf" face="0" style="0" size="0" name="native:MainThin" family="native:MainThin" sizeSettings="3" actualSize="3.5" />
         <val key="CenterText1.sel#align" value="4" />
         <font key="CenterText1.sel#font" type="ttf" face="0" style="0" size="0" name="native:MainThin" family="native:MainThin" sizeSettings="3" actualSize="3.5" />
+        <border key="ComponentDemo.border" type="image" i1="subComponent.borderTop_2.png" i2="subComponent.borderBottom_2.png" i3="subComponent.borderLeft_2.png" i4="subComponent.borderRight_2.png" i5="subComponent.borderTopL_2.png" i6="subComponent.borderTopR_2.png" i7="subComponent.borderBottomL_2.png" i8="subComponent.borderBottomR_2.png" i9="subComponent.borderCenter_2.png" />
+        <font key="ComponentDemo.font" type="system" face="0" style="0" size="16" />
+        <val key="ComponentDemo.marUnit" value="2,2,2,2" />
+        <val key="ComponentDemo.margin" value="2.0,2.0,2.0,2.0" />
+        <val key="ComponentDemo.padUnit" value="2,2,2,2" />
+        <val key="ComponentDemo.padding" value="2.0,2.0,2.0,2.0" />
+        <val key="ComponentDemo.transparency" value="255" />
         <val key="ContactIcon.padUnit" value="2,2,2,2" />
         <val key="ContactIcon.padding" value="1.0,1.0,1.0,1.0" />
         <val key="ContactIcon.press#padUnit" value="2,2,2,2" />
@@ -375,10 +400,29 @@
         <font key="TintOverlaySmall.font" type="system" face="0" style="0" size="0" />
         <val key="TintOverlaySmall.transparency" value="140" />
         <font key="Title.font" type="ttf" face="0" style="0" size="0" name="native:MainThin" family="native:MainThin" sizeSettings="3" actualSize="4.5" />
+        <font key="componentTitle.font" type="system" face="0" style="0" size="16" />
+        <val key="componentTitle.padUnit" value="2,2,2,2" />
+        <val key="componentTitle.padding" value="2.0,2.0,2.0,2.0" />
+        <val key="componentTitle.transparency" value="255" />
+        <val key="demoArea.bgColor" value="0" />
+        <val key="demoArea.marUnit" value="2,2,2,2" />
+        <val key="demoArea.margin" value="1.0,1.0,1.0,1.0" />
+        <val key="demoArea.padUnit" value="2,2,2,2" />
+        <val key="demoArea.padding" value="2.0,2.0,2.0,2.0" />
+        <val key="demoArea.transparency" value="177" />
+        <val key="demoContent.bgColor" value="ffffff" />
+        <val key="demoContent.marUnit" value="2,2,2,2" />
+        <val key="demoContent.margin" value="2.0,2.0,2.0,2.0" />
+        <val key="demoContent.transparency" value="255" />
         <font key="font" type="ttf" face="0" style="0" size="0" name="native:MainThin" family="native:MainThin" sizeSettings="3" actualSize="3.5" />
-        <font key="subComponent.font" type="system" face="0" style="0" size="16" />
-        <val key="subComponent.padUnit" value="2,2,2,2" />
-        <val key="subComponent.padding" value="2.0,2.0,2.0,2.0" />
+        <val key="subComponent.bgColor" value="ffffff" />
+        <val key="subComponent.marUnit" value="2,2,2,2" />
+        <val key="subComponent.margin" value="2.0,2.0,2.0,2.0" />
+        <val key="subComponent.transparency" value="255" />
+        <val key="subComponentLabel.fgColor" value="ffffff" />
+        <font key="subComponentLabel.font" type="system" face="0" style="0" size="0" />
+        <val key="subComponentLabel.marUnit" value="2,2,2,2" />
+        <val key="subComponentLabel.margin" value="0.0,6.0,2.0,0.0" />
     </theme>
     <image name="themes.png" type="multi"  />
     <image name="video.png" type="multi"  />

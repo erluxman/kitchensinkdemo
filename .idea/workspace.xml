@@ -2,10 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="52c81d2f-2c05-4805-9a03-ae020200e403" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/codename1/demos/kitchen/components/ComponentDemo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/codename1/demos/kitchen/components/Labels.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/kitchesinkdemo/com/codename1/demos/kitchen/Components.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/kitchesinkdemo/com/codename1/demos/kitchen/Components.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/kitchesinkdemo/theme.res" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/kitchesinkdemo/theme.res" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/res/theme.xml" beforeDir="false" afterPath="$PROJECT_DIR$/res/theme.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/codename1/demos/kitchen/Components.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/codename1/demos/kitchen/Components.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/theme.res" beforeDir="false" afterPath="$PROJECT_DIR$/src/theme.res" afterDir="false" />
     </list>
@@ -13,6 +16,13 @@
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -41,7 +51,7 @@
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="restartRequiresConfirmation" value="false" />
-    <property name="settings.editor.selected.configurable" value="AndroidSdkUpdater" />
+    <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -91,7 +101,8 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1576758457985</updated>
-      <workItem from="1576758465552" duration="2991000" />
+      <workItem from="1576758465552" duration="4454000" />
+      <workItem from="1576889926913" duration="9737000" />
     </task>
     <servers />
   </component>
@@ -99,29 +110,41 @@
     <option name="version" value="1" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="465" y="253" key="#com.intellij.ide.util.MemberChooser" timestamp="1576761261296">
+    <state x="465" y="253" key="#com.intellij.ide.util.MemberChooser" timestamp="1576909005980">
       <screen x="0" y="23" width="1680" height="1027" />
     </state>
-    <state x="465" y="253" key="#com.intellij.ide.util.MemberChooser/0.23.1680.1027@0.23.1680.1027" timestamp="1576761261296" />
-    <state width="1263" height="296" key="GridCell.Tab.0.bottom" timestamp="1576761707643">
+    <state x="465" y="253" key="#com.intellij.ide.util.MemberChooser/0.23.1680.1027@0.23.1680.1027" timestamp="1576909005980" />
+    <state width="1218" height="192" key="GridCell.Tab.0.bottom" timestamp="1576910875154">
       <screen x="0" y="23" width="1680" height="1027" />
     </state>
-    <state width="1263" height="296" key="GridCell.Tab.0.bottom/0.23.1680.1027@0.23.1680.1027" timestamp="1576761707643" />
-    <state width="1263" height="296" key="GridCell.Tab.0.center" timestamp="1576761707642">
+    <state width="1218" height="192" key="GridCell.Tab.0.bottom/0.23.1680.1027@0.23.1680.1027" timestamp="1576910875154" />
+    <state width="1218" height="192" key="GridCell.Tab.0.center" timestamp="1576910875153">
       <screen x="0" y="23" width="1680" height="1027" />
     </state>
-    <state width="1263" height="296" key="GridCell.Tab.0.center/0.23.1680.1027@0.23.1680.1027" timestamp="1576761707642" />
-    <state width="1263" height="296" key="GridCell.Tab.0.left" timestamp="1576761707642">
+    <state width="1218" height="192" key="GridCell.Tab.0.center/0.23.1680.1027@0.23.1680.1027" timestamp="1576910875153" />
+    <state width="1218" height="192" key="GridCell.Tab.0.left" timestamp="1576910875153">
       <screen x="0" y="23" width="1680" height="1027" />
     </state>
-    <state width="1263" height="296" key="GridCell.Tab.0.left/0.23.1680.1027@0.23.1680.1027" timestamp="1576761707642" />
-    <state width="1263" height="296" key="GridCell.Tab.0.right" timestamp="1576761707643">
+    <state width="1218" height="192" key="GridCell.Tab.0.left/0.23.1680.1027@0.23.1680.1027" timestamp="1576910875153" />
+    <state width="1218" height="192" key="GridCell.Tab.0.right" timestamp="1576910875154">
       <screen x="0" y="23" width="1680" height="1027" />
     </state>
-    <state width="1263" height="296" key="GridCell.Tab.0.right/0.23.1680.1027@0.23.1680.1027" timestamp="1576761707643" />
-    <state x="322" y="298" width="661" height="476" key="find.popup" timestamp="1576758954656">
+    <state width="1218" height="192" key="GridCell.Tab.0.right/0.23.1680.1027@0.23.1680.1027" timestamp="1576910875154" />
+    <state x="192" y="175" key="SettingsEditor" timestamp="1576902856655">
       <screen x="0" y="23" width="1680" height="1027" />
     </state>
-    <state x="322" y="298" width="661" height="476" key="find.popup/0.23.1680.1027@0.23.1680.1027" timestamp="1576758954656" />
+    <state x="192" y="175" key="SettingsEditor/0.23.1680.1027@0.23.1680.1027" timestamp="1576902856655" />
+    <state x="465" y="204" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1576905163465">
+      <screen x="0" y="23" width="1680" height="1027" />
+    </state>
+    <state x="465" y="204" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser/0.23.1680.1027@0.23.1680.1027" timestamp="1576905163465" />
+    <state x="429" y="308" key="extract.method.dialog" timestamp="1576908416092">
+      <screen x="0" y="23" width="1680" height="1027" />
+    </state>
+    <state x="429" y="308" key="extract.method.dialog/0.23.1680.1027@0.23.1680.1027" timestamp="1576908416092" />
+    <state x="322" y="298" width="661" height="476" key="find.popup" timestamp="1576896455327">
+      <screen x="0" y="23" width="1680" height="1027" />
+    </state>
+    <state x="322" y="298" width="661" height="476" key="find.popup/0.23.1680.1027@0.23.1680.1027" timestamp="1576896455327" />
   </component>
 </project>
