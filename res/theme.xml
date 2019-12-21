@@ -400,7 +400,7 @@
         <font key="TintOverlaySmall.font" type="system" face="0" style="0" size="0" />
         <val key="TintOverlaySmall.transparency" value="140" />
         <font key="Title.font" type="ttf" face="0" style="0" size="0" name="native:MainThin" family="native:MainThin" sizeSettings="3" actualSize="4.5" />
-        <font key="componentTitle.font" type="system" face="0" style="0" size="16" />
+        <font key="componentTitle.font" type="ttf" face="0" style="0" size="16" name="native:MainBold" family="native:MainBold" sizeSettings="3" actualSize="7.0" />
         <val key="componentTitle.padUnit" value="2,2,2,2" />
         <val key="componentTitle.padding" value="2.0,2.0,2.0,2.0" />
         <val key="componentTitle.transparency" value="255" />
@@ -412,17 +412,18 @@
         <val key="demoArea.transparency" value="177" />
         <val key="demoContent.bgColor" value="ffffff" />
         <val key="demoContent.marUnit" value="2,2,2,2" />
-        <val key="demoContent.margin" value="2.0,2.0,2.0,2.0" />
+        <val key="demoContent.margin" value="0.0,0.0,0.0,0.0" />
         <val key="demoContent.transparency" value="255" />
         <font key="font" type="ttf" face="0" style="0" size="0" name="native:MainThin" family="native:MainThin" sizeSettings="3" actualSize="3.5" />
+        <val key="subComponent.align" value="4" />
         <val key="subComponent.bgColor" value="ffffff" />
         <val key="subComponent.marUnit" value="2,2,2,2" />
-        <val key="subComponent.margin" value="2.0,2.0,2.0,2.0" />
+        <val key="subComponent.margin" value="0.0,0.0,0.0,0.0" />
         <val key="subComponent.transparency" value="255" />
         <val key="subComponentLabel.fgColor" value="ffffff" />
         <font key="subComponentLabel.font" type="system" face="0" style="0" size="0" />
         <val key="subComponentLabel.marUnit" value="2,2,2,2" />
-        <val key="subComponentLabel.margin" value="0.0,6.0,2.0,0.0" />
+        <val key="subComponentLabel.margin" value="0.0,0.0,2.0,0.0" />
     </theme>
     <image name="themes.png" type="multi"  />
     <image name="video.png" type="multi"  />

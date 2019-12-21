@@ -15,7 +15,7 @@ public class ComponentDemo {
         this.title = title;
     }
 
-    public ComponentDemo addSubComponent(String title, Component body) {
+    public ComponentDemo add(String title, Component body) {
         subComponents.add(new SubComponentDemo(title, body));
         return this;
     }
@@ -38,17 +38,15 @@ public class ComponentDemo {
         return componentDemo;
     }
 
-    static ComponentDemo create(String title) {
-        return new ComponentDemo(title);
+    private  static class SubComponentDemo {
+        String title;
+        Component body;
+
+        public SubComponentDemo(String title, Component body) {
+            this.title = title;
+            this.body = body;
+        }
     }
 }
 
-class SubComponentDemo {
-    String title;
-    Component body;
 
-    public SubComponentDemo(String title, Component body) {
-        this.title = title;
-        this.body = body;
-    }
-}

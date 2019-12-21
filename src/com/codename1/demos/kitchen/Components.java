@@ -22,44 +22,22 @@
  */
 package com.codename1.demos.kitchen;
 
-import com.codename1.components.FloatingHint;
+import com.codename1.components.FloatingActionButton;
+import com.codename1.components.MultiButton;
+import com.codename1.components.ScaleImageButton;
 import com.codename1.components.ScaleImageLabel;
+import com.codename1.components.ShareButton;
+import com.codename1.components.SpanButton;
 import com.codename1.components.SpanLabel;
 import com.codename1.demos.kitchen.components.ComponentDemo;
-import com.codename1.io.FileSystemStorage;
-import com.codename1.io.Log;
 import com.codename1.ui.Button;
 import com.codename1.ui.Component;
 import com.codename1.ui.Container;
 import com.codename1.ui.FontImage;
 import com.codename1.ui.Image;
 import com.codename1.ui.Label;
-import com.codename1.ui.events.ActionEvent;
-import com.codename1.ui.events.ActionListener;
-import com.codename1.ui.layouts.BorderLayout;
+import com.codename1.ui.TextComponent;
 import com.codename1.ui.layouts.BoxLayout;
-import com.codename1.ui.layouts.FlowLayout;
-import com.codename1.ui.layouts.GridLayout;
-import com.codename1.ui.layouts.LayeredLayout;
-import com.codename1.ui.plaf.Style;
-import com.codename1.ui.table.TableLayout;
-import com.codename1.ui.tree.Tree;
-import com.codename1.ui.tree.TreeModel;
-import com.codename1.xml.Element;
-
-import java.io.IOException;
-import java.util.Arrays;
-import java.util.Vector;
-
-import static com.codename1.ui.CN.CENTER;
-import static com.codename1.ui.CN.CENTER_BEHAVIOR_CENTER;
-import static com.codename1.ui.CN.CENTER_BEHAVIOR_SCALE;
-import static com.codename1.ui.CN.EAST;
-import static com.codename1.ui.CN.NORTH;
-import static com.codename1.ui.CN.SOUTH;
-import static com.codename1.ui.CN.TOP;
-import static com.codename1.ui.CN.WEST;
-import static com.codename1.ui.layouts.BorderLayout.CENTER_BEHAVIOR_TOTAL_BELOW;
 
 /**
  * Demonstrates some of the basic layout types available in Codename One with explanation and a smooth animation
@@ -95,20 +73,20 @@ public class Components extends Demo {
     public Container createDemo() {
 
         Container selection = BoxLayout.encloseY(
-                labelContainer(),
-                buttonsContainer(),
-                toggleContainer(),
-                toggleListContainer(),
-                selectionContainer(),
-                textFieldContainer(),
-                mediaContainer(),
-                mapsContainer(),
-                containersContainer(),
-                dialogsContainer(),
-                progressContainer(),
-                advancedContainer(),
-                chartsContainer(),
-                toolbarContainer()
+            labelContainer(),
+            buttonsContainer(),
+            toggleContainer(),
+            toggleListContainer(),
+            selectionContainer(),
+            textFieldContainer(),
+            mediaContainer(),
+            mapsContainer(),
+            containersContainer(),
+            dialogsContainer(),
+            progressContainer(),
+            advancedContainer(),
+            chartsContainer(),
+            toolbarContainer()
         );
         selection.setScrollableY(true);
 
@@ -116,29 +94,36 @@ public class Components extends Demo {
     }
 
     Container labelContainer() {
-//        Container mainDemoContainer = new Container(BoxLayout.y());
-////
-////        Button labelTitle = new Button("Labels", "componentTitle");
-////        Container labelDemo = new Container(
-////                BoxLayout.y(), "demoContent")
-////                .add(new Label("Hello there"));
-////        mainDemoContainer
-////                .add(labelDemo);
-////        return new Container(BoxLayout.y(), "subComponent")
-////                .add(labelTitle)
-////                .add(new Container(BoxLayout.y(), "demoArea")
-////                        .add(mainDemoContainer)
-////                        .add(new Label("Label", "subComponentLabel"))
-////                );
-        return new ComponentDemo("Labels")
-                .addSubComponent("Label",new Label("This is label"))
-                .addSubComponent("Span Label",new SpanLabel("This is Span Label"))
-                .generate();
+        ComponentDemo demo = new ComponentDemo("Labels");
+        demo.add("Label", new Label("This is label"))
+            .add("Span Label", new SpanLabel("This is Span Label"))
+            .add("Scale Image Label", new ScaleImageLabel(getResources().getImage("dog.jpg")))
+            .add("Floating Hint", new TextComponent(
+            ).label("Input your name"))
+        ;
+        return demo.generate();
     }
 
     Container buttonsContainer() {
-        SpanLabel borderLayout = new SpanLabel("Buttons", "subComponent");
-        return BoxLayout.encloseY(borderLayout);
+        MultiButton multiButton = new MultiButton("MultiButton");
+        multiButton.setTextLine1("Line one button");
+        multiButton.setTextLine2("Line two button");
+        multiButton.setTextLine3("Line three button");
+        multiButton.setTextLine4("Line four button");
+
+        ShareButton shareButton = new ShareButton();
+        shareButton.setText("Share the file");
+        ComponentDemo demo = new ComponentDemo("Buttons");
+        demo
+            .add("Button", new Button("Click this"))
+            .add("Span Button", new SpanButton("Click SpanButton"))
+            .add("Multi Button", multiButton)
+            .add("Scale Image Button",
+                new ScaleImageButton(getResources().getImage("dog.jpg")))
+            .add("Floating Action Button", FloatingActionButton.createFAB(FontImage.MATERIAL_ADD))
+            .add("Share Button", shareButton)
+        ;
+        return demo.generate();
     }
 
     Container toggleContainer() {
@@ -205,7 +190,7 @@ public class Components extends Demo {
     @Override
     public String getDescription() {
         return "Layouts allow the UI of Codename One to adapt to the different resolutions and DPI's supported by "
-                + "the various OS's. This is just the tip of the iceberg. Layouts can be nested deeply and there are very "
-                + "complex layouts such as MiG, Group, GridBag etc. that aren't fully represented here...";
+            + "the various OS's. This is just the tip of the iceberg. Layouts can be nested deeply and there are very "
+            + "complex layouts such as MiG, Group, GridBag etc. that aren't fully represented here...";
     }
 }
