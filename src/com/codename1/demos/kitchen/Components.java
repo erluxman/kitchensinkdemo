@@ -25,16 +25,20 @@ package com.codename1.demos.kitchen;
 import com.codename1.components.Accordion;
 import com.codename1.components.CheckBoxList;
 import com.codename1.components.ClearableTextField;
+import com.codename1.components.FileTree;
 import com.codename1.components.FloatingActionButton;
+import com.codename1.components.ImageViewer;
 import com.codename1.components.InfiniteProgress;
 import com.codename1.components.InteractionDialog;
 import com.codename1.components.MediaPlayer;
 import com.codename1.components.MultiButton;
 import com.codename1.components.OnOffSwitch;
+import com.codename1.components.RSSReader;
 import com.codename1.components.RadioButtonList;
 import com.codename1.components.ScaleImageButton;
 import com.codename1.components.ScaleImageLabel;
 import com.codename1.components.ShareButton;
+import com.codename1.components.SignatureComponent;
 import com.codename1.components.SpanButton;
 import com.codename1.components.SpanLabel;
 import com.codename1.components.SplitPane;
@@ -47,10 +51,14 @@ import com.codename1.io.Log;
 import com.codename1.media.Media;
 import com.codename1.media.MediaManager;
 import com.codename1.ui.AutoCompleteTextField;
+import com.codename1.ui.BrowserComponent;
 import com.codename1.ui.Button;
 import com.codename1.ui.ButtonGroup;
+import com.codename1.ui.CN;
+import com.codename1.ui.Calendar;
 import com.codename1.ui.CheckBox;
 import com.codename1.ui.ComboBox;
+import com.codename1.ui.CommonProgressAnimations;
 import com.codename1.ui.Component;
 import com.codename1.ui.Container;
 import com.codename1.ui.Dialog;
@@ -60,19 +68,23 @@ import com.codename1.ui.Image;
 import com.codename1.ui.InfiniteContainer;
 import com.codename1.ui.Label;
 import com.codename1.ui.List;
+import com.codename1.ui.MenuBar;
 import com.codename1.ui.PickerComponent;
 import com.codename1.ui.RadioButton;
 import com.codename1.ui.Sheet;
+import com.codename1.ui.SideMenuBar;
 import com.codename1.ui.Slider;
 import com.codename1.ui.Tabs;
 import com.codename1.ui.TextArea;
 import com.codename1.ui.TextComponent;
 import com.codename1.ui.TextField;
+import com.codename1.ui.Toolbar;
 import com.codename1.ui.events.ActionEvent;
 import com.codename1.ui.events.ActionListener;
 import com.codename1.ui.layouts.BorderLayout;
 import com.codename1.ui.layouts.BoxLayout;
 import com.codename1.ui.list.DefaultListModel;
+import com.codename1.ui.list.ListModel;
 import com.codename1.ui.list.MultipleSelectionListModel;
 import com.codename1.ui.spinner.Picker;
 
@@ -304,8 +316,8 @@ public class Components extends Demo {
         openSheetButton.addActionListener(evt -> sheet.show());
 
         Button showToastBar = new Button("Show toastbar");
-        showToastBar.addActionListener((event)->{
-            ToastBar.showMessage("Hello from Toastbar",FontImage.MATERIAL_INFO);
+        showToastBar.addActionListener((event) -> {
+            ToastBar.showMessage("Hello from Toastbar", FontImage.MATERIAL_INFO);
         });
 
         demo.add("Interaction Dialog", interactionDialog);
@@ -323,14 +335,47 @@ public class Components extends Demo {
         slider.setProgress(50);
         slider.setEditable(true);
 
-        demo.add("Infinite Progresss",infiniteProgress);
-        demo.add("Slider",slider);
+        demo.add("Infinite Progress", infiniteProgress);
+        demo.add("Slider", slider);
+        demo.add("Circle Animation", new CommonProgressAnimations.CircleProgress());
+        demo.add("Text Loading Animation", new CommonProgressAnimations.LoadingTextAnimation().rows(2).cols(1));
 
         return demo.generate();
     }
 
     Container advancedContainer() {
         ComponentDemo demo = new ComponentDemo("Advanced");
+//        BrowserComponent browserComponent = new BrowserComponent();
+//        browserComponent.setURL("https://www.codenameone.com/");
+//        browserComponent.addWebEventListener(BrowserComponent.onMessage, e->{
+//            CN.callSerially(()->{
+//                Log.p("Message: "+e.getSource());
+//                Dialog.show("Here", (String)e.getSource(), "OK", null);
+//            });
+//        });
+//
+//        //Browser component flickers in list, we have to find a better way to present it.
+//        //demo.add("Browser Component",browserComponent);
+//
+//        SignatureComponent signatureComponent = new SignatureComponent();
+        //demo.add("Signature Component",signatureComponent);
+
+        FileTree fileTree = new FileTree();
+        fileTree.setScrollableY(false);
+        RSSReader rssReader = new RSSReader();
+        rssReader.setURL("https://us12.campaign-archive.com/feed?u=f39692e245b94f7fb693b6d82&id=93b2272cb6");
+        ImageViewer imageViewer = new ImageViewer();
+        ListModel<Image> images = new DefaultListModel<Image>(
+                getResources().getImage("background.jpg"),
+                getResources().getImage("layout.png"),
+                getResources().getImage("themes.png"),
+                getResources().getImage("dog.jpg")
+        );
+        imageViewer.setImageList(images);
+        demo.add("Calendar", new Calendar());
+        demo.add("FileTree", fileTree);
+        demo.add("Rss Reader", rssReader);
+        demo.add("Image Viewer", imageViewer);
         return demo.generate();
     }
 
@@ -341,6 +386,8 @@ public class Components extends Demo {
 
     Container toolbarContainer() {
         ComponentDemo demo = new ComponentDemo("Toolbar");
+        Toolbar searchBar = new Toolbar();
+        demo.add("Search Bar", searchBar);
         return demo.generate();
     }
 
