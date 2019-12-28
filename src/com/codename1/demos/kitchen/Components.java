@@ -27,6 +27,7 @@ import com.codename1.components.CheckBoxList;
 import com.codename1.components.ClearableTextField;
 import com.codename1.components.FloatingActionButton;
 import com.codename1.components.InfiniteProgress;
+import com.codename1.components.InteractionDialog;
 import com.codename1.components.MediaPlayer;
 import com.codename1.components.MultiButton;
 import com.codename1.components.OnOffSwitch;
@@ -52,6 +53,7 @@ import com.codename1.ui.CheckBox;
 import com.codename1.ui.ComboBox;
 import com.codename1.ui.Component;
 import com.codename1.ui.Container;
+import com.codename1.ui.Dialog;
 import com.codename1.ui.FontImage;
 import com.codename1.ui.Form;
 import com.codename1.ui.Image;
@@ -60,6 +62,9 @@ import com.codename1.ui.Label;
 import com.codename1.ui.List;
 import com.codename1.ui.PickerComponent;
 import com.codename1.ui.RadioButton;
+import com.codename1.ui.Sheet;
+import com.codename1.ui.Slider;
+import com.codename1.ui.Tabs;
 import com.codename1.ui.TextArea;
 import com.codename1.ui.TextComponent;
 import com.codename1.ui.TextField;
@@ -266,37 +271,77 @@ public class Components extends Demo {
                         new SplitPane.Settings(VERTICAL_SPLIT, "15%", "50%", "85%"),
                         new Label("Hola"),
                         new Label("Hi")));
+
+        Tabs tabs = new Tabs();
+        tabs.addTab("Home", new Label("Home"));
+        tabs.addTab("Profile", new Label("Profile"));
+        tabs.addTab("Setting", new Label("Setting"));
         demo.add("Accordin", accordion);
         demo.add("Infinite Container", InfiniteContainerDemo.getInstance());
         demo.add("Split Pane", splitPane);
-
-
+        demo.add("Tabs", tabs);
         return demo.generate();
     }
 
     Container dialogsContainer() {
-        SpanLabel borderLayout = new SpanLabel("Dialogs / Prompts", "subComponent");
-        return BoxLayout.encloseY(borderLayout);
+        ComponentDemo demo = new ComponentDemo("Dialogs / Prompts");
+        InteractionDialog interactionDialog = new InteractionDialog();
+        interactionDialog.addComponent(new Button("Ok"));
+        interactionDialog.addComponent(new Button("Cancel"));
+        interactionDialog.setLayout(BoxLayout.y());
+
+        Dialog dialog = new Dialog();
+        Button okButton = new Button("Ok");
+        okButton.addActionListener(evt -> dialog.dispose());
+        dialog.addComponent(okButton);
+        Button showDialog = new Button("Show Dialog");
+        //Why does it take long to show dialog?
+        showDialog.addActionListener(evt -> dialog.show());
+
+
+        Button openSheetButton = new Button("Open Sheet");
+        Sheet sheet = new Sheet(null, "Hello there");
+        openSheetButton.addActionListener(evt -> sheet.show());
+
+        Button showToastBar = new Button("Show toastbar");
+        showToastBar.addActionListener((event)->{
+            ToastBar.showMessage("Hello from Toastbar",FontImage.MATERIAL_INFO);
+        });
+
+        demo.add("Interaction Dialog", interactionDialog);
+        demo.add("Dialog", showDialog);
+        demo.add("Sheet", openSheetButton);
+        demo.add("ToastBar", showToastBar);
+        return demo.generate();
     }
 
     Container progressContainer() {
-        SpanLabel borderLayout = new SpanLabel("Progress", "subComponent");
-        return BoxLayout.encloseY(borderLayout);
+        ComponentDemo demo = new ComponentDemo("Progress");
+        InfiniteProgress infiniteProgress = new InfiniteProgress();
+
+        Slider slider = new Slider();
+        slider.setProgress(50);
+        slider.setEditable(true);
+
+        demo.add("Infinite Progresss",infiniteProgress);
+        demo.add("Slider",slider);
+
+        return demo.generate();
     }
 
     Container advancedContainer() {
-        SpanLabel borderLayout = new SpanLabel("Advanced", "subComponent");
-        return BoxLayout.encloseY(borderLayout);
+        ComponentDemo demo = new ComponentDemo("Advanced");
+        return demo.generate();
     }
 
     Container chartsContainer() {
-        SpanLabel borderLayout = new SpanLabel("Charts", "subComponent");
-        return BoxLayout.encloseY(borderLayout);
+        ComponentDemo demo = new ComponentDemo("Charts");
+        return demo.generate();
     }
 
     Container toolbarContainer() {
-        SpanLabel borderLayout = new SpanLabel("Toolbar", "subComponent");
-        return BoxLayout.encloseY(borderLayout);
+        ComponentDemo demo = new ComponentDemo("Toolbar");
+        return demo.generate();
     }
 
 
