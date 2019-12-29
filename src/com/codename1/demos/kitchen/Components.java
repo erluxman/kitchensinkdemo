@@ -30,7 +30,6 @@ import com.codename1.components.FloatingActionButton;
 import com.codename1.components.ImageViewer;
 import com.codename1.components.InfiniteProgress;
 import com.codename1.components.InteractionDialog;
-import com.codename1.components.MediaPlayer;
 import com.codename1.components.MultiButton;
 import com.codename1.components.OnOffSwitch;
 import com.codename1.components.RSSReader;
@@ -38,23 +37,18 @@ import com.codename1.components.RadioButtonList;
 import com.codename1.components.ScaleImageButton;
 import com.codename1.components.ScaleImageLabel;
 import com.codename1.components.ShareButton;
-import com.codename1.components.SignatureComponent;
 import com.codename1.components.SpanButton;
 import com.codename1.components.SpanLabel;
 import com.codename1.components.SplitPane;
 import com.codename1.components.Switch;
 import com.codename1.components.SwitchList;
 import com.codename1.components.ToastBar;
+import com.codename1.demos.kitchen.components.ChartsDemo;
 import com.codename1.demos.kitchen.components.ComponentDemo;
 import com.codename1.demos.kitchen.components.InfiniteContainerDemo;
-import com.codename1.io.Log;
-import com.codename1.media.Media;
-import com.codename1.media.MediaManager;
 import com.codename1.ui.AutoCompleteTextField;
-import com.codename1.ui.BrowserComponent;
 import com.codename1.ui.Button;
 import com.codename1.ui.ButtonGroup;
-import com.codename1.ui.CN;
 import com.codename1.ui.Calendar;
 import com.codename1.ui.CheckBox;
 import com.codename1.ui.ComboBox;
@@ -63,41 +57,24 @@ import com.codename1.ui.Component;
 import com.codename1.ui.Container;
 import com.codename1.ui.Dialog;
 import com.codename1.ui.FontImage;
-import com.codename1.ui.Form;
 import com.codename1.ui.Image;
-import com.codename1.ui.InfiniteContainer;
 import com.codename1.ui.Label;
 import com.codename1.ui.List;
-import com.codename1.ui.MenuBar;
 import com.codename1.ui.PickerComponent;
 import com.codename1.ui.RadioButton;
 import com.codename1.ui.Sheet;
-import com.codename1.ui.SideMenuBar;
 import com.codename1.ui.Slider;
 import com.codename1.ui.Tabs;
 import com.codename1.ui.TextArea;
 import com.codename1.ui.TextComponent;
 import com.codename1.ui.TextField;
 import com.codename1.ui.Toolbar;
-import com.codename1.ui.events.ActionEvent;
-import com.codename1.ui.events.ActionListener;
-import com.codename1.ui.layouts.BorderLayout;
 import com.codename1.ui.layouts.BoxLayout;
 import com.codename1.ui.list.DefaultListModel;
 import com.codename1.ui.list.ListModel;
-import com.codename1.ui.list.MultipleSelectionListModel;
-import com.codename1.ui.spinner.Picker;
-
-import java.io.IOException;
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.Date;
 
 import static com.codename1.components.SplitPane.HORIZONTAL_SPLIT;
 import static com.codename1.components.SplitPane.VERTICAL_SPLIT;
-import static com.codename1.ui.CN.CENTER;
-import static com.codename1.ui.CN.callSerially;
-import static com.codename1.ui.CN.scheduleBackgroundTask;
 
 
 /**
@@ -381,6 +358,8 @@ public class Components extends Demo {
 
     Container chartsContainer() {
         ComponentDemo demo = new ComponentDemo("Charts");
+        //Some erros on Bar Chart
+        //demo.add("Bar Chart", ChartsDemo.getBarChartDemo());
         return demo.generate();
     }
 
