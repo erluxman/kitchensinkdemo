@@ -44,7 +44,9 @@ import com.codename1.components.SplitPane;
 import com.codename1.components.Switch;
 import com.codename1.components.SwitchList;
 import com.codename1.components.ToastBar;
+import com.codename1.demos.kitchen.charts.BarChartDemo;
 import com.codename1.demos.kitchen.charts.LineChart;
+import com.codename1.demos.kitchen.charts.PieChartDemo;
 import com.codename1.demos.kitchen.components.ComponentDemo;
 import com.codename1.demos.kitchen.components.InfiniteContainerDemo;
 import com.codename1.maps.MapComponent;
@@ -346,7 +348,7 @@ public class Components extends Demo {
         BrowserComponent browserComponent = new BrowserComponent();
 
         //Browser crashes when set url
-        //browserComponent.setURL("https://www.codenameone.com/");
+        browserComponent.setURL("https://www.codenameone.com/");
 
         Button showBrowserComponent = new Button("Show browser");
         showBrowserComponent.addActionListener(evt -> {
@@ -392,8 +394,9 @@ public class Components extends Demo {
     Container chartsContainer() {
         ComponentDemo demo = new ComponentDemo("Charts");
 
-        demo.add("LineChart", getLineChartButton());
-        demo.add("BarChart", getBarChartButton());
+        demo.add("Line Chart", getLineChartButton());
+        demo.add("Bar Chart", getBarChartButton());
+        demo.add("Pie Chart", getPieChartButton());
         return demo.generate();
     }
 
@@ -411,13 +414,24 @@ public class Components extends Demo {
     private Button getBarChartButton(){
         Button showBarChart = new Button("Bar Chart");
         Form barChartViewer = new Form("Bar Charts ", new BorderLayout());
-        barChartViewer.add(CENTER, BorderLayout.center(new LineChart().execute()));
+        barChartViewer.add(CENTER, BorderLayout.center(new BarChartDemo().execute()));
         barChartViewer.getToolbar().setBackCommand("Bar Chart", ee -> showBarChart.getComponentForm().showBack());
         showBarChart.addActionListener(evt -> {
             barChartViewer.show();
         });
 
         return showBarChart;
+    }
+    private Button getPieChartButton(){
+        Button showPieChart = new Button("Pie Chart");
+        Form pieChartViewer = new Form("Pie Charts ", new BorderLayout());
+        pieChartViewer.add(CENTER, BorderLayout.center(new PieChartDemo().execute()));
+        pieChartViewer.getToolbar().setBackCommand("Pie Chart", ee -> showPieChart.getComponentForm().showBack());
+        showPieChart.addActionListener(evt -> {
+            pieChartViewer.show();
+        });
+
+        return showPieChart;
     }
     Container toolbarContainer() {
         ComponentDemo demo = new ComponentDemo("Toolbar");

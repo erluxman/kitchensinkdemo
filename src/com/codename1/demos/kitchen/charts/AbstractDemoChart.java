@@ -182,7 +182,7 @@ public abstract class AbstractDemoChart {
         CategorySeries series = new CategorySeries(title);
         int k = 0;
         for (double value : values) {
-            series.add("Project " + ++k, value);
+            series.add(title + ++k, value);
         }
 
         return series;
