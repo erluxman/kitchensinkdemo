@@ -66,6 +66,8 @@ import java.util.Map;
  */
 public class WebServices extends Demo {
     private static final String WEBSERVICE_URL =  "https://www.codenameone.com/files/kitchensink/dogs/list2.json";
+
+    //This is a new variable basically it's a placeholder for the images.
     private EncodedImage placeholder;
     
     public String getDisplayName() {
@@ -192,17 +194,25 @@ public class WebServices extends Demo {
             placeholder = EncodedImage.createFromImage(placeholderTmp, true);
         }
         InfiniteContainer ic = new InfiniteContainer(10) {
+            //Why list items and all items?
             List items;
             List allItems = new ArrayList();
+
+            //Why is this nextUrl constant?
             String nextURL = WEBSERVICE_URL;            
-            
+
+            //Basically it's a paged list, index says the current pivot index and amount means the
+            //page size
             @Override
             public Component[] fetchComponents(int index, int amount) {
                 // pull to refresh resets the position
                 if(index == 0) {
+                    // At this point we have to determine the url that s going to be called for
+                    // right page.
                     nextURL = WEBSERVICE_URL;
                 }
                 // downloaded all the content from the webservice
+                // It gives the url for next page to be fetched.
                 if(nextURL == null) {
                     return null;
                 }
@@ -241,8 +251,12 @@ public class WebServices extends Demo {
                             BorderLayout.south(titleLabel));
                     
                     btn.addActionListener(e -> {
+                        //This is offset for viewpager
                         int offset = btn.getParent().getParent().getComponentIndex(btn.getParent());
+                        // List Model/adapter for viewpager
                         ImageListModel imlm = new ImageListModel(allItems, offset);
+
+                        //Creating new form which represents new screen.
                         Form viewer = new Form(title + " - " + (offset + 1) + " of " + imlm.getSize(), new BorderLayout());
                         Image img = (Image)imlm.getItemAt(offset);
                         if(img == placeholder) {

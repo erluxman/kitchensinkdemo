@@ -37,16 +37,19 @@ import com.codename1.components.RadioButtonList;
 import com.codename1.components.ScaleImageButton;
 import com.codename1.components.ScaleImageLabel;
 import com.codename1.components.ShareButton;
+import com.codename1.components.SignatureComponent;
 import com.codename1.components.SpanButton;
 import com.codename1.components.SpanLabel;
 import com.codename1.components.SplitPane;
 import com.codename1.components.Switch;
 import com.codename1.components.SwitchList;
 import com.codename1.components.ToastBar;
-import com.codename1.demos.kitchen.components.ChartsDemo;
+import com.codename1.demos.kitchen.charts.LineChart;
 import com.codename1.demos.kitchen.components.ComponentDemo;
 import com.codename1.demos.kitchen.components.InfiniteContainerDemo;
+import com.codename1.maps.MapComponent;
 import com.codename1.ui.AutoCompleteTextField;
+import com.codename1.ui.BrowserComponent;
 import com.codename1.ui.Button;
 import com.codename1.ui.ButtonGroup;
 import com.codename1.ui.Calendar;
@@ -57,6 +60,7 @@ import com.codename1.ui.Component;
 import com.codename1.ui.Container;
 import com.codename1.ui.Dialog;
 import com.codename1.ui.FontImage;
+import com.codename1.ui.Form;
 import com.codename1.ui.Image;
 import com.codename1.ui.Label;
 import com.codename1.ui.List;
@@ -69,12 +73,14 @@ import com.codename1.ui.TextArea;
 import com.codename1.ui.TextComponent;
 import com.codename1.ui.TextField;
 import com.codename1.ui.Toolbar;
+import com.codename1.ui.layouts.BorderLayout;
 import com.codename1.ui.layouts.BoxLayout;
 import com.codename1.ui.list.DefaultListModel;
 import com.codename1.ui.list.ListModel;
 
 import static com.codename1.components.SplitPane.HORIZONTAL_SPLIT;
 import static com.codename1.components.SplitPane.VERTICAL_SPLIT;
+import static com.codename1.ui.CN.CENTER;
 
 
 /**
@@ -111,19 +117,19 @@ public class Components extends Demo {
     public Container createDemo() {
 
         Container selection = BoxLayout.encloseY(
+                chartsContainer(),
+                advancedContainer(),
+                mapsContainer(),
+                mediaContainer(),
                 labelContainer(),
                 buttonsContainer(),
                 toggleContainer(),
                 toggleListContainer(),
                 selectionContainer(),
                 textFieldContainer(),
-                mediaContainer(),
-                mapsContainer(),
                 containersContainer(),
                 dialogsContainer(),
                 progressContainer(),
-                advancedContainer(),
-                chartsContainer(),
                 toolbarContainer()
         );
         selection.setScrollableY(true);
@@ -237,12 +243,27 @@ public class Components extends Demo {
 //            e.printStackTrace();
 //        }
 
+        //AudioRecorderComponent audioRecorder = new AudioRecorderComponent(new MediaRecorderBuilder());
+        //demo.add("Media Recorder",audioRecorder);
         return demo.generate();
     }
 
     Container mapsContainer() {
-        SpanLabel borderLayout = new SpanLabel("Maps", "subComponent");
-        return BoxLayout.encloseY(borderLayout);
+        ComponentDemo demo = new ComponentDemo("Containers");
+        MapComponent mapComponent = new MapComponent();
+        Button showMapComponent = new Button("Show map component");
+
+        Form viewer = new Form("MapComponent Demo", new BorderLayout());
+        viewer.add(CENTER, BorderLayout.center(mapComponent));
+        viewer.getToolbar().setBackCommand("", ee -> showMapComponent.getComponentForm().showBack());
+        showMapComponent.addActionListener(evt -> {
+            viewer.show();
+        });
+
+
+        //Is google map that hard to implement ( as in github repo)?
+        demo.add("MapComponent", showMapComponent);
+        return demo.generate();
     }
 
     Container containersContainer() {
@@ -322,20 +343,28 @@ public class Components extends Demo {
 
     Container advancedContainer() {
         ComponentDemo demo = new ComponentDemo("Advanced");
-//        BrowserComponent browserComponent = new BrowserComponent();
-//        browserComponent.setURL("https://www.codenameone.com/");
-//        browserComponent.addWebEventListener(BrowserComponent.onMessage, e->{
-//            CN.callSerially(()->{
-//                Log.p("Message: "+e.getSource());
-//                Dialog.show("Here", (String)e.getSource(), "OK", null);
-//            });
-//        });
-//
-//        //Browser component flickers in list, we have to find a better way to present it.
-//        //demo.add("Browser Component",browserComponent);
-//
-//        SignatureComponent signatureComponent = new SignatureComponent();
-        //demo.add("Signature Component",signatureComponent);
+        BrowserComponent browserComponent = new BrowserComponent();
+
+        //Browser crashes when set url
+        //browserComponent.setURL("https://www.codenameone.com/");
+
+        Button showBrowserComponent = new Button("Show browser");
+        showBrowserComponent.addActionListener(evt -> {
+            Form viewer = new Form("Browser Demo", new BorderLayout());
+            viewer.add(CENTER, BorderLayout.center(browserComponent));
+            viewer.getToolbar().setBackCommand("", ee -> showBrowserComponent.getComponentForm().showBack());
+            viewer.show();
+        });
+
+
+        SignatureComponent signatureComponent = new SignatureComponent();
+        Button showSignature = new Button("Sign the Document");
+        showSignature.addActionListener(evt -> {
+            Form viewer = new Form("Browser Demo", new BorderLayout());
+            viewer.add(CENTER, BorderLayout.center(signatureComponent));
+            viewer.getToolbar().setBackCommand("", ee -> showSignature.getComponentForm().showBack());
+            viewer.show();
+        });
 
         FileTree fileTree = new FileTree();
         fileTree.setScrollableY(false);
@@ -349,6 +378,10 @@ public class Components extends Demo {
                 getResources().getImage("dog.jpg")
         );
         imageViewer.setImageList(images);
+
+
+        demo.add("Browser Component", showBrowserComponent);
+        demo.add("SignatureComponent", showSignature);
         demo.add("Calendar", new Calendar());
         demo.add("FileTree", fileTree);
         demo.add("Rss Reader", rssReader);
@@ -358,11 +391,34 @@ public class Components extends Demo {
 
     Container chartsContainer() {
         ComponentDemo demo = new ComponentDemo("Charts");
-        //Some erros on Bar Chart
-        //demo.add("Bar Chart", ChartsDemo.getBarChartDemo());
+
+        demo.add("LineChart", getLineChartButton());
+        demo.add("BarChart", getBarChartButton());
         return demo.generate();
     }
 
+    private Button getLineChartButton(){
+        Button showLineChart = new Button("Line Chart");
+        Form lineChartViewer = new Form("Line Charts ", new BorderLayout());
+        lineChartViewer.add(CENTER, BorderLayout.center(new LineChart().execute()));
+        lineChartViewer.getToolbar().setBackCommand("Line Chart", ee -> showLineChart.getComponentForm().showBack());
+        showLineChart.addActionListener(evt -> {
+            lineChartViewer.show();
+        });
+        return showLineChart;
+    }
+
+    private Button getBarChartButton(){
+        Button showBarChart = new Button("Bar Chart");
+        Form barChartViewer = new Form("Bar Charts ", new BorderLayout());
+        barChartViewer.add(CENTER, BorderLayout.center(new LineChart().execute()));
+        barChartViewer.getToolbar().setBackCommand("Bar Chart", ee -> showBarChart.getComponentForm().showBack());
+        showBarChart.addActionListener(evt -> {
+            barChartViewer.show();
+        });
+
+        return showBarChart;
+    }
     Container toolbarContainer() {
         ComponentDemo demo = new ComponentDemo("Toolbar");
         Toolbar searchBar = new Toolbar();
