@@ -46,6 +46,7 @@ import com.codename1.components.SwitchList;
 import com.codename1.components.ToastBar;
 import com.codename1.demos.kitchen.components.ComponentDemo;
 import com.codename1.demos.kitchen.components.InfiniteContainerDemo;
+import com.codename1.demos.kitchen.map.GoogleMapDemo;
 import com.codename1.maps.MapComponent;
 import com.codename1.ui.AutoCompleteTextField;
 import com.codename1.ui.BrowserComponent;
@@ -253,7 +254,7 @@ public class Components extends Demo {
     }
 
     Container mapsContainer() {
-        ComponentDemo demo = new ComponentDemo("Containers");
+        ComponentDemo demo = new ComponentDemo("Maps");
         MapComponent mapComponent = new MapComponent();
         Button showMapComponent = new Button("Show map component");
 
@@ -267,6 +268,7 @@ public class Components extends Demo {
 
         //Is google map that hard to implement ( as in github repo)?
         demo.add("MapComponent", showMapComponent);
+        demo.add("GoogleMap", GoogleMapDemo.getGoogleMapButton());
         return demo.generate();
     }
 
@@ -381,7 +383,7 @@ public class Components extends Demo {
                 getResources().getImage("themes.png"),
                 getResources().getImage("dog.jpg")
         );
-        imageViewer.setImageList(images);
+        imageViewer.setImt addageList(images);
 
 
         demo.add("Browser Component", showBrowserComponent);
