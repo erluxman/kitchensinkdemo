@@ -1,12 +1,12 @@
 /**
  * Copyright (C) 2009 - 2013 SC 4ViewSoft SRL
- *
+ * <p>
  * Licensed under the Apache License, Version 2.0 (the "License"); you may not
  * use this file except in compliance with the License. You may obtain a copy of
  * the License at
- *
+ * <p>
  * http://www.apache.org/licenses/LICENSE-2.0
- *
+ * <p>
  * Unless required by applicable law or agreed to in writing, software
  * distributed under the License is distributed on an "AS IS" BASIS, WITHOUT
  * WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the
@@ -40,10 +40,10 @@ import java.util.List;
  */
 public abstract class AbstractDemoChart {
 
-    private boolean drawOnMutableImage;
     Font smallFont = Font.createSystemFont(Font.FACE_SYSTEM, Font.SIZE_SMALL, Font.STYLE_PLAIN);
     Font medFont = Font.createSystemFont(Font.FACE_SYSTEM, Font.SIZE_MEDIUM, Font.STYLE_PLAIN);
     Font largeFont = Font.createSystemFont(Font.FACE_SYSTEM, Font.SIZE_LARGE, Font.STYLE_PLAIN);
+    private boolean drawOnMutableImage;
 
     protected XYMultipleSeriesDataset createTemperatureDataset() {
         String[] titles = new String[]{"Crete", "Corfu", "Thassos", "Skiathos"};
@@ -53,17 +53,17 @@ public abstract class AbstractDemoChart {
         }
         List<double[]> values = new ArrayList<double[]>();
         values.add(new double[]{12.3, 12.5, 13.8, 16.8, 20.4, 24.4, 26.4, 26.1, 23.6, 20.3, 17.2,
-            13.9});
+                13.9});
         values.add(new double[]{10, 10, 12, 15, 20, 24, 26, 26, 23, 18, 14, 11});
         values.add(new double[]{5, 5.3, 8, 12, 17, 22, 24.2, 24, 19, 15, 9, 6});
         values.add(new double[]{9, 10, 11, 15, 19, 23, 26, 25, 22, 18, 13, 10});
         return buildDataset(titles, x, values);
     }
-    
+
     /**
      * Builds an XY multiple dataset using the provided values.
      *
-     * @param titles the series titles
+     * @param titles  the series titles
      * @param xValues the values for the X axis
      * @param yValues the values for the Y axis
      * @return the XY multiple dataset
@@ -73,6 +73,39 @@ public abstract class AbstractDemoChart {
         XYMultipleSeriesDataset dataset = new XYMultipleSeriesDataset();
         addXYSeries(dataset, titles, xValues, yValues, 0);
         return dataset;
+    }
+
+    protected XYMultipleSeriesDataset buildDataset(String title, double[] xValues,
+                                                   double[] yValues) {
+        XYMultipleSeriesDataset dataset = new XYMultipleSeriesDataset();
+        addXYSeries(dataset, title, xValues, yValues, 0);
+        return dataset;
+    }
+
+    public void addXYSeries(XYMultipleSeriesDataset dataset, String title, double[] xValues,
+                            double[] yValues, int scale) {
+
+        XYSeries series = new XYSeries(title, scale);
+        double[] xV = xValues;
+        double[] yV = yValues;
+        int seriesLength = xV.length;
+        for (int k = 0; k < seriesLength; k++) {
+            series.add(xV[k], yV[k]);
+        }
+        dataset.addSeries(series);
+
+
+//        int length = titles.length;
+//        for (int i = 0; i < length; i++) {
+//            XYSeries series = new XYSeries(titles[i], scale);
+//            double[] xV = xValues.get(i);
+//            double[] yV = yValues.get(i);
+//            int seriesLength = xV.length;
+//            for (int k = 0; k < seriesLength; k++) {
+//                series.add(xV[k], yV[k]);
+//            }
+//            dataset.addSeries(series);
+//        }
     }
 
     public void addXYSeries(XYMultipleSeriesDataset dataset, String[] titles, List<double[]> xValues,
@@ -103,6 +136,26 @@ public abstract class AbstractDemoChart {
         return renderer;
     }
 
+    protected XYMultipleSeriesRenderer buildRenderer(int color, PointStyle style) {
+        XYMultipleSeriesRenderer renderer = new XYMultipleSeriesRenderer();
+        setRenderer(renderer, color, style);
+        return renderer;
+    }
+
+    protected void setRenderer(XYMultipleSeriesRenderer renderer, int color, PointStyle style) {
+        renderer.setAxisTitleTextSize(smallFont.getHeight() / 2);
+        renderer.setChartTitleTextSize(smallFont.getHeight());
+        renderer.setLabelsTextSize(smallFont.getHeight() / 2);
+        renderer.setLegendTextSize(smallFont.getHeight() / 2);
+        renderer.setPointSize(5f);
+        renderer.setMargins(new int[]{medFont.getHeight(), medFont.getHeight(), 15, medFont.getHeight()});
+
+        XYSeriesRenderer r = new XYSeriesRenderer();
+        r.setColor(color);
+        r.setPointStyle(style);
+        renderer.addSeriesRenderer(r);
+    }
+
     protected void setRenderer(XYMultipleSeriesRenderer renderer, int[] colors, PointStyle[] styles) {
         renderer.setAxisTitleTextSize(smallFont.getHeight() / 2);
         renderer.setChartTitleTextSize(smallFont.getHeight());
@@ -122,15 +175,15 @@ public abstract class AbstractDemoChart {
     /**
      * Sets a few of the series renderer settings.
      *
-     * @param renderer the renderer to set the properties to
-     * @param title the chart title
-     * @param xTitle the title for the X axis
-     * @param yTitle the title for the Y axis
-     * @param xMin the minimum value on the X axis
-     * @param xMax the maximum value on the X axis
-     * @param yMin the minimum value on the Y axis
-     * @param yMax the maximum value on the Y axis
-     * @param axesColor the axes color
+     * @param renderer    the renderer to set the properties to
+     * @param title       the chart title
+     * @param xTitle      the title for the X axis
+     * @param yTitle      the title for the Y axis
+     * @param xMin        the minimum value on the X axis
+     * @param xMax        the maximum value on the X axis
+     * @param yMin        the minimum value on the Y axis
+     * @param yMax        the maximum value on the Y axis
+     * @param axesColor   the axes color
      * @param labelsColor the labels color
      */
     protected void setChartSettings(XYMultipleSeriesRenderer renderer, String title, String xTitle,
@@ -150,7 +203,7 @@ public abstract class AbstractDemoChart {
     /**
      * Builds an XY multiple time dataset using the provided values.
      *
-     * @param titles the series titles
+     * @param titles  the series titles
      * @param xValues the values for the X axis
      * @param yValues the values for the Y axis
      * @return the XY multiple time dataset
@@ -203,6 +256,13 @@ public abstract class AbstractDemoChart {
             series.add(2007 + k + "", titles.get(k), value);
             k++;
         }
+        return series;
+    }
+
+    protected MultipleCategorySeries buildMultipleCategoryDataset(String title,
+                                                                  String[] categories, double[] values) {
+        MultipleCategorySeries series = new MultipleCategorySeries(title);
+        series.add(title,categories,values);
         return series;
     }
 
@@ -268,21 +328,20 @@ public abstract class AbstractDemoChart {
         return renderer;
     }
 
-    public void setDrawOnMutableImage(boolean b) {
-        this.drawOnMutableImage = b;
-    }
-
     public boolean isDrawOnMutableImage() {
         return this.drawOnMutableImage;
     }
 
-    
+    public void setDrawOnMutableImage(boolean b) {
+        this.drawOnMutableImage = b;
+    }
+
     protected void initRendererer(DefaultRenderer renderer) {
         renderer.setBackgroundColor(0xffffffff);
         renderer.setApplyBackgroundColor(true);
         renderer.setLabelsColor(0xff000000);
         renderer.setAxesColor(0xff000000);
-        if(Font.isNativeFontSchemeSupported()) {
+        if (Font.isNativeFontSchemeSupported()) {
             Font fnt = Font.createTrueTypeFont("native:MainLight", "native:MainLight").
                     derive(Display.getInstance().convertToPixels(2.5f), Font.STYLE_PLAIN);
             renderer.setTextTypeface(fnt);
@@ -290,11 +349,11 @@ public abstract class AbstractDemoChart {
             renderer.setLabelsTextFont(fnt);
             renderer.setLegendTextFont(fnt);
 
-            if(renderer instanceof XYMultipleSeriesRenderer) {
-                ((XYMultipleSeriesRenderer)renderer).setAxisTitleTextFont(fnt);
+            if (renderer instanceof XYMultipleSeriesRenderer) {
+                ((XYMultipleSeriesRenderer) renderer).setAxisTitleTextFont(fnt);
             }
-            if(renderer instanceof XYMultipleSeriesRenderer) {
-                XYMultipleSeriesRenderer x = (XYMultipleSeriesRenderer)renderer;
+            if (renderer instanceof XYMultipleSeriesRenderer) {
+                XYMultipleSeriesRenderer x = (XYMultipleSeriesRenderer) renderer;
                 x.setMarginsColor(0xfff7f7f7);
                 x.setXLabelsColor(0xff000000);
                 x.setYLabelsColor(0, 0xff000000);
@@ -302,7 +361,7 @@ public abstract class AbstractDemoChart {
         }
 
     }
-    
+
     protected ChartComponent newChart(AbstractChart chart) {
         ChartComponent c = new ChartComponent(chart);
         c.setFocusable(true);

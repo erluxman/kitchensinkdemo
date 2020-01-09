@@ -2,15 +2,29 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="52c81d2f-2c05-4805-9a03-ae020200e403" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/com/codename1/demos/kitchen/charts/BarChartDemo.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/codename1/demos/kitchen/charts/PieChartDemo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/codename1/demos/kitchen/charts/ChartDemosList.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/codename1/demos/kitchen/charts/DonutChartDemo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/codename1/demos/kitchen/charts/ScatterChartDemo.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/JavaSE.jar" beforeDir="false" afterPath="$PROJECT_DIR$/JavaSE.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hs_err_pid1100.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hs_err_pid1124.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hs_err_pid1150.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hs_err_pid1207.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hs_err_pid1238.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hs_err_pid1356.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hs_err_pid1414.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hs_err_pid1462.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hs_err_pid1565.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hs_err_pid1582.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hs_err_pid2989.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hs_err_pid3686.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hs_err_pid5141.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/CodenameOne.jar" beforeDir="false" afterPath="$PROJECT_DIR$/lib/CodenameOne.jar" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/kitchesinkdemo/com/codename1/demos/kitchen/Components.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/kitchesinkdemo/com/codename1/demos/kitchen/Components.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/kitchesinkdemo/com/codename1/demos/kitchen/charts/AbstractDemoChart.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/kitchesinkdemo/com/codename1/demos/kitchen/charts/AbstractDemoChart.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/kitchesinkdemo/com/codename1/demos/kitchen/charts/LineChart.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/kitchesinkdemo/com/codename1/demos/kitchen/charts/LineChart.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/codename1/demos/kitchen/Components.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/codename1/demos/kitchen/Components.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/codename1/demos/kitchen/charts/AbstractDemoChart.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/codename1/demos/kitchen/charts/AbstractDemoChart.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/codename1/demos/kitchen/charts/LineChart.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/codename1/demos/kitchen/charts/LineChart.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -122,30 +136,34 @@
       <screen x="0" y="23" width="1680" height="1027" />
     </state>
     <state x="465" y="253" key="#com.intellij.ide.util.MemberChooser/0.23.1680.1027@0.23.1680.1027" timestamp="1577348024641" />
+    <state x="60" y="23" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1578363434248">
+      <screen x="0" y="23" width="1680" height="1027" />
+    </state>
+    <state x="60" y="23" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.23.1680.1027@0.23.1680.1027" timestamp="1578363434248" />
     <state width="465" height="466" key="DebuggerActiveHint" timestamp="1577515500974">
       <screen x="0" y="23" width="1680" height="1027" />
     </state>
     <state width="465" height="466" key="DebuggerActiveHint/0.23.1680.1027@0.23.1680.1027" timestamp="1577515500974" />
-    <state width="1333" height="266" key="GridCell.Tab.0.bottom" timestamp="1578047017472">
+    <state width="1359" height="425" key="GridCell.Tab.0.bottom" timestamp="1578371045279">
       <screen x="0" y="23" width="1680" height="1027" />
     </state>
     <state width="1333" height="269" key="GridCell.Tab.0.bottom/0.23.1680.1027@0.0.1680.1050" timestamp="1577858994562" />
-    <state width="1333" height="266" key="GridCell.Tab.0.bottom/0.23.1680.1027@0.23.1680.1027" timestamp="1578047017472" />
-    <state width="1333" height="266" key="GridCell.Tab.0.center" timestamp="1578047017471">
+    <state width="1359" height="425" key="GridCell.Tab.0.bottom/0.23.1680.1027@0.23.1680.1027" timestamp="1578371045279" />
+    <state width="1359" height="425" key="GridCell.Tab.0.center" timestamp="1578371045278">
       <screen x="0" y="23" width="1680" height="1027" />
     </state>
     <state width="1333" height="269" key="GridCell.Tab.0.center/0.23.1680.1027@0.0.1680.1050" timestamp="1577858994561" />
-    <state width="1333" height="266" key="GridCell.Tab.0.center/0.23.1680.1027@0.23.1680.1027" timestamp="1578047017471" />
-    <state width="1333" height="266" key="GridCell.Tab.0.left" timestamp="1578047017471">
+    <state width="1359" height="425" key="GridCell.Tab.0.center/0.23.1680.1027@0.23.1680.1027" timestamp="1578371045278" />
+    <state width="1359" height="425" key="GridCell.Tab.0.left" timestamp="1578371045278">
       <screen x="0" y="23" width="1680" height="1027" />
     </state>
     <state width="1333" height="269" key="GridCell.Tab.0.left/0.0.1680.1050@0.0.1680.1050" timestamp="1577858994550" />
-    <state width="1333" height="266" key="GridCell.Tab.0.left/0.23.1680.1027@0.23.1680.1027" timestamp="1578047017471" />
-    <state width="1333" height="266" key="GridCell.Tab.0.right" timestamp="1578047017472">
+    <state width="1359" height="425" key="GridCell.Tab.0.left/0.23.1680.1027@0.23.1680.1027" timestamp="1578371045278" />
+    <state width="1359" height="425" key="GridCell.Tab.0.right" timestamp="1578371045279">
       <screen x="0" y="23" width="1680" height="1027" />
     </state>
     <state width="1333" height="269" key="GridCell.Tab.0.right/0.23.1680.1027@0.0.1680.1050" timestamp="1577858994562" />
-    <state width="1333" height="266" key="GridCell.Tab.0.right/0.23.1680.1027@0.23.1680.1027" timestamp="1578047017472" />
+    <state width="1359" height="425" key="GridCell.Tab.0.right/0.23.1680.1027@0.23.1680.1027" timestamp="1578371045279" />
     <state width="1333" height="365" key="GridCell.Tab.1.bottom" timestamp="1577548034043">
       <screen x="0" y="23" width="1680" height="1027" />
     </state>
@@ -162,22 +180,22 @@
       <screen x="0" y="23" width="1680" height="1027" />
     </state>
     <state width="1333" height="365" key="GridCell.Tab.1.right/0.23.1680.1027@0.23.1680.1027" timestamp="1577548034043" />
-    <state x="192" y="175" key="SettingsEditor" timestamp="1576991925495">
+    <state x="192" y="175" key="SettingsEditor" timestamp="1578361593406">
       <screen x="0" y="23" width="1680" height="1027" />
     </state>
-    <state x="192" y="175" key="SettingsEditor/0.23.1680.1027@0.23.1680.1027" timestamp="1576991925495" />
-    <state x="465" y="204" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1576993111919">
+    <state x="192" y="175" key="SettingsEditor/0.23.1680.1027@0.23.1680.1027" timestamp="1578361593406" />
+    <state x="465" y="204" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1578366274657">
       <screen x="0" y="23" width="1680" height="1027" />
     </state>
-    <state x="465" y="204" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser/0.23.1680.1027@0.23.1680.1027" timestamp="1576993111919" />
+    <state x="465" y="204" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser/0.23.1680.1027@0.23.1680.1027" timestamp="1578366274657" />
     <state x="429" y="308" key="extract.method.dialog" timestamp="1576908416092">
       <screen x="0" y="23" width="1680" height="1027" />
     </state>
     <state x="429" y="308" key="extract.method.dialog/0.23.1680.1027@0.23.1680.1027" timestamp="1576908416092" />
-    <state x="322" y="298" width="666" height="476" key="find.popup" timestamp="1577877537940">
+    <state x="322" y="298" width="666" height="476" key="find.popup" timestamp="1578357372774">
       <screen x="0" y="23" width="1680" height="1027" />
     </state>
-    <state x="322" y="298" width="666" height="476" key="find.popup/0.23.1680.1027@0.23.1680.1027" timestamp="1577877537940" />
+    <state x="322" y="298" width="666" height="476" key="find.popup/0.23.1680.1027@0.23.1680.1027" timestamp="1578357372774" />
     <state x="62" y="264" key="new project wizard" timestamp="1577875297130">
       <screen x="0" y="23" width="1680" height="1027" />
     </state>
@@ -199,6 +217,10 @@
           <url>jar://$PROJECT_DIR$/lib/CodenameOne_SRC.zip!/com/codename1/charts/views/XYChart.java</url>
           <line>175</line>
           <option name="timeStamp" value="3" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>jar://$PROJECT_DIR$/lib/CodenameOne_SRC.zip!/com/codename1/ui/Container.java</url>
+          <option name="timeStamp" value="4" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

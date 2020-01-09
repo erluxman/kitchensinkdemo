@@ -44,9 +44,6 @@ import com.codename1.components.SplitPane;
 import com.codename1.components.Switch;
 import com.codename1.components.SwitchList;
 import com.codename1.components.ToastBar;
-import com.codename1.demos.kitchen.charts.BarChartDemo;
-import com.codename1.demos.kitchen.charts.LineChart;
-import com.codename1.demos.kitchen.charts.PieChartDemo;
 import com.codename1.demos.kitchen.components.ComponentDemo;
 import com.codename1.demos.kitchen.components.InfiniteContainerDemo;
 import com.codename1.maps.MapComponent;
@@ -82,6 +79,11 @@ import com.codename1.ui.list.ListModel;
 
 import static com.codename1.components.SplitPane.HORIZONTAL_SPLIT;
 import static com.codename1.components.SplitPane.VERTICAL_SPLIT;
+import static com.codename1.demos.kitchen.charts.ChartDemosList.getBarChartButton;
+import static com.codename1.demos.kitchen.charts.ChartDemosList.getDonutChartButton;
+import static com.codename1.demos.kitchen.charts.ChartDemosList.getLineChartButton;
+import static com.codename1.demos.kitchen.charts.ChartDemosList.getPieChartButton;
+import static com.codename1.demos.kitchen.charts.ChartDemosList.getScatterChartButton;
 import static com.codename1.ui.CN.CENTER;
 
 
@@ -397,42 +399,11 @@ public class Components extends Demo {
         demo.add("Line Chart", getLineChartButton());
         demo.add("Bar Chart", getBarChartButton());
         demo.add("Pie Chart", getPieChartButton());
+        demo.add("Scatter Chart", getScatterChartButton());
+        demo.add("Donut Chart", getDonutChartButton());
         return demo.generate();
     }
 
-    private Button getLineChartButton(){
-        Button showLineChart = new Button("Line Chart");
-        Form lineChartViewer = new Form("Line Charts ", new BorderLayout());
-        lineChartViewer.add(CENTER, BorderLayout.center(new LineChart().execute()));
-        lineChartViewer.getToolbar().setBackCommand("Line Chart", ee -> showLineChart.getComponentForm().showBack());
-        showLineChart.addActionListener(evt -> {
-            lineChartViewer.show();
-        });
-        return showLineChart;
-    }
-
-    private Button getBarChartButton(){
-        Button showBarChart = new Button("Bar Chart");
-        Form barChartViewer = new Form("Bar Charts ", new BorderLayout());
-        barChartViewer.add(CENTER, BorderLayout.center(new BarChartDemo().execute()));
-        barChartViewer.getToolbar().setBackCommand("Bar Chart", ee -> showBarChart.getComponentForm().showBack());
-        showBarChart.addActionListener(evt -> {
-            barChartViewer.show();
-        });
-
-        return showBarChart;
-    }
-    private Button getPieChartButton(){
-        Button showPieChart = new Button("Pie Chart");
-        Form pieChartViewer = new Form("Pie Charts ", new BorderLayout());
-        pieChartViewer.add(CENTER, BorderLayout.center(new PieChartDemo().execute()));
-        pieChartViewer.getToolbar().setBackCommand("Pie Chart", ee -> showPieChart.getComponentForm().showBack());
-        showPieChart.addActionListener(evt -> {
-            pieChartViewer.show();
-        });
-
-        return showPieChart;
-    }
     Container toolbarContainer() {
         ComponentDemo demo = new ComponentDemo("Toolbar");
         Toolbar searchBar = new Toolbar();
