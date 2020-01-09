@@ -383,7 +383,7 @@ public class Components extends Demo {
                 getResources().getImage("themes.png"),
                 getResources().getImage("dog.jpg")
         );
-        imageViewer.setImt addageList(images);
+        imageViewer.setImageList(images);
 
 
         demo.add("Browser Component", showBrowserComponent);
