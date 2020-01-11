@@ -32,7 +32,7 @@ public class ChartDemosList {
     public static Button getDialChartButton() {
         Button showDialChart = new Button("Dial Chart");
         Form dialChartViewer = new Form("Dial Charts ", new BorderLayout());
-        dialChartViewer.add(CENTER, BorderLayout.center(new CubicLineChartDemo().execute()));
+        dialChartViewer.add(CENTER, BorderLayout.center(new DialChartDemo().execute()));
         dialChartViewer.getToolbar().setBackCommand("Dial Chart", ee -> showDialChart.getComponentForm().showBack());
         showDialChart.addActionListener(evt -> {
             dialChartViewer.show();
@@ -65,15 +65,15 @@ public class ChartDemosList {
     }
 
     public static Button getCombinedXYChartButton() {
-        Button showBarChart = new Button("Bar Chart");
-        Form barChartViewer = new Form("Bar Charts ", new BorderLayout());
-        barChartViewer.add(CENTER, BorderLayout.center(new BarChartDemo().execute()));
-        barChartViewer.getToolbar().setBackCommand("Bar Chart", ee -> showBarChart.getComponentForm().showBack());
-        showBarChart.addActionListener(evt -> {
-            barChartViewer.show();
+        Button combinedXYChart = new Button("CombinedXY Chart");
+        Form combinedXYChartViewer = new Form("CombinedXY Charts ", new BorderLayout());
+        combinedXYChartViewer.add(CENTER, BorderLayout.center(new CombinedXYChartDemo().execute()));
+        combinedXYChartViewer.getToolbar().setBackCommand("CombinedXY Chart", ee -> combinedXYChart.getComponentForm().showBack());
+        combinedXYChart.addActionListener(evt -> {
+            combinedXYChartViewer.show();
         });
 
-        return showBarChart;
+        return combinedXYChart;
     }
 
     public static Button getPieChartButton() {
@@ -125,15 +125,15 @@ public class ChartDemosList {
     }
 
     public static Button getTimeChartButton() {
-        Button showScatterChart = new Button("Scatter Chart");
-        Form scatterChartViewer = new Form("Scatter Charts ", new BorderLayout());
-        scatterChartViewer.add(CENTER, BorderLayout.center(new ScatterChartDemo().execute()));
-        scatterChartViewer.getToolbar().setBackCommand("Scatter Chart", ee -> showScatterChart.getComponentForm().showBack());
-        showScatterChart.addActionListener(evt -> {
-            scatterChartViewer.show();
+        Button showTimeChart = new Button("Time Chart");
+        Form timeChartViewer = new Form("Time Charts ", new BorderLayout());
+        timeChartViewer.add(CENTER, BorderLayout.center(new TimeChartDemo().execute()));
+        timeChartViewer.getToolbar().setBackCommand("Time Chart", ee -> showTimeChart.getComponentForm().showBack());
+        showTimeChart.addActionListener(evt -> {
+            timeChartViewer.show();
         });
 
-        return showScatterChart;
+        return showTimeChart;
     }
 
     public static Button getDonutChartButton() {
