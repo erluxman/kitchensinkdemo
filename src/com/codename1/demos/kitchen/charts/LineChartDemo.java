@@ -23,7 +23,6 @@ public class LineChartDemo extends AbstractDemoChart {
         renderer.setXTitle("Month");
         setRenderer(renderer, colors, styles);
         initRendererer(renderer);
-        LineChart chart = new LineChart(dataSet, renderer);
-        return newChart(chart);
+        return newChart(new LineChart(dataSet, renderer));
     }
 }

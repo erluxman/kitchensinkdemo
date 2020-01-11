@@ -17,7 +17,6 @@ public class DonutChartDemo extends AbstractDemoChart {
 
         MultipleCategorySeries series = new MultipleCategorySeries("Project Budget");
         series.add("Project Budget", titles, values);
-        DoughnutChart chart = new DoughnutChart(series, renderer);
-        return newChart(chart);
+        return newChart(new DoughnutChart(series, renderer));
     }
 }

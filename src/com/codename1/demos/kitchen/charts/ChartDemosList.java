@@ -89,27 +89,27 @@ public class ChartDemosList {
     }
 
     public static Button getRadarChartButton() {
-        Button showPieChart = new Button("Pie Chart");
-        Form pieChartViewer = new Form("Pie Charts ", new BorderLayout());
-        pieChartViewer.add(CENTER, BorderLayout.center(new PieChartDemo().execute()));
-        pieChartViewer.getToolbar().setBackCommand("Pie Chart", ee -> showPieChart.getComponentForm().showBack());
-        showPieChart.addActionListener(evt -> {
-            pieChartViewer.show();
+        Button showRadarChart = new Button("Radar Chart");
+        Form radarChartViewer = new Form("Radar Charts ", new BorderLayout());
+        radarChartViewer.add(CENTER, BorderLayout.center(new RadarChartDemo().execute()));
+        radarChartViewer.getToolbar().setBackCommand("Radar Chart", ee -> showRadarChart.getComponentForm().showBack());
+        showRadarChart.addActionListener(evt -> {
+            radarChartViewer.show();
         });
 
-        return showPieChart;
+        return showRadarChart;
     }
 
     public static Button getRoundChartButton() {
-        Button showPieChart = new Button("Pie Chart");
-        Form pieChartViewer = new Form("Pie Charts ", new BorderLayout());
-        pieChartViewer.add(CENTER, BorderLayout.center(new PieChartDemo().execute()));
-        pieChartViewer.getToolbar().setBackCommand("Pie Chart", ee -> showPieChart.getComponentForm().showBack());
-        showPieChart.addActionListener(evt -> {
-            pieChartViewer.show();
+        Button showRoundChart = new Button("Round Chart");
+        Form roundChartViewer = new Form("Round Charts ", new BorderLayout());
+        roundChartViewer.add(CENTER, BorderLayout.center(new RoundChartDemo().execute()));
+        roundChartViewer.getToolbar().setBackCommand("Round Chart", ee -> showRoundChart.getComponentForm().showBack());
+        showRoundChart.addActionListener(evt -> {
+            roundChartViewer.show();
         });
 
-        return showPieChart;
+        return showRoundChart;
     }
 
     public static Button getScatterChartButton() {

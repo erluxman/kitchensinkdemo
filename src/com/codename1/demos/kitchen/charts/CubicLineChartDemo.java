@@ -24,7 +24,6 @@ public class CubicLineChartDemo extends AbstractDemoChart {
         renderer.setXTitle("Month");
         setRenderer(renderer, colors, styles);
         initRendererer(renderer);
-        CubicLineChart chart = new CubicLineChart(dataSet, renderer,0.5f);
-        return newChart(chart);
+        return newChart(new CubicLineChart(dataSet, renderer,0.5f));
     }
 }

@@ -16,7 +16,7 @@ public class BubbleChartDemo extends AbstractDemoChart {
     public Component execute() {
         XYMultipleSeriesDataset series = new XYMultipleSeriesDataset();
 
-        XYValueSeries newTicketSeries = new XYValueSeries("New Tickets");
+        XYValueSeries newTicketSeries = new XYValueSeries("Laptop Speed");
         newTicketSeries.add(4f, 4, 32);
         newTicketSeries.add(8f, 2, 32);
         newTicketSeries.add(8f, 3, 48);
