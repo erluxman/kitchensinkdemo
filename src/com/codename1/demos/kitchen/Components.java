@@ -81,10 +81,17 @@ import com.codename1.ui.list.ListModel;
 import static com.codename1.components.SplitPane.HORIZONTAL_SPLIT;
 import static com.codename1.components.SplitPane.VERTICAL_SPLIT;
 import static com.codename1.demos.kitchen.charts.ChartDemosList.getBarChartButton;
+import static com.codename1.demos.kitchen.charts.ChartDemosList.getBubbleChartButton;
+import static com.codename1.demos.kitchen.charts.ChartDemosList.getCombinedXYChartButton;
+import static com.codename1.demos.kitchen.charts.ChartDemosList.getCubicLineChartButton;
+import static com.codename1.demos.kitchen.charts.ChartDemosList.getDialChartButton;
 import static com.codename1.demos.kitchen.charts.ChartDemosList.getDonutChartButton;
 import static com.codename1.demos.kitchen.charts.ChartDemosList.getLineChartButton;
 import static com.codename1.demos.kitchen.charts.ChartDemosList.getPieChartButton;
+import static com.codename1.demos.kitchen.charts.ChartDemosList.getRadarChartButton;
+import static com.codename1.demos.kitchen.charts.ChartDemosList.getRoundChartButton;
 import static com.codename1.demos.kitchen.charts.ChartDemosList.getScatterChartButton;
+import static com.codename1.demos.kitchen.charts.ChartDemosList.getTimeChartButton;
 import static com.codename1.ui.CN.CENTER;
 
 
@@ -398,11 +405,18 @@ public class Components extends Demo {
     Container chartsContainer() {
         ComponentDemo demo = new ComponentDemo("Charts");
 
-        demo.add("Line Chart", getLineChartButton());
         demo.add("Bar Chart", getBarChartButton());
-        demo.add("Pie Chart", getPieChartButton());
-        demo.add("Scatter Chart", getScatterChartButton());
+        demo.add("Bubble Chart", getBubbleChartButton());
+        demo.add("CombinedXY Chart", getCombinedXYChartButton());
+        demo.add("CubicLine Chart", getCubicLineChartButton());
+        demo.add("Dial Chart", getDialChartButton());
         demo.add("Donut Chart", getDonutChartButton());
+        demo.add("Line Chart", getLineChartButton());
+        demo.add("Pie Chart", getPieChartButton());
+        demo.add("Radar Chart", getRadarChartButton());
+        demo.add("Round Chart", getRoundChartButton());
+        demo.add("Scatter Chart", getScatterChartButton());
+        demo.add("Time Chart", getTimeChartButton());
         return demo.generate();
     }
 

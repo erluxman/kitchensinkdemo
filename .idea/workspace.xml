@@ -2,118 +2,18 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="52c81d2f-2c05-4805-9a03-ae020200e403" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/com/codename1/demos/kitchen/map/GoogleMapDemo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/codename1/demos/kitchen/charts/BubbleChartDemo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/codename1/demos/kitchen/charts/LineChartDemo.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.cn1/localstorage/https_www.codenameone.com_0.localstorage-shm" beforeDir="false" afterPath="$PROJECT_DIR$/.cn1/localstorage/https_www.codenameone.com_0.localstorage-shm" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.cn1/localstorage/https_www.codenameone.com_0.localstorage-wal" beforeDir="false" afterPath="$PROJECT_DIR$/.cn1/localstorage/https_www.codenameone.com_0.localstorage-wal" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/JavaSE.jar" beforeDir="false" afterPath="$PROJECT_DIR$/JavaSE.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Versions.properties" beforeDir="false" afterPath="$PROJECT_DIR$/Versions.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/built-jar.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/Handlee-Regular.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/com/codename1/demos/kitchen/ClockDemo$1ClockImage.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/com/codename1/demos/kitchen/ClockDemo$AnalogClock.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/com/codename1/demos/kitchen/ClockDemo.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/com/codename1/demos/kitchen/Components.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/com/codename1/demos/kitchen/Contacts$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/com/codename1/demos/kitchen/Contacts.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/com/codename1/demos/kitchen/Demo.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/com/codename1/demos/kitchen/DemoComponent.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/com/codename1/demos/kitchen/Input.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/com/codename1/demos/kitchen/Layouts.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/com/codename1/demos/kitchen/MyApplication.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/com/codename1/demos/kitchen/RatingWidget$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/com/codename1/demos/kitchen/RatingWidget.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/com/codename1/demos/kitchen/SalesDemo$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/com/codename1/demos/kitchen/SalesDemo$2.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/com/codename1/demos/kitchen/SalesDemo.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/com/codename1/demos/kitchen/Themes.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/com/codename1/demos/kitchen/Video$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/com/codename1/demos/kitchen/Video.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/com/codename1/demos/kitchen/WebServices$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/com/codename1/demos/kitchen/WebServices$ImageListModel.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/com/codename1/demos/kitchen/WebServices.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/com/codename1/demos/kitchen/charts/AbstractDemoChart.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/com/codename1/demos/kitchen/charts/BarChartDemo.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/com/codename1/demos/kitchen/charts/ChartDemosList.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/com/codename1/demos/kitchen/charts/DonutChartDemo.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/com/codename1/demos/kitchen/charts/LineChart.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/com/codename1/demos/kitchen/charts/PieChartDemo.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/com/codename1/demos/kitchen/charts/ScatterChartDemo.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/com/codename1/demos/kitchen/components/ComponentDemo$SubComponentDemo.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/com/codename1/demos/kitchen/components/ComponentDemo.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/com/codename1/demos/kitchen/components/InfiniteContainerDemo.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/theme.res" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/tmp/com/codename1/demos/kitchen/ClockDemo$1ClockImage.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/tmp/com/codename1/demos/kitchen/ClockDemo$AnalogClock.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/tmp/com/codename1/demos/kitchen/ClockDemo.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/tmp/com/codename1/demos/kitchen/Components.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/tmp/com/codename1/demos/kitchen/Contacts$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/tmp/com/codename1/demos/kitchen/Contacts.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/tmp/com/codename1/demos/kitchen/Demo.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/tmp/com/codename1/demos/kitchen/DemoComponent.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/tmp/com/codename1/demos/kitchen/Input.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/tmp/com/codename1/demos/kitchen/Layouts.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/tmp/com/codename1/demos/kitchen/MyApplication.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/tmp/com/codename1/demos/kitchen/RatingWidget$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/tmp/com/codename1/demos/kitchen/RatingWidget.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/tmp/com/codename1/demos/kitchen/SalesDemo$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/tmp/com/codename1/demos/kitchen/SalesDemo$2.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/tmp/com/codename1/demos/kitchen/SalesDemo.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/tmp/com/codename1/demos/kitchen/Themes.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/tmp/com/codename1/demos/kitchen/Video$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/tmp/com/codename1/demos/kitchen/Video.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/tmp/com/codename1/demos/kitchen/WebServices$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/tmp/com/codename1/demos/kitchen/WebServices$ImageListModel.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/tmp/com/codename1/demos/kitchen/WebServices.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/tmp/com/codename1/demos/kitchen/charts/AbstractDemoChart.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/tmp/com/codename1/demos/kitchen/charts/BarChartDemo.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/tmp/com/codename1/demos/kitchen/charts/ChartDemosList.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/tmp/com/codename1/demos/kitchen/charts/DonutChartDemo.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/tmp/com/codename1/demos/kitchen/charts/LineChart.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/tmp/com/codename1/demos/kitchen/charts/PieChartDemo.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/tmp/com/codename1/demos/kitchen/charts/ScatterChartDemo.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/tmp/com/codename1/demos/kitchen/components/ComponentDemo$SubComponentDemo.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/tmp/com/codename1/demos/kitchen/components/ComponentDemo.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/tmp/com/codename1/demos/kitchen/components/InfiniteContainerDemo.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/codenameone_settings.properties" beforeDir="false" afterPath="$PROJECT_DIR$/codenameone_settings.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/MyApplication.jar" beforeDir="false" afterPath="$PROJECT_DIR$/dist/MyApplication.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/CodenameOne.jar" beforeDir="false" afterPath="$PROJECT_DIR$/lib/CodenameOne.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/impl/cls/com/codename1/googlemaps/InternalNativeMaps.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/impl/cls/com/codename1/googlemaps/MapContainer$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/impl/cls/com/codename1/googlemaps/MapContainer$2.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/impl/cls/com/codename1/googlemaps/MapContainer$3$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/impl/cls/com/codename1/googlemaps/MapContainer$3$2.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/impl/cls/com/codename1/googlemaps/MapContainer$3$3.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/impl/cls/com/codename1/googlemaps/MapContainer$3$4.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/impl/cls/com/codename1/googlemaps/MapContainer$3$5$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/impl/cls/com/codename1/googlemaps/MapContainer$3$5.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/impl/cls/com/codename1/googlemaps/MapContainer$3.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/impl/cls/com/codename1/googlemaps/MapContainer$4.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/impl/cls/com/codename1/googlemaps/MapContainer$5.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/impl/cls/com/codename1/googlemaps/MapContainer$6.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/impl/cls/com/codename1/googlemaps/MapContainer$7.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/impl/cls/com/codename1/googlemaps/MapContainer$BrowserBridge.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/impl/cls/com/codename1/googlemaps/MapContainer$MapObject.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/impl/cls/com/codename1/googlemaps/MapContainer$MarkerOptions.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/impl/cls/com/codename1/googlemaps/MapContainer.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/impl/cls/com/codename1/googlemaps/MapLayout$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/impl/cls/com/codename1/googlemaps/MapLayout.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/impl/cls/com_codename1_googlemaps.cn1mf.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/impl/cls/com_codename1_googlemaps_MapContainer.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/impl/native/android/com/codename1/googlemaps/InternalNativeMapsImpl.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/impl/native/ios/com_codename1_googlemaps_InternalNativeMapsImpl.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/impl/native/ios/com_codename1_googlemaps_InternalNativeMapsImpl.m" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/impl/native/j2me/com/codename1/googlemaps/InternalNativeMapsImpl.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/impl/native/javascript/com_codename1_googlemaps_InternalNativeMaps.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/impl/native/javase/com/codename1/googlemaps/InternalNativeMapsImpl.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/impl/native/rim/com/codename1/googlemaps/InternalNativeMapsImpl.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/impl/native/win/com/codename1/googlemaps/InternalNativeMapsImpl.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/impl/stubs/com/codename1/googlemaps/InternalNativeMaps.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/impl/stubs/com/codename1/googlemaps/MapContainer.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/impl/stubs/com/codename1/googlemaps/MapLayout.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/kitchesinkdemo/META-INF/kitchesinkdemo.kotlin_module" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build.xml" beforeDir="false" afterPath="$PROJECT_DIR$/build.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/kitchesinkdemo/com/codename1/demos/kitchen/Components.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/kitchesinkdemo/com/codename1/demos/kitchen/Components.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/kitchesinkdemo/com/codename1/demos/kitchen/charts/ChartDemosList.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/kitchesinkdemo/com/codename1/demos/kitchen/charts/ChartDemosList.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/kitchesinkdemo/com/codename1/demos/kitchen/charts/LineChart.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/codename1/demos/kitchen/Components.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/codename1/demos/kitchen/Components.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/codename1/demos/kitchen/charts/ChartDemosList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/codename1/demos/kitchen/charts/ChartDemosList.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/codename1/demos/kitchen/charts/LineChart.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/codename1/demos/kitchen/charts/CubicLineChartDemo.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -157,16 +57,16 @@
     <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/src/com/codename1/demos/kitchen/charts" />
+    <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/src" />
       <recent name="$PROJECT_DIR$" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
-      <recent name="com.codename1.demos.kitchen.map" />
       <recent name="com.codename1.demos.kitchen.charts" />
+      <recent name="com.codename1.demos.kitchen.map" />
     </key>
-    <key name="MoveFile.RECENT_KEYS">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/com/codename1/demos/kitchen/charts" />
       <recent name="$PROJECT_DIR$/src" />
       <recent name="$PROJECT_DIR$" />
     </key>
@@ -238,26 +138,26 @@
       <screen x="0" y="23" width="1680" height="1027" />
     </state>
     <state x="103" y="123" width="1060" height="827" key="DiffContextDialog/0.23.1680.1027@0.23.1680.1027" timestamp="1578574565023" />
-    <state width="1218" height="211" key="GridCell.Tab.0.bottom" timestamp="1578576516922">
+    <state width="1359" height="211" key="GridCell.Tab.0.bottom" timestamp="1578737378070">
       <screen x="0" y="23" width="1680" height="1027" />
     </state>
     <state width="1333" height="269" key="GridCell.Tab.0.bottom/0.23.1680.1027@0.0.1680.1050" timestamp="1577858994562" />
-    <state width="1218" height="211" key="GridCell.Tab.0.bottom/0.23.1680.1027@0.23.1680.1027" timestamp="1578576516922" />
-    <state width="1218" height="211" key="GridCell.Tab.0.center" timestamp="1578576516921">
+    <state width="1359" height="211" key="GridCell.Tab.0.bottom/0.23.1680.1027@0.23.1680.1027" timestamp="1578737378070" />
+    <state width="1359" height="211" key="GridCell.Tab.0.center" timestamp="1578737378070">
       <screen x="0" y="23" width="1680" height="1027" />
     </state>
     <state width="1333" height="269" key="GridCell.Tab.0.center/0.23.1680.1027@0.0.1680.1050" timestamp="1577858994561" />
-    <state width="1218" height="211" key="GridCell.Tab.0.center/0.23.1680.1027@0.23.1680.1027" timestamp="1578576516921" />
-    <state width="1218" height="211" key="GridCell.Tab.0.left" timestamp="1578576516921">
+    <state width="1359" height="211" key="GridCell.Tab.0.center/0.23.1680.1027@0.23.1680.1027" timestamp="1578737378070" />
+    <state width="1359" height="211" key="GridCell.Tab.0.left" timestamp="1578737378069">
       <screen x="0" y="23" width="1680" height="1027" />
     </state>
     <state width="1333" height="269" key="GridCell.Tab.0.left/0.0.1680.1050@0.0.1680.1050" timestamp="1577858994550" />
-    <state width="1218" height="211" key="GridCell.Tab.0.left/0.23.1680.1027@0.23.1680.1027" timestamp="1578576516921" />
-    <state width="1218" height="211" key="GridCell.Tab.0.right" timestamp="1578576516922">
+    <state width="1359" height="211" key="GridCell.Tab.0.left/0.23.1680.1027@0.23.1680.1027" timestamp="1578737378069" />
+    <state width="1359" height="211" key="GridCell.Tab.0.right" timestamp="1578737378070">
       <screen x="0" y="23" width="1680" height="1027" />
     </state>
     <state width="1333" height="269" key="GridCell.Tab.0.right/0.23.1680.1027@0.0.1680.1050" timestamp="1577858994562" />
-    <state width="1218" height="211" key="GridCell.Tab.0.right/0.23.1680.1027@0.23.1680.1027" timestamp="1578576516922" />
+    <state width="1359" height="211" key="GridCell.Tab.0.right/0.23.1680.1027@0.23.1680.1027" timestamp="1578737378070" />
     <state width="1333" height="365" key="GridCell.Tab.1.bottom" timestamp="1577548034043">
       <screen x="0" y="23" width="1680" height="1027" />
     </state>
@@ -274,10 +174,10 @@
       <screen x="0" y="23" width="1680" height="1027" />
     </state>
     <state width="1333" height="365" key="GridCell.Tab.1.right/0.23.1680.1027@0.23.1680.1027" timestamp="1577548034043" />
-    <state x="192" y="175" key="SettingsEditor" timestamp="1578361593406">
+    <state x="192" y="175" key="SettingsEditor" timestamp="1578734126959">
       <screen x="0" y="23" width="1680" height="1027" />
     </state>
-    <state x="192" y="175" key="SettingsEditor/0.23.1680.1027@0.23.1680.1027" timestamp="1578361593406" />
+    <state x="192" y="175" key="SettingsEditor/0.23.1680.1027@0.23.1680.1027" timestamp="1578734126959" />
     <state x="465" y="204" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1578571260386">
       <screen x="0" y="23" width="1680" height="1027" />
     </state>
@@ -294,10 +194,10 @@
       <screen x="0" y="23" width="1680" height="1027" />
     </state>
     <state x="62" y="264" key="new project wizard/0.23.1680.1027@0.23.1680.1027" timestamp="1577875297130" />
-    <state x="356" y="250" width="670" height="676" key="search.everywhere.popup" timestamp="1577878448877">
+    <state x="356" y="250" width="670" height="676" key="search.everywhere.popup" timestamp="1578736023871">
       <screen x="0" y="23" width="1680" height="1027" />
     </state>
-    <state x="356" y="250" width="670" height="676" key="search.everywhere.popup/0.23.1680.1027@0.23.1680.1027" timestamp="1577878448877" />
+    <state x="356" y="250" width="670" height="676" key="search.everywhere.popup/0.23.1680.1027@0.23.1680.1027" timestamp="1578736023871" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
