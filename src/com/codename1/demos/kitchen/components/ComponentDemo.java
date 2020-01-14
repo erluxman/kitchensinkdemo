@@ -20,11 +20,12 @@ public class ComponentDemo {
         return this;
     }
 
-    public Container generate() {
+    public Container generate(boolean scrollable) {
         Label componentTitle = new Label(title, "componentTitle");
 
         Container componentDemo = new Container(BoxLayout.y(), "componentDemo");
         componentDemo.add(componentTitle);
+        componentDemo.setScrollableY(scrollable);
 
         for (SubComponentDemo subComponent : subComponents) {
             componentDemo.add(
@@ -36,6 +37,10 @@ public class ComponentDemo {
             );
         }
         return componentDemo;
+    }
+
+     public Container generate() {
+        return  generate(false);
     }
 
     private  static class SubComponentDemo {

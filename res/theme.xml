@@ -3,6 +3,15 @@
 <resource majorVersion="1" minorVersion="10" useXmlUI="false">
     <image name="background.jpg"  />
     <image name="card-full.png" type="multi"  />
+    <image name="CardButton.borderBottom_1.png" type="multi"  />
+    <image name="CardButton.borderBottomL_1.png" type="multi"  />
+    <image name="CardButton.borderBottomR_1.png" type="multi"  />
+    <image name="CardButton.borderCenter_1.png" type="multi"  />
+    <image name="CardButton.borderLeft_1.png" type="multi"  />
+    <image name="CardButton.borderRight_1.png" type="multi"  />
+    <image name="CardButton.borderTop_1.png" type="multi"  />
+    <image name="CardButton.borderTopL_1.png" type="multi"  />
+    <image name="CardButton.borderTopR_1.png" type="multi"  />
     <image name="charts.png" type="multi"  />
     <image name="circle-line.png" type="multi"  />
     <image name="circle.png" type="multi"  />
@@ -69,6 +78,15 @@
         <val key="CardBottom.press#derive" value="CardBottom" />
         <val key="CardBottom.sel#derive" value="CardBottom" />
         <val key="CardBottom.transparency" value="0" />
+        <val key="CardButton.align" value="4" />
+        <val key="CardButton.bgColor" value="ffffff" />
+        <border key="CardButton.border" type="image" i1="CardButton.borderTop_1.png" i2="CardButton.borderBottom_1.png" i3="CardButton.borderLeft_1.png" i4="CardButton.borderRight_1.png" i5="CardButton.borderTopL_1.png" i6="CardButton.borderTopR_1.png" i7="CardButton.borderBottomL_1.png" i8="CardButton.borderBottomR_1.png" i9="CardButton.borderCenter_1.png" />
+        <font key="CardButton.font" type="ttf" face="0" style="0" size="16" name="native:MainRegular" family="native:MainRegular" sizeSettings="3" actualSize="3.5" />
+        <val key="CardButton.marUnit" value="2,2,2,2" />
+        <val key="CardButton.margin" value="2.0,2.0,2.0,2.0" />
+        <val key="CardButton.padUnit" value="2,2,2,2" />
+        <val key="CardButton.padding" value="6.0,6.0,6.0,6.0" />
+        <val key="CardButton.transparency" value="255" />
         <val key="CardTop.align" value="4" />
         <val key="CardTop.dis#derive" value="CardTop" />
         <val key="CardTop.fgColor" value="ffffff" />

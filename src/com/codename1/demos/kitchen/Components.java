@@ -80,18 +80,6 @@ import com.codename1.ui.list.ListModel;
 
 import static com.codename1.components.SplitPane.HORIZONTAL_SPLIT;
 import static com.codename1.components.SplitPane.VERTICAL_SPLIT;
-import static com.codename1.demos.kitchen.charts.ChartDemosList.getBarChartButton;
-import static com.codename1.demos.kitchen.charts.ChartDemosList.getBubbleChartButton;
-import static com.codename1.demos.kitchen.charts.ChartDemosList.getCombinedXYChartButton;
-import static com.codename1.demos.kitchen.charts.ChartDemosList.getCubicLineChartButton;
-import static com.codename1.demos.kitchen.charts.ChartDemosList.getDialChartButton;
-import static com.codename1.demos.kitchen.charts.ChartDemosList.getDonutChartButton;
-import static com.codename1.demos.kitchen.charts.ChartDemosList.getLineChartButton;
-import static com.codename1.demos.kitchen.charts.ChartDemosList.getPieChartButton;
-import static com.codename1.demos.kitchen.charts.ChartDemosList.getRadarChartButton;
-import static com.codename1.demos.kitchen.charts.ChartDemosList.getRoundChartButton;
-import static com.codename1.demos.kitchen.charts.ChartDemosList.getScatterChartButton;
-import static com.codename1.demos.kitchen.charts.ChartDemosList.getTimeChartButton;
 import static com.codename1.ui.CN.CENTER;
 
 
@@ -129,7 +117,7 @@ public class Components extends Demo {
     public Container createDemo() {
 
         Container selection = BoxLayout.encloseY(
-                chartsContainer(),
+                chartsCard(),
                 advancedContainer(),
                 mapsContainer(),
                 mediaContainer(),
@@ -402,22 +390,15 @@ public class Components extends Demo {
         return demo.generate();
     }
 
-    Container chartsContainer() {
-        ComponentDemo demo = new ComponentDemo("Charts");
-
-        demo.add("Bar Chart", getBarChartButton());
-        demo.add("Bubble Chart", getBubbleChartButton());
-        demo.add("CombinedXY Chart", getCombinedXYChartButton());
-        demo.add("CubicLine Chart", getCubicLineChartButton());
-        demo.add("Dial Chart", getDialChartButton());
-        demo.add("Donut Chart", getDonutChartButton());
-        demo.add("Line Chart", getLineChartButton());
-        demo.add("Pie Chart", getPieChartButton());
-        demo.add("Radar Chart", getRadarChartButton());
-        demo.add("Round Chart", getRoundChartButton());
-        demo.add("Scatter Chart", getScatterChartButton());
-        demo.add("Time Chart", getTimeChartButton());
-        return demo.generate();
+    Component chartsCard() {
+        Button showCharts = new Button("Charts","CardButton");
+        Form charts = new Form("Charts ", new BorderLayout());
+        charts.add(CENTER, BorderLayout.center(ComponentFactory.chartsContainer()));
+        charts.getToolbar().setBackCommand("Charts", ee -> showCharts.getComponentForm().showBack());
+        showCharts.addActionListener(evt -> {
+            charts.show();
+        });
+        return showCharts;
     }
 
     Container toolbarContainer() {
