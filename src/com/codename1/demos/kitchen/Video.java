@@ -23,6 +23,7 @@
 package com.codename1.demos.kitchen;
 
 import com.codename1.capture.Capture;
+import com.codename1.charts.util.ColorUtil;
 import com.codename1.components.InfiniteProgress;
 import com.codename1.components.MediaPlayer;
 import com.codename1.components.MultiButton;
@@ -105,7 +106,7 @@ public class Video  extends Demo {
         
         // special case: the simulator doesn't support https URLs for media due to JavaFX limitations
         if(isSimulator()) {
-            helloOnline.addActionListener(e -> playVideo(parent, "http://www.codenameone.com/files/hello-codenameone.mp4"));
+            helloOnline.addActionListener(e -> playVideo(parent, "https://www.codenameone.com/files/hello-codenameone.mp4"));
         } else {
             helloOnline.addActionListener(e -> playVideo(parent, "https://www.codenameone.com/files/hello-codenameone.mp4"));
         }
@@ -176,7 +177,9 @@ public class Video  extends Demo {
             }
             parent.showBack();
         });
-        player.add(CENTER, new InfiniteProgress());
+        InfiniteProgress progress = new InfiniteProgress();
+        progress.setTintColor(ColorUtil.GREEN);
+        player.add(CENTER, progress);
         scheduleBackgroundTask(() -> {
             try {
                 Media video = MediaManager.createMedia(videoUrl, true, () -> parent.showBack());

@@ -89,7 +89,7 @@ public class Components extends Demo {
                 getCard("Containers", containersContainer()),
                 getCard("Dialog", dialogsContainer()),
                 getCard("Progress", progressContainer()),
-                getCard("Toolbar", toolbarContainer()),
+                getCard("Hello Toolbar", toolbarContainer()),
                 getCard("Media", mediaContainer())
                 );
         selection.setScrollableY(true);

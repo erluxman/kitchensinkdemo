@@ -10,7 +10,6 @@ import com.codename1.components.InfiniteProgress;
 import com.codename1.components.InteractionDialog;
 import com.codename1.components.MultiButton;
 import com.codename1.components.OnOffSwitch;
-import com.codename1.components.RSSReader;
 import com.codename1.components.RadioButtonList;
 import com.codename1.components.ScaleImageButton;
 import com.codename1.components.ScaleImageLabel;
@@ -78,7 +77,7 @@ class ComponentFactory {
         Button button = new Button(title, "CardButton");
         Form form = new Form(title, new BorderLayout());
         form.add(CENTER, BorderLayout.center(container));
-        form.getToolbar().setBackCommand(title, evt -> button.getComponentForm().show());
+        form.getToolbar().setBackCommand(title, evt -> button.getComponentForm().showBack());
         button.addActionListener(evt -> {
             form.show();
         });
@@ -128,8 +127,6 @@ class ComponentFactory {
 
         FileTree fileTree = new FileTree();
         fileTree.setScrollableY(false);
-        RSSReader rssReader = new RSSReader();
-        rssReader.setURL("https://us12.campaign-archive.com/feed?u=f39692e245b94f7fb693b6d82&id=93b2272cb6");
         ImageViewer imageViewer = new ImageViewer();
         ListModel<Image> images = new DefaultListModel<Image>(
                 res.getImage("background.jpg"),
@@ -137,22 +134,46 @@ class ComponentFactory {
                 res.getImage("themes.png"),
                 res.getImage("dog.jpg")
         );
-        imageViewer.setImageList(images);
 
+        Button previousButton = new Button("Previous");
+        Button nextButton = new Button("Next");
+        Container buttonLine = new Container(BoxLayout.xCenter())
+                .add(previousButton)
+                .add(nextButton);
+        Container imageViewerContainer = new Container(BoxLayout.y())
+                .add(imageViewer).add(buttonLine);
+        previousButton.addActionListener(event -> {
+            int currentIndex = images.getSelectedIndex();
+            int totalSize = images.getSize();
+            currentIndex -= 1;
+            if (currentIndex < 0) {
+                currentIndex = totalSize - 1;
+            }
+            images.setSelectedIndex(currentIndex);
+        });
+
+        nextButton.addActionListener(event -> {
+            int currentIndex = images.getSelectedIndex();
+            currentIndex += 1;
+            if (currentIndex >= images.getSize()) {
+                currentIndex = 0;
+            }
+            images.setSelectedIndex(currentIndex);
+        });
+        imageViewer.setImageList(images);
 
         demo.add("Browser Component", showBrowserComponent);
         demo.add("SignatureComponent", showSignature);
         demo.add("Calendar", new Calendar());
         demo.add("FileTree", fileTree);
-        demo.add("Rss Reader", rssReader);
-        demo.add("Image Viewer", imageViewer);
+        demo.add("Image Viewer", imageViewerContainer);
         return demo.generate();
     }
 
     static Container labelContainer(Resources resources) {
         ComponentDemo demo = new ComponentDemo("Labels");
         demo.add("Label", new Label("This is label"))
-                .add("Span Label", new SpanLabel("This is Span Label"))
+                .add("Span Label", new SpanLabel("Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scramble"))
                 .add("Scale Image Label", new ScaleImageLabel(resources.getImage("dog.jpg")))
                 .add("Floating Hint", new TextComponent(
                 ).label("Input your name"))
@@ -170,9 +191,16 @@ class ComponentFactory {
         ShareButton shareButton = new ShareButton();
         shareButton.setText("Share the file");
         ComponentDemo demo = new ComponentDemo("Buttons");
-        demo
-                .add("Button", new Button("Click this"))
-                .add("Span Button", new SpanButton("Click SpanButton"))
+        Button simpleButton = new Button("Show toast");
+        SpanButton spanButton = new SpanButton("Click SpanButton Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard d ");
+        spanButton.addActionListener(evt -> {
+            ToastBar.showMessage(spanButton.getText(), FontImage.MATERIAL_INFO);
+        });
+        simpleButton.addActionListener(evt -> {
+            ToastBar.showMessage("Hello from Toastbar", FontImage.MATERIAL_INFO);
+        });
+        demo.add("Button", simpleButton)
+                .add("Span Button",spanButton )
                 .add("Multi Button", multiButton)
                 .add("Scale Image Button",
                         new ScaleImageButton(resources.getImage("dog.jpg")))
@@ -243,21 +271,9 @@ class ComponentFactory {
         return demo.generate();
     }
 
-    static Container mediaContainer() {
-        ComponentDemo demo = new ComponentDemo("Media");
-        Button playButton = new Button("Play online video");
-//        try {
-//            Media video = MediaManager.createMedia("http://www.codenameone.com/files/hello-codenameone.mp4", true, () -> demo.generate().getComponentForm().showBack());
-//            MediaPlayer player = new MediaPlayer(video);
-//            player.showControls();
-//            demo. add("Media Player", player);
-//        } catch (IOException e) {
-//            e.printStackTrace();
-//        }
-
-        //AudioRecorderComponent audioRecorder = new AudioRecorderComponent(new MediaRecorderBuilder());
-        //demo.add("Media Recorder",audioRecorder);
-        return demo.generate();
+    static Component mediaContainer() {
+        Form form = new Form("Media", new BorderLayout());
+        return new Video().createDemo(form);
     }
 
     static Container mapsContainer() {
@@ -355,9 +371,16 @@ class ComponentFactory {
     }
 
     static Container toolbarContainer() {
-        ComponentDemo demo = new ComponentDemo("Toolbar");
+        ComponentDemo demo = new ComponentDemo("We have toolbar on top saying \"Hello toolbar\"");
         Toolbar searchBar = new Toolbar();
-        demo.add("Search Bar", searchBar);
+        Form f = new Form();
+        f.setToolbar(searchBar);
+        searchBar.setTitle("Searchbar");
+        searchBar.addSearchCommand((actionEvent) -> {
+
+        });
+        demo.add("Search Bar", f);
+
         return demo.generate();
     }
 }
