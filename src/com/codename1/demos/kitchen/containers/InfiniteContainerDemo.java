@@ -1,4 +1,4 @@
-package com.codename1.demos.kitchen.components;
+package com.codename1.demos.kitchen.containers;
 
 import com.codename1.io.Log;
 import com.codename1.ui.Button;
@@ -15,47 +15,37 @@ import java.util.List;
 import java.util.Map;
 
 public class InfiniteContainerDemo extends InfiniteContainer {
+
+    static int pageNumber = 1;
+
     public static Button getInstance(Resources resources) {
         Button infiniteContainerButton = new Button("Infinite Container");
+        Form infiniteList = new Form("InfiniteContainer", new BorderLayout());
+
+        infiniteList.add(BorderLayout.CENTER, getInfiniteContainerContent(resources));
+        infiniteList.getToolbar().setBackCommand("Line Chart", ee -> infiniteContainerButton.getComponentForm().showBack());
         infiniteContainerButton.addActionListener(evt -> {
-            showForm(resources);
+            infiniteList.show();
         });
         return infiniteContainerButton;
-
     }
 
-    private static InfiniteContainerDemo getList() {
-        InfiniteContainerDemo container = new InfiniteContainerDemo();
-        container.add(new Label("Hello there "));
-        container.add(new Label("Namaste"));
-        container.add(new Label("Hi everyone"));
-        container.add(new Label("let's go party"));
-        container.add(new Label("Codenameone"));
-        container.add(new Label("Amazing Cross platform"));
-        return container;
-    }
-
-    public static void showForm(Resources resources) {
-        Form hi = new Form("InfiniteContainer", new BorderLayout());
-
+    public static InfiniteContainer getInfiniteContainerContent(Resources resources){
         InfiniteContainer ic = new InfiniteContainer() {
             @Override
             public Component[] fetchComponents(int index, int amount) {
                 java.util.List<Map<String, Object>> data = fetchPropertyData();
                 Button[] cmps = new Button[data.size()];
                 for (int iter = 0; iter < cmps.length; iter++) {
-                    Map<String,Object> datam= data.get(iter);
-                    cmps[iter] = new Button("Image" + iter+" Page no"+datam.get("page"));
+                    Map<String, Object> datam = data.get(iter);
+                    cmps[iter] = new Button("Image" + iter + " Page no" + datam.get("page"));
                     cmps[iter].setIcon(resources.getImage("dog.jpg"));
                 }
                 return cmps;
             }
         };
-        hi.add(BorderLayout.CENTER, ic);
-        hi.show();
+        return ic;
     }
-
-   static int pageNumber = 1;
 
     static List<Map<String, Object>> fetchPropertyData() {
         try {

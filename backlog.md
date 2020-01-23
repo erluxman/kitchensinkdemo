@@ -10,13 +10,8 @@ Once all of the flow is in place, I've going to get Renzo to do a design for it 
 	- Google Map
 		- If the the google map credentials aren’t available, then show a screenshot of a nice-looking google map, and add explain that Google Maps requires a Google Maps account.  Add a button that opens  the Google Maps Github page for more information.	
 - Labels Form
-	✅ SpanLabel needs longer test to demonstrate that the text wraps.  Use Lorem ipsum
 	ScaleImageLabel 
-  		✅ Add button for user to select a different image
 		❌ Add Selection (using combo box or picker) to change the size of the component (small, medium, large)
-	Floating hint
-        ✅ This doesn’t seem to demonstrate floating hint’s ability to float.   When you enter text, the hint should float above the field
-
 -Buttons
 	- Multi Button.
 	    - Create a better example that shows the real-world use-case for MultiButton.  
@@ -24,24 +19,10 @@ Once all of the flow is in place, I've going to get Renzo to do a design for it 
 		    Show a container with 3 or 4 multi-buttons so people get the idea.
 	- Scale Image Button
 		- Add option for user to change the image
-	- Floating Action Button
-		- To see this properly used it needs to be on separator form. Make a subform for the floating 
-		action button.  The subform should have some sort of list (box layout y), and the Floating action
-		button should appear in bottom right of form.  The Contacts section already has a good example of this.
-
 - Containers
-
-	- Each container should have its own sub-form
-
-	- Accordion
-		- Add a few more headings
-	- Infinite Container
-		- Doesn’t seem infinite.  Have it generate an infinite number of rows using the Infinite container functionality
 	- Tabs
-		- Most definitely needs its own form.
 		- Have something more interesting for each tab content.
-
-
+		
 - Dialog
 
 	- Interaction Dialog
@@ -63,8 +44,6 @@ ToolBar
 
 Progress 
     Slider Looks strange. Looks like two sliders on top of each other
-
-
 
 A couple of things I noticed:
 

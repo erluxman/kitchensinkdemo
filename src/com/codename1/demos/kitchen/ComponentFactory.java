@@ -17,12 +17,15 @@ import com.codename1.components.ShareButton;
 import com.codename1.components.SignatureComponent;
 import com.codename1.components.SpanButton;
 import com.codename1.components.SpanLabel;
-import com.codename1.components.SplitPane;
 import com.codename1.components.Switch;
 import com.codename1.components.SwitchList;
 import com.codename1.components.ToastBar;
-import com.codename1.demos.kitchen.components.ComponentDemo;
-import com.codename1.demos.kitchen.components.InfiniteContainerDemo;
+import com.codename1.demos.kitchen.containers.AccordinContainerDemo;
+import com.codename1.demos.kitchen.containers.ComponentDemo;
+import com.codename1.demos.kitchen.containers.InfiniteContainerDemo;
+import com.codename1.demos.kitchen.containers.SplitPaneContainer;
+import com.codename1.demos.kitchen.containers.TabsContainerDemo;
+import com.codename1.demos.kitchen.demoforms.FloatingActionButtonDemo;
 import com.codename1.demos.kitchen.map.GoogleMapDemo;
 import com.codename1.maps.MapComponent;
 import com.codename1.ui.AutoCompleteTextField;
@@ -57,8 +60,6 @@ import com.codename1.ui.list.DefaultListModel;
 import com.codename1.ui.list.ListModel;
 import com.codename1.ui.util.Resources;
 
-import static com.codename1.components.SplitPane.HORIZONTAL_SPLIT;
-import static com.codename1.components.SplitPane.VERTICAL_SPLIT;
 import static com.codename1.demos.kitchen.charts.ChartDemosList.getBarChartButton;
 import static com.codename1.demos.kitchen.charts.ChartDemosList.getBubbleChartButton;
 import static com.codename1.demos.kitchen.charts.ChartDemosList.getCombinedXYChartButton;
@@ -242,7 +243,7 @@ class ComponentFactory {
                 .add("Multi Button", multiButton)
                 .add("Scale Image Button",
                         new ScaleImageButton(resources.getImage("dog.jpg")))
-                .add("Floating Action Button", FloatingActionButton.createFAB(FontImage.MATERIAL_ADD))
+                .add("Floating Action Button", FloatingActionButtonDemo.getInstance(resources))
                 .add("Share Button", shareButton);
         return demo.generate();
     }
@@ -353,39 +354,10 @@ class ComponentFactory {
 
     static Container containersContainer(Resources resources) {
         ComponentDemo demo = new ComponentDemo("Containers");
-        Accordion accordion = new Accordion();
-        //How to add containers rather than just strings into Accordion.
-        accordion.addContent("Greeting Words", new List<String>(
-                "Hi", "Hello", "Namste", "gracias"
-        ));
-
-        accordion.addContent("Respect Words", new List<String>(
-                "Hi", "Hello", "Namste", "gracias"
-        ));
-        accordion.addContent("Insult Words", new List<String>(
-                "ugly", "tiny", "dumb", "Pig headed"
-        ));
-
-        accordion.addContent("Places", new List<String>(
-                "Nyc", "Washington", "Paris", "Milan"
-        ));
-
-        SplitPane splitPane = new SplitPane(
-                new SplitPane.Settings(HORIZONTAL_SPLIT, "15%", "50%", "85%"),
-                new Label("hello"),
-                new SplitPane(
-                        new SplitPane.Settings(VERTICAL_SPLIT, "15%", "50%", "85%"),
-                        new Label("Hola"),
-                        new Label("Hi")));
-
-        Tabs tabs = new Tabs();
-        tabs.addTab("Home", new Label("Home"));
-        tabs.addTab("Profile", new Label("Profile"));
-        tabs.addTab("Setting", new Label("Setting"));
-        demo.add("Accordin", accordion);
+        demo.add("Accordin", AccordinContainerDemo.getInstance());
         demo.add("Infinite Container", InfiniteContainerDemo.getInstance(resources));
-        demo.add("Split Pane", splitPane);
-        demo.add("Tabs", tabs);
+        demo.add("Split Pane", SplitPaneContainer.getInstance());
+        demo.add("Tabs", TabsContainerDemo.getInstance());
         return demo.generate();
     }
 

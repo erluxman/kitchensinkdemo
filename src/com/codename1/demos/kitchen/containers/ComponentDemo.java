@@ -1,4 +1,4 @@
-package com.codename1.demos.kitchen.components;
+package com.codename1.demos.kitchen.containers;
 
 import com.codename1.ui.Component;
 import com.codename1.ui.Container;
