@@ -86,7 +86,7 @@ public class Components extends Demo {
                 getCard("Toggle List", toggleListContainer()),
                 getCard("Selection", selectionContainer()),
                 getCard("TextField", textFieldContainer()),
-                getCard("Containers", containersContainer()),
+                getCard("Containers", containersContainer(getResources())),
                 getCard("Dialog", dialogsContainer()),
                 getCard("Progress", progressContainer()),
                 getCard("Hello Toolbar", toolbarContainer()),

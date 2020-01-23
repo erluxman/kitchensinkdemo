@@ -5,7 +5,6 @@ import com.codename1.components.CheckBoxList;
 import com.codename1.components.ClearableTextField;
 import com.codename1.components.FileTree;
 import com.codename1.components.FloatingActionButton;
-import com.codename1.components.FloatingHint;
 import com.codename1.components.ImageViewer;
 import com.codename1.components.InfiniteProgress;
 import com.codename1.components.InteractionDialog;
@@ -176,14 +175,12 @@ class ComponentFactory {
         ComponentDemo demo = new ComponentDemo("Labels");
 
         ScaleImageLabel imageLabel = new ScaleImageLabel(resources.getImage("dog.jpg"));
-        //imageLabel.setsize();
         ListModel<Image> images = new DefaultListModel<Image>(
                 resources.getImage("background.jpg"),
                 resources.getImage("layout.png"),
                 resources.getImage("themes.png"),
                 resources.getImage("dog.jpg")
         );
-
         Button previousButton = new Button("Previous");
         Button nextButton = new Button("Next");
         Container buttonLine = new Container(BoxLayout.xCenter())
@@ -241,7 +238,7 @@ class ComponentFactory {
             ToastBar.showMessage("Hello from Toastbar", FontImage.MATERIAL_INFO);
         });
         demo.add("Button", simpleButton)
-                .add("Span Button",spanButton )
+                .add("Span Button", spanButton)
                 .add("Multi Button", multiButton)
                 .add("Scale Image Button",
                         new ScaleImageButton(resources.getImage("dog.jpg")))
@@ -277,19 +274,19 @@ class ComponentFactory {
 
     static Container toggleListContainer() {
         ComponentDemo demo = new ComponentDemo("Toggle List");
-        Container switchListContainer = new Container( new FlowLayout());
+        Container switchListContainer = new Container(new FlowLayout());
         SwitchList switchList = new SwitchList(new DefaultListModel<>("GPS", "Net", "Storage", "App usage", "Display over app"));
         switchListContainer.add(switchList);
 
 
-        Container checkBoxListContainer = new Container( new FlowLayout());
+        Container checkBoxListContainer = new Container(new FlowLayout());
         CheckBoxList checkBoxList = new CheckBoxList(
-                new DefaultListModel<>("Maths", "Science", "English","Social", "Drawing", "English"));
+                new DefaultListModel<>("Maths", "Science", "English", "Social", "Drawing", "English"));
         checkBoxListContainer.add(checkBoxList);
 
-        Container radioButtonListContainer = new Container( new FlowLayout());
+        Container radioButtonListContainer = new Container(new FlowLayout());
         RadioButtonList radioButtonList = new RadioButtonList(
-                new DefaultListModel<>("Male", "Female","alien","robot","Others","Do not want to disclose"));
+                new DefaultListModel<>("Male", "Female", "alien", "robot", "Others", "Do not want to disclose"));
 
         //This is use vertical list instead of flow layout for the toggle list.
         radioButtonList.setLayout(BoxLayout.y());
@@ -354,12 +351,23 @@ class ComponentFactory {
         return demo.generate();
     }
 
-    static Container containersContainer() {
+    static Container containersContainer(Resources resources) {
         ComponentDemo demo = new ComponentDemo("Containers");
         Accordion accordion = new Accordion();
         //How to add containers rather than just strings into Accordion.
-        accordion.addContent("Greetings", new List<String>(
+        accordion.addContent("Greeting Words", new List<String>(
                 "Hi", "Hello", "Namste", "gracias"
+        ));
+
+        accordion.addContent("Respect Words", new List<String>(
+                "Hi", "Hello", "Namste", "gracias"
+        ));
+        accordion.addContent("Insult Words", new List<String>(
+                "ugly", "tiny", "dumb", "Pig headed"
+        ));
+
+        accordion.addContent("Places", new List<String>(
+                "Nyc", "Washington", "Paris", "Milan"
         ));
 
         SplitPane splitPane = new SplitPane(
@@ -375,7 +383,7 @@ class ComponentFactory {
         tabs.addTab("Profile", new Label("Profile"));
         tabs.addTab("Setting", new Label("Setting"));
         demo.add("Accordin", accordion);
-        demo.add("Infinite Container", InfiniteContainerDemo.getInstance());
+        demo.add("Infinite Container", InfiniteContainerDemo.getInstance(resources));
         demo.add("Split Pane", splitPane);
         demo.add("Tabs", tabs);
         return demo.generate();
