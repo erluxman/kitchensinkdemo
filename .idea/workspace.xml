@@ -2,18 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="52c81d2f-2c05-4805-9a03-ae020200e403" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/backlog.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/ant.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.cn1/localstorage/https_www.codenameone.com_0.localstorage-shm" beforeDir="false" afterPath="$PROJECT_DIR$/.cn1/localstorage/https_www.codenameone.com_0.localstorage-shm" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.cn1/localstorage/https_www.codenameone.com_0.localstorage-wal" beforeDir="false" afterPath="$PROJECT_DIR$/.cn1/localstorage/https_www.codenameone.com_0.localstorage-wal" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backlog.md" beforeDir="false" afterPath="$PROJECT_DIR$/backlog.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/codenameone_settings.properties" beforeDir="false" afterPath="$PROJECT_DIR$/codenameone_settings.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/MyApplication.jar" beforeDir="false" afterPath="$PROJECT_DIR$/dist/MyApplication.jar" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/kitchesinkdemo/com/codename1/demos/kitchen/ComponentFactory.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/kitchesinkdemo/com/codename1/demos/kitchen/ComponentFactory.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/kitchesinkdemo/com/codename1/demos/kitchen/Components.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/kitchesinkdemo/com/codename1/demos/kitchen/Components.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/kitchesinkdemo/com/codename1/demos/kitchen/Video$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/kitchesinkdemo/com/codename1/demos/kitchen/Video$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/kitchesinkdemo/com/codename1/demos/kitchen/Video.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/kitchesinkdemo/com/codename1/demos/kitchen/Video.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/codename1/demos/kitchen/ComponentFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/codename1/demos/kitchen/ComponentFactory.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/codename1/demos/kitchen/Components.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/codename1/demos/kitchen/Components.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/codename1/demos/kitchen/Video.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/codename1/demos/kitchen/Video.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -138,26 +135,26 @@
       <screen x="0" y="23" width="1680" height="1027" />
     </state>
     <state x="103" y="123" width="1060" height="827" key="DiffContextDialog/0.23.1680.1027@0.23.1680.1027" timestamp="1578574565023" />
-    <state width="1366" height="271" key="GridCell.Tab.0.bottom" timestamp="1579523848926">
+    <state width="1366" height="271" key="GridCell.Tab.0.bottom" timestamp="1579756463166">
       <screen x="0" y="23" width="1680" height="1027" />
     </state>
     <state width="1333" height="269" key="GridCell.Tab.0.bottom/0.23.1680.1027@0.0.1680.1050" timestamp="1577858994562" />
-    <state width="1366" height="271" key="GridCell.Tab.0.bottom/0.23.1680.1027@0.23.1680.1027" timestamp="1579523848926" />
-    <state width="1366" height="271" key="GridCell.Tab.0.center" timestamp="1579523848924">
+    <state width="1366" height="271" key="GridCell.Tab.0.bottom/0.23.1680.1027@0.23.1680.1027" timestamp="1579756463166" />
+    <state width="1366" height="271" key="GridCell.Tab.0.center" timestamp="1579756463165">
       <screen x="0" y="23" width="1680" height="1027" />
     </state>
     <state width="1333" height="269" key="GridCell.Tab.0.center/0.23.1680.1027@0.0.1680.1050" timestamp="1577858994561" />
-    <state width="1366" height="271" key="GridCell.Tab.0.center/0.23.1680.1027@0.23.1680.1027" timestamp="1579523848924" />
-    <state width="1366" height="271" key="GridCell.Tab.0.left" timestamp="1579523848924">
+    <state width="1366" height="271" key="GridCell.Tab.0.center/0.23.1680.1027@0.23.1680.1027" timestamp="1579756463165" />
+    <state width="1366" height="271" key="GridCell.Tab.0.left" timestamp="1579756463165">
       <screen x="0" y="23" width="1680" height="1027" />
     </state>
     <state width="1333" height="269" key="GridCell.Tab.0.left/0.0.1680.1050@0.0.1680.1050" timestamp="1577858994550" />
-    <state width="1366" height="271" key="GridCell.Tab.0.left/0.23.1680.1027@0.23.1680.1027" timestamp="1579523848924" />
-    <state width="1366" height="271" key="GridCell.Tab.0.right" timestamp="1579523848925">
+    <state width="1366" height="271" key="GridCell.Tab.0.left/0.23.1680.1027@0.23.1680.1027" timestamp="1579756463165" />
+    <state width="1366" height="271" key="GridCell.Tab.0.right" timestamp="1579756463166">
       <screen x="0" y="23" width="1680" height="1027" />
     </state>
     <state width="1333" height="269" key="GridCell.Tab.0.right/0.23.1680.1027@0.0.1680.1050" timestamp="1577858994562" />
-    <state width="1366" height="271" key="GridCell.Tab.0.right/0.23.1680.1027@0.23.1680.1027" timestamp="1579523848925" />
+    <state width="1366" height="271" key="GridCell.Tab.0.right/0.23.1680.1027@0.23.1680.1027" timestamp="1579756463166" />
     <state width="1333" height="365" key="GridCell.Tab.1.bottom" timestamp="1577548034043">
       <screen x="0" y="23" width="1680" height="1027" />
     </state>
@@ -174,14 +171,14 @@
       <screen x="0" y="23" width="1680" height="1027" />
     </state>
     <state width="1333" height="365" key="GridCell.Tab.1.right/0.23.1680.1027@0.23.1680.1027" timestamp="1577548034043" />
-    <state x="192" y="175" key="SettingsEditor" timestamp="1579092993846">
+    <state x="192" y="175" key="SettingsEditor" timestamp="1579751451909">
       <screen x="0" y="23" width="1680" height="1027" />
     </state>
-    <state x="192" y="175" key="SettingsEditor/0.23.1680.1027@0.23.1680.1027" timestamp="1579092993846" />
-    <state x="465" y="204" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1579523404371">
+    <state x="192" y="175" key="SettingsEditor/0.23.1680.1027@0.23.1680.1027" timestamp="1579751451909" />
+    <state x="465" y="204" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1579524582108">
       <screen x="0" y="23" width="1680" height="1027" />
     </state>
-    <state x="465" y="204" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser/0.23.1680.1027@0.23.1680.1027" timestamp="1579523404371" />
+    <state x="465" y="204" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser/0.23.1680.1027@0.23.1680.1027" timestamp="1579524582108" />
     <state x="429" y="308" key="extract.method.dialog" timestamp="1576908416092">
       <screen x="0" y="23" width="1680" height="1027" />
     </state>
@@ -194,10 +191,10 @@
       <screen x="0" y="23" width="1680" height="1027" />
     </state>
     <state x="62" y="264" key="new project wizard/0.23.1680.1027@0.23.1680.1027" timestamp="1577875297130" />
-    <state x="356" y="250" width="670" height="676" key="search.everywhere.popup" timestamp="1578736023871">
+    <state x="356" y="250" width="670" height="676" key="search.everywhere.popup" timestamp="1579753562313">
       <screen x="0" y="23" width="1680" height="1027" />
     </state>
-    <state x="356" y="250" width="670" height="676" key="search.everywhere.popup/0.23.1680.1027@0.23.1680.1027" timestamp="1578736023871" />
+    <state x="356" y="250" width="670" height="676" key="search.everywhere.popup/0.23.1680.1027@0.23.1680.1027" timestamp="1579753562313" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

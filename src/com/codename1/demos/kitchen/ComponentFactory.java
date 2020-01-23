@@ -5,6 +5,7 @@ import com.codename1.components.CheckBoxList;
 import com.codename1.components.ClearableTextField;
 import com.codename1.components.FileTree;
 import com.codename1.components.FloatingActionButton;
+import com.codename1.components.FloatingHint;
 import com.codename1.components.ImageViewer;
 import com.codename1.components.InfiniteProgress;
 import com.codename1.components.InteractionDialog;
@@ -52,6 +53,7 @@ import com.codename1.ui.TextField;
 import com.codename1.ui.Toolbar;
 import com.codename1.ui.layouts.BorderLayout;
 import com.codename1.ui.layouts.BoxLayout;
+import com.codename1.ui.layouts.FlowLayout;
 import com.codename1.ui.list.DefaultListModel;
 import com.codename1.ui.list.ListModel;
 import com.codename1.ui.util.Resources;
@@ -172,11 +174,50 @@ class ComponentFactory {
 
     static Container labelContainer(Resources resources) {
         ComponentDemo demo = new ComponentDemo("Labels");
+
+        ScaleImageLabel imageLabel = new ScaleImageLabel(resources.getImage("dog.jpg"));
+        //imageLabel.setsize();
+        ListModel<Image> images = new DefaultListModel<Image>(
+                resources.getImage("background.jpg"),
+                resources.getImage("layout.png"),
+                resources.getImage("themes.png"),
+                resources.getImage("dog.jpg")
+        );
+
+        Button previousButton = new Button("Previous");
+        Button nextButton = new Button("Next");
+        Container buttonLine = new Container(BoxLayout.xCenter())
+                .add(previousButton)
+                .add(nextButton);
+        Container scaleImageContainer = new Container(BoxLayout.y())
+                .add(imageLabel).add(buttonLine);
+        previousButton.addActionListener(event -> {
+            int currentIndex = images.getSelectedIndex();
+            int totalSize = images.getSize();
+            currentIndex -= 1;
+            if (currentIndex < 0) {
+                currentIndex = totalSize - 1;
+            }
+            images.setSelectedIndex(currentIndex);
+            imageLabel.setIcon(images.getItemAt(images.getSelectedIndex()));
+        });
+
+        nextButton.addActionListener(event -> {
+            int currentIndex = images.getSelectedIndex();
+            currentIndex += 1;
+            if (currentIndex >= images.getSize()) {
+                currentIndex = 0;
+            }
+            images.setSelectedIndex(currentIndex);
+            imageLabel.setIcon(images.getItemAt(images.getSelectedIndex()));
+        });
+
+        TextComponent floatingText = new TextComponent();
+        floatingText.labelAndHint("Full name");
         demo.add("Label", new Label("This is label"))
                 .add("Span Label", new SpanLabel("Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scramble"))
-                .add("Scale Image Label", new ScaleImageLabel(resources.getImage("dog.jpg")))
-                .add("Floating Hint", new TextComponent(
-                ).label("Input your name"))
+                .add("Scale Image Label", scaleImageContainer)
+                .add("Floating Hint", floatingText)
         ;
         return demo.generate();
     }
@@ -236,10 +277,28 @@ class ComponentFactory {
 
     static Container toggleListContainer() {
         ComponentDemo demo = new ComponentDemo("Toggle List");
+        Container switchListContainer = new Container( new FlowLayout());
+        SwitchList switchList = new SwitchList(new DefaultListModel<>("GPS", "Net", "Storage", "App usage", "Display over app"));
+        switchListContainer.add(switchList);
+
+
+        Container checkBoxListContainer = new Container( new FlowLayout());
+        CheckBoxList checkBoxList = new CheckBoxList(
+                new DefaultListModel<>("Maths", "Science", "English","Social", "Drawing", "English"));
+        checkBoxListContainer.add(checkBoxList);
+
+        Container radioButtonListContainer = new Container( new FlowLayout());
+        RadioButtonList radioButtonList = new RadioButtonList(
+                new DefaultListModel<>("Male", "Female","alien","robot","Others","Do not want to disclose"));
+
+        //This is use vertical list instead of flow layout for the toggle list.
+        radioButtonList.setLayout(BoxLayout.y());
+        radioButtonListContainer.add(radioButtonList);
+
         demo
-                .add("Switch List", new SwitchList(new DefaultListModel<>("GPS", "Notifications")))
-                .add("Check Box List", new CheckBoxList(new DefaultListModel<>("Maths", "Science", "English")))
-                .add("Radio Button List", new RadioButtonList(new DefaultListModel<>("Male", "Female")));
+                .add("Switch List(Flow)", switchListContainer)
+                .add("Check Box List(Flow)", checkBoxListContainer)
+                .add("RadioButton List(Layout Y)", radioButtonListContainer);
         return demo.generate();
     }
 

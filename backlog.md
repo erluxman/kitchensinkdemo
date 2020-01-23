@@ -25,10 +25,10 @@ Specific Feedback:
 - Labels Form
 	✅ SpanLabel needs longer test to demonstrate that the text wraps.  Use Lorem ipsum
 	- ScaleImageLabel 
-  		- Add button for user to select a different image
-		- Add Selection (using combo box or picker) to change the size of the component (small, medium, large)
-		- Floating hint
-			- This doesn’t seem to demonstrate floating hint’s ability to float.   When you enter text, the hint should float above the field
+  		✅ Add button for user to select a different image
+		✅Add Selection (using combo box or picker) to change the size of the component (small, medium, large)
+	- Floating hint
+		- This doesn’t seem to demonstrate floating hint’s ability to float.   When you enter text, the hint should float above the field
 
 -Buttons
 	✅  Have the button do something when you click on it.  E.g. Open a dialog saying you clicked me or something.
@@ -43,14 +43,15 @@ Specific Feedback:
 
 - Toggles
 
-- Toggle List
-	- Switch List
+- Toggle List 
+	✅ Switch List
+	     it is not showing multiple toggles even if added to model
 		- Add a few more switches.  One switch doesn’t make a list.
-	- Check Box List
+	✅ Check Box List
 		- Same, add a few more.
-	- Radio Button List
+	✅ Radio Button List
 		- Add a few more options
-	- For ALL of them, make variations that show list in a box layout Y and flow layout.  Right now you just have flow.
+	✅ For ALL of them, make variations that show list in a box layout Y and flow layout.  Right now you just have flow.
 
 
 - Text Field
