@@ -19,9 +19,6 @@ Once all of the flow is in place, I've going to get Renzo to do a design for it 
 		    Show a container with 3 or 4 multi-buttons so people get the idea.
 	- Scale Image Button
 		- Add option for user to change the image
-- Containers
-	- Tabs
-		- Have something more interesting for each tab content.
 		
 - Dialog
 

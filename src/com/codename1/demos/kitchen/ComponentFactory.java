@@ -56,6 +56,7 @@ import com.codename1.ui.Toolbar;
 import com.codename1.ui.layouts.BorderLayout;
 import com.codename1.ui.layouts.BoxLayout;
 import com.codename1.ui.layouts.FlowLayout;
+import com.codename1.ui.layouts.LayeredLayout;
 import com.codename1.ui.list.DefaultListModel;
 import com.codename1.ui.list.ListModel;
 import com.codename1.ui.util.Resources;
@@ -361,12 +362,39 @@ class ComponentFactory {
         return demo.generate();
     }
 
-    static Container dialogsContainer() {
+    static Container dialogsContainer(Resources resources) {
         ComponentDemo demo = new ComponentDemo("Dialogs / Prompts");
         InteractionDialog interactionDialog = new InteractionDialog();
-        interactionDialog.addComponent(new Button("Ok"));
-        interactionDialog.addComponent(new Button("Cancel"));
-        interactionDialog.setLayout(BoxLayout.y());
+
+        Button openInteractionDialog = new Button("Deliver Shipping");
+        Button confirmDelivery = new Button("Confirm Delivery");
+        Button wrongPackage = new Button("Wrong puppy");
+        Button ignore = new Button();
+        FontImage.setMaterialIcon(ignore, FontImage.MATERIAL_CLOSE, 8);
+
+        confirmDelivery.addActionListener(evt -> {
+            openInteractionDialog.setText("Successfully delivered");
+            interactionDialog.dispose();
+        });
+        wrongPackage.addActionListener(evt -> {
+            openInteractionDialog.setText("Wrong package");
+            interactionDialog.dispose();
+        });
+        ignore.addActionListener(evt -> {
+                    interactionDialog.dispose();
+                });
+
+        Container interactionContent = new Container(BoxLayout.yCenter());
+
+        interactionContent.add(new Container(BoxLayout.xRight()).add(ignore));
+        interactionContent.add(new Container(BoxLayout.xCenter()).add(resources.getImage("dog.jpg")));
+        interactionContent.addComponent(confirmDelivery);
+        interactionContent.addComponent(wrongPackage);
+        interactionDialog.addComponent(interactionContent);
+        interactionDialog.setLayout(new LayeredLayout());
+
+        //interactionDialog.
+        openInteractionDialog.addActionListener(evt -> interactionDialog.show(700,700,100,100));
 
         Dialog dialog = new Dialog();
         Button okButton = new Button("Ok");
@@ -386,7 +414,7 @@ class ComponentFactory {
             ToastBar.showMessage("Hello from Toastbar", FontImage.MATERIAL_INFO);
         });
 
-        demo.add("Interaction Dialog", interactionDialog);
+        demo.add("Interaction Dialog", openInteractionDialog);
         demo.add("Dialog", showDialog);
         demo.add("Sheet", openSheetButton);
         demo.add("ToastBar", showToastBar);
