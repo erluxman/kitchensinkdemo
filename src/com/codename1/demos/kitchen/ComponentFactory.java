@@ -227,8 +227,6 @@ class ComponentFactory {
         multiButton.setTextLine3("Line three button");
         multiButton.setTextLine4("Line four button");
 
-        ShareButton shareButton = new ShareButton();
-        shareButton.setText("Share the file");
         ComponentDemo demo = new ComponentDemo("Buttons");
         Button simpleButton = new Button("Show toast");
         SpanButton spanButton = new SpanButton("Click SpanButton Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard d ");
@@ -238,11 +236,52 @@ class ComponentFactory {
         simpleButton.addActionListener(evt -> {
             ToastBar.showMessage("Hello from Toastbar", FontImage.MATERIAL_INFO);
         });
+
+
+        ScaleImageButton imageButton = new ScaleImageButton(resources.getImage("dog.jpg"));
+        ListModel<Image> images = new DefaultListModel<Image>(
+                resources.getImage("background.jpg"),
+                resources.getImage("layout.png"),
+                resources.getImage("themes.png"),
+                resources.getImage("dog.jpg")
+        );
+        Button previousButton = new Button("Previous");
+        Button nextButton = new Button("Next");
+        previousButton.addActionListener(event -> {
+            int currentIndex = images.getSelectedIndex();
+            int totalSize = images.getSize();
+            currentIndex -= 1;
+            if (currentIndex < 0) {
+                currentIndex = totalSize - 1;
+            }
+            images.setSelectedIndex(currentIndex);
+            imageButton.setIcon(images.getItemAt(images.getSelectedIndex()));
+        });
+
+        nextButton.addActionListener(event -> {
+            int currentIndex = images.getSelectedIndex();
+            currentIndex += 1;
+            if (currentIndex >= images.getSize()) {
+                currentIndex = 0;
+            }
+            images.setSelectedIndex(currentIndex);
+            imageButton.setIcon(images.getItemAt(images.getSelectedIndex()));
+        });
+        Container buttonLine = new Container(BoxLayout.xCenter())
+                .add(previousButton)
+                .add(nextButton);
+        Container scaleImageContainer = new Container(BoxLayout.y())
+                .add(imageButton).add(buttonLine);
+
+
+        ShareButton shareButton = new ShareButton();
+        shareButton.setText("Share the file");
+
+
         demo.add("Button", simpleButton)
                 .add("Span Button", spanButton)
                 .add("Multi Button", multiButton)
-                .add("Scale Image Button",
-                        new ScaleImageButton(resources.getImage("dog.jpg")))
+                .add("Scale Image Button",scaleImageContainer)
                 .add("Floating Action Button", FloatingActionButtonDemo.getInstance(resources))
                 .add("Share Button", shareButton);
         return demo.generate();

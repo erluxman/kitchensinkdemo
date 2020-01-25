@@ -1,10 +1,8 @@
-I have checked out and built your fork.  Here is some feedback.
-
-Good start!.  Most of the components are in place.  We need to refine it in places, and some of the components need some changes to properly demonstrate their functionality, but there's a good base here to work with.
-
-One key thing that needs to be added throughout is the ability for the user to find more information about each component, and see a code sample of how each is used.  So for each component, there should be a button that links to the javadocs for the component.  For the "Snippet", I'd like the user to stay in the app.  The button to see the code snippet for each can open a form with a BrowserComponent showing the content.  You can embed an [AceEditor](https://ace.c9.io/) in the browser component and display the snippet.
-
-Once all of the flow is in place, I've going to get Renzo to do a design for it in XD - then I'll get you to implement that design.
+One key thing that needs to be added throughout is the ability for the user to find more information about 
+each component, and see a code sample of how each is used.  So for each component, there should be a button 
+that links to the javadocs for the component.  For the "Snippet", I'd like the user to stay in the app.  
+The button to see the code snippet for each can open a form with a BrowserComponent showing the content.  
+You can embed an [AceEditor](https://ace.c9.io/) in the browser component and display the snippet.
 
 - Maps
 	- Google Map
@@ -17,17 +15,13 @@ Once all of the flow is in place, I've going to get Renzo to do a design for it 
 	    - Create a better example that shows the real-world use-case for MultiButton.  
 		    They can have checkboxes, badges, icons, etc….   
 		    Show a container with 3 or 4 multi-buttons so people get the idea.
-	- Scale Image Button
-		- Add option for user to change the image
-		
+			
 ToolBar
 	-  This doesn’t use the toolbar at all.  You might need to read some of the docs and tutorials on 
 	ToolBar to get the idea.  The ToolBar is attached to a form.  It provides a side menu, and the option to add menu buttons in various places on the form.   The Search bar is a feature of the toolbar.  It shouldn’t just be placed on the form as it is.  It should be integrated with the toolbar for that demonstration.  You’ll want multiple Toolbar demonstrations - have each in its own subform.
 
 Progress 
     Slider Looks strange. Looks like two sliders on top of each other
-
-A couple of things I noticed:
 
 - Component embedding is inconsistent in complex components e.g. in the advanced section the signature component is a link to a separate form (this makes sense). But the calendar, RSS reader etc. are all embedded into the same form and that makes scrolling/seeing them really hard.
 Naturally this doesn't apply to simple components like labels and buttons
