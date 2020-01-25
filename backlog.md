@@ -20,21 +20,6 @@ Once all of the flow is in place, I've going to get Renzo to do a design for it 
 	- Scale Image Button
 		- Add option for user to change the image
 		
-- Dialog
-
-	- Interaction Dialog
-		- Don’t just show the dialog contents in this section.  Add a button that opens the Interaction Dialog 
-		    just like you have for the other dialog types.
-
-	- Dialog
-		- The dialog needs work.  It just says “OK”.   
-	- Sheet
-		- Have the sheet show a little bit more than just Hello there.
-		- Demonstrate its ability to navigate to a new sheet from within the sheet, with its back-button 
-		functionality
-		- I have added the ability to set the Sheet position (NORTH, EAST, WEST, SOUTH, CENTER).  Give user 
-		ability to test out each of these positions.
-
 ToolBar
 	-  This doesn’t use the toolbar at all.  You might need to read some of the docs and tutorials on 
 	ToolBar to get the idea.  The ToolBar is attached to a form.  It provides a side menu, and the option to add menu buttons in various places on the form.   The Search bar is a feature of the toolbar.  It shouldn’t just be placed on the form as it is.  It should be integrated with the toolbar for that demonstration.  You’ll want multiple Toolbar demonstrations - have each in its own subform.
