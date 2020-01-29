@@ -37,11 +37,11 @@ import static com.codename1.demos.kitchen.ComponentFactory.labelContainer;
 import static com.codename1.demos.kitchen.ComponentFactory.mapsContainer;
 import static com.codename1.demos.kitchen.ComponentFactory.mediaContainer;
 import static com.codename1.demos.kitchen.ComponentFactory.progressContainer;
+import static com.codename1.demos.kitchen.ComponentFactory.searchBarContainer;
 import static com.codename1.demos.kitchen.ComponentFactory.selectionContainer;
 import static com.codename1.demos.kitchen.ComponentFactory.textFieldContainer;
 import static com.codename1.demos.kitchen.ComponentFactory.toggleContainer;
 import static com.codename1.demos.kitchen.ComponentFactory.toggleListContainer;
-import static com.codename1.demos.kitchen.ComponentFactory.toolbarContainer;
 
 
 /**
@@ -89,9 +89,9 @@ public class Components extends Demo {
                 getCard("Containers", containersContainer(getResources())),
                 getCard("Dialog", dialogsContainer(getResources())),
                 getCard("Progress", progressContainer()),
-                getCard("Hello Toolbar", toolbarContainer()),
+                searchBarContainer(),
                 getCard("Media", mediaContainer())
-                );
+        );
         selection.setScrollableY(true);
         return selection;
     }

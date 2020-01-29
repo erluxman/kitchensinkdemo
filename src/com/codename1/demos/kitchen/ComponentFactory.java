@@ -73,6 +73,7 @@ import static com.codename1.demos.kitchen.charts.ChartDemosList.getTimeChartButt
 import static com.codename1.ui.CN.CENTER;
 import static com.codename1.ui.CN.NORTH;
 import static com.codename1.ui.CN.SOUTH;
+import static com.codename1.ui.CN.log;
 
 class ComponentFactory {
     static Component getCard(String title, Component container) {
@@ -120,10 +121,10 @@ class ComponentFactory {
 
         SignatureComponent signatureComponent = new SignatureComponent();
         Button showSignature = new Button("Sign the Document");
+        Form viewer = new Form("Browser Demo", new BorderLayout());
+        viewer.add(CENTER, BorderLayout.center(signatureComponent));
+        viewer.getToolbar().setBackCommand("", ee -> showSignature.getComponentForm().showBack());
         showSignature.addActionListener(evt -> {
-            Form viewer = new Form("Browser Demo", new BorderLayout());
-            viewer.add(CENTER, BorderLayout.center(signatureComponent));
-            viewer.getToolbar().setBackCommand("", ee -> showSignature.getComponentForm().showBack());
             viewer.show();
         });
 
@@ -203,7 +204,7 @@ class ComponentFactory {
         nextButton.addActionListener(event -> {
             int currentIndex = images.getSelectedIndex();
             currentIndex += 1;
-            if (currentIndex >= images.getSize()) {
+            if (currentIndex >= (images.getSize() - 1)) {
                 currentIndex = 0;
             }
             images.setSelectedIndex(currentIndex);
@@ -221,11 +222,30 @@ class ComponentFactory {
     }
 
     static Container buttonsContainer(Resources resources) {
-        MultiButton multiButton = new MultiButton("MultiButton");
-        multiButton.setTextLine1("Line one button");
-        multiButton.setTextLine2("Line two button");
-        multiButton.setTextLine3("Line three button");
-        multiButton.setTextLine4("Line four button");
+
+        MultiButton multiButton1 = new MultiButton("MultiButton");
+        multiButton1.setTextLine1("Line one button");
+        multiButton1.setTextLine2("Line two button");
+        multiButton1.setTextLine3("Line three button");
+        multiButton1.setTextLine4("Line four button");
+
+        MultiButton multiButton2 = new MultiButton("MultiButton checkboxes");
+        multiButton2.setCheckBox(true);
+        multiButton2.setTextLine1("Line 1");
+        multiButton2.setTextLine2("Line 2");
+        multiButton2.setTextLine3("Line 3");
+        multiButton2.setTextLine4("Line 4");
+
+        MultiButton multiButton3 = new MultiButton("MultiButton checkboxes");
+        multiButton3.setCheckBox(true);
+        multiButton3.setIcon(resources.getImage("dog.jpg"));
+        multiButton3.setTextLine1("Line 1");
+        multiButton3.setTextLine2("Line 2");
+        multiButton3.setTextLine3("Line 3");
+        multiButton3.setTextLine4("Line 4");
+
+        Container multiButton = new Container(BoxLayout.y());
+        multiButton.add(multiButton1).add(multiButton2).add(multiButton3);
 
         ComponentDemo demo = new ComponentDemo("Buttons");
         Button simpleButton = new Button("Show toast");
@@ -237,7 +257,6 @@ class ComponentFactory {
             ToastBar.showMessage("Hello from Toastbar", FontImage.MATERIAL_INFO);
         });
 
-
         ScaleImageButton imageButton = new ScaleImageButton(resources.getImage("dog.jpg"));
         ListModel<Image> images = new DefaultListModel<Image>(
                 resources.getImage("background.jpg"),
@@ -245,6 +264,7 @@ class ComponentFactory {
                 resources.getImage("themes.png"),
                 resources.getImage("dog.jpg")
         );
+
         Button previousButton = new Button("Previous");
         Button nextButton = new Button("Next");
         previousButton.addActionListener(event -> {
@@ -255,33 +275,37 @@ class ComponentFactory {
                 currentIndex = totalSize - 1;
             }
             images.setSelectedIndex(currentIndex);
-            imageButton.setIcon(images.getItemAt(images.getSelectedIndex()));
+            Image currentImage = images.getItemAt(images.getSelectedIndex());
+            System.out.println("currentIndex" + currentIndex + "Image = " + currentImage);
+            imageButton.setIcon(currentImage);
         });
 
         nextButton.addActionListener(event -> {
             int currentIndex = images.getSelectedIndex();
             currentIndex += 1;
-            if (currentIndex >= images.getSize()) {
+            if (currentIndex >= (images.getSize() - 1)) {
                 currentIndex = 0;
             }
             images.setSelectedIndex(currentIndex);
-            imageButton.setIcon(images.getItemAt(images.getSelectedIndex()));
+            Image currentImage = images.getItemAt(images.getSelectedIndex());
+            System.out.println("currentIndex" + currentIndex + "Image = " + currentImage);
+            imageButton.setIcon(currentImage);
         });
         Container buttonLine = new Container(BoxLayout.xCenter())
                 .add(previousButton)
                 .add(nextButton);
+
+
         Container scaleImageContainer = new Container(BoxLayout.y())
                 .add(imageButton).add(buttonLine);
-
 
         ShareButton shareButton = new ShareButton();
         shareButton.setText("Share the file");
 
-
         demo.add("Button", simpleButton)
                 .add("Span Button", spanButton)
                 .add("Multi Button", multiButton)
-                .add("Scale Image Button",scaleImageContainer)
+                .add("Scale Image Button", scaleImageContainer)
                 .add("Floating Action Button", FloatingActionButtonDemo.getInstance(resources))
                 .add("Share Button", shareButton);
         return demo.generate();
@@ -484,7 +508,7 @@ class ComponentFactory {
 
         Button openDetailsSheet = new Button("Open Details");
         SpanLabel detailsText = new SpanLabel("This is best puppy in the world, \nbuy it for million dollars only");
-        Sheet detailSheet = new Sheet(sheet,"Sheet Child as Details");
+        Sheet detailSheet = new Sheet(sheet, "Sheet Child as Details");
         Container detailsSheetContent = new Container(BoxLayout.y());
         detailsSheetContent.add(resources.getImage("dog.jpg"));
         detailsSheetContent.add(detailsText);
@@ -529,17 +553,53 @@ class ComponentFactory {
         return demo.generate();
     }
 
-    static Container toolbarContainer() {
-        ComponentDemo demo = new ComponentDemo("We have toolbar on top saying \"Hello toolbar\"");
+    static Button searchBarContainer() {
+
+        //Toolbar
+//        Button showToolbar = new Button("Show Toolbar");
+//        Toolbar toolbar = new Toolbar();
+//        Form toolbarScreen = new Form();
+//        toolbarScreen.setToolbar(toolbar);
+
+        //SearchBar
+        Button showToolbarScreen = new Button("Show toolbar","CardButton");
+        Button showSearchBar = new Button("Show searchbar");
+        Button goBack = new Button("Go back");
         Toolbar searchBar = new Toolbar();
-        Form f = new Form();
-        f.setToolbar(searchBar);
-        searchBar.setTitle("Searchbar");
-        searchBar.addSearchCommand((actionEvent) -> {
+        Form searchScreen = new Form("Toolbar");
+        searchScreen.setToolbar(searchBar);
+        Button homeButton = new Button("Home");
+        FontImage.setMaterialIcon(homeButton, FontImage.MATERIAL_HOME);
+        searchBar.addComponentToSideMenu(homeButton);
+        Button profileButton = new Button("Profile");
+        FontImage.setMaterialIcon(profileButton, FontImage.MATERIAL_SUPERVISED_USER_CIRCLE);
+        searchBar.addComponentToSideMenu(profileButton);
+        Button settingButton = new Button("Setting");
+        FontImage.setMaterialIcon(settingButton, FontImage.MATERIAL_SETTINGS);
+        searchBar.addComponentToSideMenu(settingButton);
+        Button logoutButton = new Button("Logout");
+        FontImage.setMaterialIcon(logoutButton, FontImage.MATERIAL_LOGOUT);
+        searchBar.addComponentToSideMenu(logoutButton);
+        searchBar.setRightSideMenuCmdsAlignedToLeft(true);
+        Label searchResult = new Label();
 
+        showSearchBar.addActionListener(e -> {
+            searchBar.showSearchBar(evt -> {
+                String searchValue = (String) evt.getSource();
+                searchResult.setText(searchValue);
+            });
         });
-        demo.add("Search Bar", f);
 
-        return demo.generate();
+        showToolbarScreen.addActionListener(evt -> {
+            searchScreen.show();
+        });
+
+        goBack.addActionListener(evt -> showToolbarScreen.getComponentForm().showBack());
+        Container buttons = new Container(BoxLayout.y());
+        buttons.add(searchResult);
+        buttons.add(showSearchBar);
+        buttons.add(goBack);
+        searchScreen.add(buttons);
+        return showToolbarScreen;
     }
 }
