@@ -25,7 +25,7 @@ package com.codename1.demos.kitchen;
 import com.codename1.ui.Component;
 import com.codename1.ui.Container;
 import com.codename1.ui.Image;
-import com.codename1.ui.layouts.BoxLayout;
+import com.codename1.ui.layouts.GridLayout;
 
 import static com.codename1.demos.kitchen.ComponentFactory.advancedContainer;
 import static com.codename1.demos.kitchen.ComponentFactory.buttonsContainer;
@@ -75,22 +75,29 @@ public class Components extends Demo {
         }
     }
 
+    private Image getImage(String image) {
+        return getResources().getImage(image);
+    }
+
     public Container createDemo() {
-        Container selection = BoxLayout.encloseY(
-                getCard("Charts", chartsContainer()),
-                getCard("Advanced", advancedContainer(getResources())),
-                getCard("Maps", mapsContainer()),
-                getCard("Labels", labelContainer(getResources())),
-                getCard("Buttons", buttonsContainer(getResources())),
-                getCard("Toggles", toggleContainer()),
-                getCard("Toggle List", toggleListContainer()),
-                getCard("Selection", selectionContainer()),
-                getCard("TextField", textFieldContainer()),
-                getCard("Containers", containersContainer(getResources())),
-                getCard("Dialog", dialogsContainer(getResources())),
-                getCard("Progress", progressContainer()),
-                searchBarContainer(),
-                getCard("Media", mediaContainer())
+        GridLayout g = new GridLayout(2);
+        g.setAutoFit(true);
+
+        Container selection = Container.encloseIn(g,
+                getCard("Charts", chartsContainer(), getImage("charts.png")),
+                getCard("Advanced", advancedContainer(getResources()), getImage("advanced.png")),
+                getCard("Maps", mapsContainer(), getImage("maps.png")),
+                getCard("Labels", labelContainer(getResources()), getImage("text.png")),
+                getCard("Buttons", buttonsContainer(getResources()), getImage("buttons.png")),
+                getCard("Toggles", toggleContainer(), getImage("toggles.png")),
+                getCard("Toggle List", toggleListContainer(), getImage("toggleList.png")),
+                getCard("Selection", selectionContainer(), getImage("selection.png")),
+                getCard("TextField", textFieldContainer(), getImage("textfield.png")),
+                getCard("Containers", containersContainer(getResources()), getImage("containers.png")),
+                getCard("Dialog", dialogsContainer(getResources()), getImage("dialog.png")),
+                getCard("Progress", progressContainer(), getImage("progress.png")),
+                 searchBarContainer("Toolbar",getImage("toolbar.png")),
+                getCard("Media", mediaContainer(), getImage("media.png"))
         );
         selection.setScrollableY(true);
         return selection;

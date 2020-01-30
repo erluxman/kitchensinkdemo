@@ -49,6 +49,7 @@ import com.codename1.ui.TextArea;
 import com.codename1.ui.TextComponent;
 import com.codename1.ui.TextField;
 import com.codename1.ui.Toolbar;
+import com.codename1.ui.geom.Dimension;
 import com.codename1.ui.layouts.BorderLayout;
 import com.codename1.ui.layouts.BoxLayout;
 import com.codename1.ui.layouts.FlowLayout;
@@ -73,18 +74,36 @@ import static com.codename1.demos.kitchen.charts.ChartDemosList.getTimeChartButt
 import static com.codename1.ui.CN.CENTER;
 import static com.codename1.ui.CN.NORTH;
 import static com.codename1.ui.CN.SOUTH;
-import static com.codename1.ui.CN.log;
 
 class ComponentFactory {
-    static Component getCard(String title, Component container) {
-        Button button = new Button(title, "CardButton");
+
+    static Component getCard(String title, Component detailsContent, Image image) {
+        Container buttonCard = getGridCard(title, image);
+        Form form = getForm(title, detailsContent, buttonCard);
+
+        Button imageButton = new Button();
+        imageButton.setWidth(10);
+        imageButton.addActionListener(evt -> form.show());
+        buttonCard.setLeadComponent(imageButton);
+        return buttonCard;
+    }
+
+    private static Form getForm(String title, Component content, Container menuCard) {
         Form form = new Form(title, new BorderLayout());
-        form.add(CENTER, BorderLayout.center(container));
-        form.getToolbar().setBackCommand(title, evt -> button.getComponentForm().showBack());
-        button.addActionListener(evt -> {
-            form.show();
-        });
-        return button;
+        form.add(CENTER, BorderLayout.center(content));
+        form.getToolbar().setBackCommand(title, evt -> menuCard.getComponentForm().showBack());
+        return form;
+    }
+
+    private static Container getGridCard(String title, Image image) {
+        Container buttonCard = new Container(BoxLayout.y());
+        buttonCard.setUIID("gridcard");
+        ScaleImageButton scaleImageButton = new ScaleImageButton(image);
+        scaleImageButton.setPreferredSize(new Dimension(200, 200));
+        buttonCard.add(scaleImageButton);
+        Label titleLabel = new Label(title);
+        buttonCard.add(new Container(BoxLayout.xCenter()).add(titleLabel));
+        return buttonCard;
     }
 
     static Component chartsContainer() {
@@ -553,20 +572,13 @@ class ComponentFactory {
         return demo.generate();
     }
 
-    static Button searchBarContainer() {
-
-        //Toolbar
-//        Button showToolbar = new Button("Show Toolbar");
-//        Toolbar toolbar = new Toolbar();
-//        Form toolbarScreen = new Form();
-//        toolbarScreen.setToolbar(toolbar);
-
-        //SearchBar
-        Button showToolbarScreen = new Button("Show toolbar","CardButton");
+    private  static Form getToolbarForm(String title,Container buttonCard){
+        Form searchScreen = new Form(title);
+        Button imageButton = new Button();
+        //Button showToolbarScreen = new Button("Show toolbar", "CardButton");
         Button showSearchBar = new Button("Show searchbar");
         Button goBack = new Button("Go back");
         Toolbar searchBar = new Toolbar();
-        Form searchScreen = new Form("Toolbar");
         searchScreen.setToolbar(searchBar);
         Button homeButton = new Button("Home");
         FontImage.setMaterialIcon(homeButton, FontImage.MATERIAL_HOME);
@@ -590,16 +602,27 @@ class ComponentFactory {
             });
         });
 
-        showToolbarScreen.addActionListener(evt -> {
-            searchScreen.show();
-        });
+        imageButton.setWidth(10);
+        imageButton.addActionListener(evt -> searchScreen.show());
+        buttonCard.setLeadComponent(imageButton);
 
-        goBack.addActionListener(evt -> showToolbarScreen.getComponentForm().showBack());
+        goBack.addActionListener(evt -> buttonCard.getComponentForm().showBack());
         Container buttons = new Container(BoxLayout.y());
         buttons.add(searchResult);
         buttons.add(showSearchBar);
         buttons.add(goBack);
         searchScreen.add(buttons);
-        return showToolbarScreen;
+        return searchScreen;
+    }
+    static Container searchBarContainer(String title,Image image) {
+
+        Container buttonCard = getGridCard(title, image);
+        Form form = getToolbarForm(title, buttonCard);
+
+        Button imageButton = new Button();
+        imageButton.setWidth(10);
+        imageButton.addActionListener(evt -> form.show());
+        buttonCard.setLeadComponent(imageButton);
+        return buttonCard;
     }
 }

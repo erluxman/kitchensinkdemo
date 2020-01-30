@@ -8,8 +8,12 @@
       <change beforePath="$PROJECT_DIR$/backlog.md" beforeDir="false" afterPath="$PROJECT_DIR$/backlog.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/nbproject/project.properties" beforeDir="false" afterPath="$PROJECT_DIR$/nbproject/project.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/kitchesinkdemo/com/codename1/demos/kitchen/ComponentFactory.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/kitchesinkdemo/com/codename1/demos/kitchen/ComponentFactory.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/kitchesinkdemo/com/codename1/demos/kitchen/Components.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/kitchesinkdemo/com/codename1/demos/kitchen/Components.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/kitchesinkdemo/theme.res" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/kitchesinkdemo/theme.res" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/res/theme.xml" beforeDir="false" afterPath="$PROJECT_DIR$/res/theme.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/codename1/demos/kitchen/ComponentFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/codename1/demos/kitchen/ComponentFactory.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/codename1/demos/kitchen/Components.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/codename1/demos/kitchen/Components.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/theme.res" beforeDir="false" afterPath="$PROJECT_DIR$/src/theme.res" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -138,26 +142,26 @@
       <screen x="0" y="23" width="1680" height="1027" />
     </state>
     <state x="103" y="123" width="1060" height="827" key="DiffContextDialog/0.23.1680.1027@0.23.1680.1027" timestamp="1578574565023" />
-    <state width="1345" height="185" key="GridCell.Tab.0.bottom" timestamp="1580296525832">
+    <state width="1162" height="27" key="GridCell.Tab.0.bottom" timestamp="1580361886251">
       <screen x="0" y="23" width="1680" height="1027" />
     </state>
-    <state width="1345" height="185" key="GridCell.Tab.0.bottom/0.23.1680.1027@0.0.1680.1050" timestamp="1580295790723" />
-    <state width="1345" height="185" key="GridCell.Tab.0.bottom/0.23.1680.1027@0.23.1680.1027" timestamp="1580296525832" />
-    <state width="1345" height="185" key="GridCell.Tab.0.center" timestamp="1580296525831">
+    <state width="1345" height="130" key="GridCell.Tab.0.bottom/0.23.1680.1027@0.0.1680.1050" timestamp="1580356078832" />
+    <state width="1162" height="27" key="GridCell.Tab.0.bottom/0.23.1680.1027@0.23.1680.1027" timestamp="1580361886251" />
+    <state width="1162" height="27" key="GridCell.Tab.0.center" timestamp="1580361886251">
       <screen x="0" y="23" width="1680" height="1027" />
     </state>
-    <state width="1345" height="185" key="GridCell.Tab.0.center/0.23.1680.1027@0.0.1680.1050" timestamp="1580295790721" />
-    <state width="1345" height="185" key="GridCell.Tab.0.center/0.23.1680.1027@0.23.1680.1027" timestamp="1580296525831" />
-    <state width="1345" height="185" key="GridCell.Tab.0.left" timestamp="1580296525831">
+    <state width="1345" height="130" key="GridCell.Tab.0.center/0.23.1680.1027@0.0.1680.1050" timestamp="1580356078828" />
+    <state width="1162" height="27" key="GridCell.Tab.0.center/0.23.1680.1027@0.23.1680.1027" timestamp="1580361886251" />
+    <state width="1162" height="27" key="GridCell.Tab.0.left" timestamp="1580361886250">
       <screen x="0" y="23" width="1680" height="1027" />
     </state>
-    <state width="1345" height="185" key="GridCell.Tab.0.left/0.0.1680.1050@0.0.1680.1050" timestamp="1580295790717" />
-    <state width="1345" height="185" key="GridCell.Tab.0.left/0.23.1680.1027@0.23.1680.1027" timestamp="1580296525831" />
-    <state width="1345" height="185" key="GridCell.Tab.0.right" timestamp="1580296525832">
+    <state width="1345" height="130" key="GridCell.Tab.0.left/0.0.1680.1050@0.0.1680.1050" timestamp="1580356078815" />
+    <state width="1162" height="27" key="GridCell.Tab.0.left/0.23.1680.1027@0.23.1680.1027" timestamp="1580361886250" />
+    <state width="1162" height="27" key="GridCell.Tab.0.right" timestamp="1580361886251">
       <screen x="0" y="23" width="1680" height="1027" />
     </state>
-    <state width="1345" height="185" key="GridCell.Tab.0.right/0.23.1680.1027@0.0.1680.1050" timestamp="1580295790722" />
-    <state width="1345" height="185" key="GridCell.Tab.0.right/0.23.1680.1027@0.23.1680.1027" timestamp="1580296525832" />
+    <state width="1345" height="130" key="GridCell.Tab.0.right/0.23.1680.1027@0.0.1680.1050" timestamp="1580356078830" />
+    <state width="1162" height="27" key="GridCell.Tab.0.right/0.23.1680.1027@0.23.1680.1027" timestamp="1580361886251" />
     <state width="1366" height="365" key="GridCell.Tab.1.bottom" timestamp="1579787935978">
       <screen x="0" y="23" width="1680" height="1027" />
     </state>
@@ -186,10 +190,10 @@
       <screen x="0" y="23" width="1680" height="1027" />
     </state>
     <state x="429" y="308" key="extract.method.dialog/0.23.1680.1027@0.23.1680.1027" timestamp="1576908416092" />
-    <state x="322" y="298" width="666" height="486" key="find.popup" timestamp="1580295771141">
+    <state x="322" y="298" width="666" height="486" key="find.popup" timestamp="1580353417086">
       <screen x="0" y="23" width="1680" height="1027" />
     </state>
-    <state x="322" y="298" width="666" height="486" key="find.popup/0.23.1680.1027@0.23.1680.1027" timestamp="1580295771141" />
+    <state x="322" y="298" width="666" height="486" key="find.popup/0.23.1680.1027@0.23.1680.1027" timestamp="1580353417086" />
     <state x="62" y="264" key="new project wizard" timestamp="1577875297130">
       <screen x="0" y="23" width="1680" height="1027" />
     </state>
@@ -218,7 +222,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/com/codename1/demos/kitchen/ComponentFactory.java</url>
-          <line>518</line>
+          <line>537</line>
           <option name="timeStamp" value="5" />
         </line-breakpoint>
       </breakpoints>

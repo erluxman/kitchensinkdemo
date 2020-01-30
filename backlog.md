@@ -14,7 +14,9 @@ You can embed an [AceEditor](https://ace.c9.io/) in the browser component and di
 	ScaleImageLabel 
 		❌ Add Selection (using combo box or picker) to change the size of the component (small, medium, large)
 
-- Component embedding is inconsistent in complex components e.g. in the advanced section the signature component is a link to a separate form (this makes sense). But the calendar, RSS reader etc. are all embedded into the same form and that makes scrolling/seeing them really hard.
+- Component embedding is inconsistent in complex components e.g. in the advanced section the signature component 
+is a link to a separate form (this makes sense). But the calendar, RSS reader etc. are all embedded into the same 
+form and that makes scrolling/seeing them really hard.
 Naturally this doesn't apply to simple components like labels and buttons
     
 - I would suggest removing map component, it's deprecated. We should only support the native maps. 
