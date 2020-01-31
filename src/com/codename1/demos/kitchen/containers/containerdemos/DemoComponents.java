@@ -9,25 +9,22 @@ import java.util.Arrays;
 import java.util.List;
 
 public class DemoComponents extends Demo {
-    List<DemoComponent> demoComponentList = Arrays.asList(
+    static List<DemoComponent> demoComponentList = Arrays.asList(
             new DemoComponent[]{
+                    new ChartsDemo(),
+                    new AdvancedDemo(),
+                    new MapsDemo(),
                     new LabelDemo(),
-                    new LabelDemo(),
-                    new LabelDemo(),
-                    new LabelDemo(),
-                    new LabelDemo(),
-                    new LabelDemo(),
-                    new LabelDemo(),
-                    new LabelDemo(),
-                    new LabelDemo(),
-                    new LabelDemo(),
-                    new LabelDemo(),
-                    new LabelDemo(),
-                    new LabelDemo(),
-                    new LabelDemo(),
-                    new LabelDemo(),
-                    new LabelDemo(),
-                    new LabelDemo()
+                    new ButtonsDemo(),
+                    new TogglesDemo(),
+                    new ToggleListDemo(),
+                    new SelectionDemo(),
+                    new TextfieldDemo(),
+                    new ContainersDemo(),
+                    new DialogDemo(),
+                    new ProgressDemo(),
+                    new SearchBarDemo(),
+                    new MediaDemo()
             }
     );
 

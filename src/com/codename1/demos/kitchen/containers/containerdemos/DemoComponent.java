@@ -15,9 +15,7 @@ import com.codename1.ui.layouts.BoxLayout;
 import com.codename1.ui.util.Resources;
 
 import static com.codename1.ui.CN.CENTER;
-import static com.codename1.ui.CN.SOUTH;
 import static com.codename1.ui.CN.execute;
-
 
 abstract class DemoComponent {
 
@@ -32,8 +30,6 @@ abstract class DemoComponent {
     abstract String getSourceUrl();
 
     abstract String getTitle();
-
-    abstract String getDescription();
 
     abstract Container getContent();
 
@@ -56,13 +52,13 @@ abstract class DemoComponent {
         Form form = new Form(title, new BorderLayout());
         form.add(CENTER, BorderLayout.center(content));
         form.getToolbar().setBackCommand(title, evt -> menuCard.getComponentForm().showBack());
-        form.getToolbar().addMaterialCommandToRightBar("", FontImage.MATERIAL_INFO, 4, ee -> {
+        form.getToolbar().addMaterialCommandToRightBar("", FontImage.MATERIAL_CODE, 4, ee -> {
             execute(getSourceUrl());
         });
         return form;
     }
 
-    private Container getGridCard(String title, Image image) {
+    protected Container getGridCard(String title, Image image) {
         Container buttonCard = new Container(BoxLayout.y());
         buttonCard.setUIID("gridcard");
         ScaleImageButton scaleImageButton = new ScaleImageButton(image);

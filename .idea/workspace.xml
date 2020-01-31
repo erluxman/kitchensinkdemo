@@ -2,17 +2,32 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="52c81d2f-2c05-4805-9a03-ae020200e403" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/com/codename1/demos/kitchen/containers/containerdemos/DemoComponent.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/codename1/demos/kitchen/containers/containerdemos/DemoComponents.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/codename1/demos/kitchen/containers/containerdemos/LabelDemo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/codename1/demos/kitchen/containers/containerdemos/AdvancedDemo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/codename1/demos/kitchen/containers/containerdemos/ButtonsDemo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/codename1/demos/kitchen/containers/containerdemos/ChartsDemo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/codename1/demos/kitchen/containers/containerdemos/ContainersDemo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/codename1/demos/kitchen/containers/containerdemos/DialogDemo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/codename1/demos/kitchen/containers/containerdemos/MapsDemo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/codename1/demos/kitchen/containers/containerdemos/MediaDemo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/codename1/demos/kitchen/containers/containerdemos/ProgressDemo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/codename1/demos/kitchen/containers/containerdemos/SearchBarDemo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/codename1/demos/kitchen/containers/containerdemos/SelectionDemo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/codename1/demos/kitchen/containers/containerdemos/TextfieldDemo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/codename1/demos/kitchen/containers/containerdemos/ToggleListDemo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/codename1/demos/kitchen/containers/containerdemos/TogglesDemo.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.cn1/localstorage/https_www.codenameone.com_0.localstorage-shm" beforeDir="false" afterPath="$PROJECT_DIR$/.cn1/localstorage/https_www.codenameone.com_0.localstorage-shm" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.cn1/localstorage/https_www.codenameone.com_0.localstorage-wal" beforeDir="false" afterPath="$PROJECT_DIR$/.cn1/localstorage/https_www.codenameone.com_0.localstorage-wal" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/nbproject/project.properties" beforeDir="false" afterPath="$PROJECT_DIR$/nbproject/project.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/kitchesinkdemo/theme.res" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/kitchesinkdemo/theme.res" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/kitchesinkdemo/com/codename1/demos/kitchen/ComponentFactory.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/kitchesinkdemo/com/codename1/demos/kitchen/ComponentFactory.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/kitchesinkdemo/com/codename1/demos/kitchen/Components.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/kitchesinkdemo/com/codename1/demos/kitchen/Components.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/kitchesinkdemo/com/codename1/demos/kitchen/containers/containerdemos/DemoComponent.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/kitchesinkdemo/com/codename1/demos/kitchen/containers/containerdemos/DemoComponent.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/kitchesinkdemo/com/codename1/demos/kitchen/containers/containerdemos/DemoComponents.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/kitchesinkdemo/com/codename1/demos/kitchen/containers/containerdemos/DemoComponents.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/kitchesinkdemo/com/codename1/demos/kitchen/containers/containerdemos/LabelDemo.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/kitchesinkdemo/com/codename1/demos/kitchen/containers/containerdemos/LabelDemo.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/codename1/demos/kitchen/ComponentFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/codename1/demos/kitchen/ComponentFactory.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/codename1/demos/kitchen/MyApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/codename1/demos/kitchen/MyApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/theme.res" beforeDir="false" afterPath="$PROJECT_DIR$/src/theme.res" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/codename1/demos/kitchen/Components.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/codename1/demos/kitchen/Components.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/codename1/demos/kitchen/containers/containerdemos/DemoComponent.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/codename1/demos/kitchen/containers/containerdemos/DemoComponent.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/codename1/demos/kitchen/containers/containerdemos/DemoComponents.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/codename1/demos/kitchen/containers/containerdemos/DemoComponents.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/codename1/demos/kitchen/containers/containerdemos/LabelDemo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/codename1/demos/kitchen/containers/containerdemos/LabelDemo.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -56,16 +71,17 @@
     <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/com/codename1/demos/kitchen/charts" />
       <recent name="$PROJECT_DIR$/src" />
       <recent name="$PROJECT_DIR$" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.codename1.demos.kitchen.containers.containerdemos" />
       <recent name="com.codename1.demos.kitchen.charts" />
       <recent name="com.codename1.demos.kitchen.map" />
     </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/src/com/codename1/demos/kitchen/charts" />
+    <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/src" />
       <recent name="$PROJECT_DIR$" />
     </key>
@@ -125,10 +141,10 @@
       <screen x="0" y="23" width="1680" height="1027" />
     </state>
     <state x="148" y="200" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.23.1680.1027@0.23.1680.1027" timestamp="1579840012646" />
-    <state x="465" y="253" key="#com.intellij.ide.util.MemberChooser" timestamp="1580472205139">
+    <state x="465" y="253" key="#com.intellij.ide.util.MemberChooser" timestamp="1580473774135">
       <screen x="0" y="23" width="1680" height="1027" />
     </state>
-    <state x="465" y="253" key="#com.intellij.ide.util.MemberChooser/0.23.1680.1027@0.23.1680.1027" timestamp="1580472205139" />
+    <state x="465" y="253" key="#com.intellij.ide.util.MemberChooser/0.23.1680.1027@0.23.1680.1027" timestamp="1580473774135" />
     <state x="60" y="23" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1578363434248">
       <screen x="0" y="23" width="1680" height="1027" />
     </state>
@@ -141,26 +157,26 @@
       <screen x="0" y="23" width="1680" height="1027" />
     </state>
     <state x="103" y="123" width="1060" height="827" key="DiffContextDialog/0.23.1680.1027@0.23.1680.1027" timestamp="1578574565023" />
-    <state width="1353" height="147" key="GridCell.Tab.0.bottom" timestamp="1580473585676">
+    <state width="1353" height="147" key="GridCell.Tab.0.bottom" timestamp="1580485448861">
       <screen x="0" y="23" width="1680" height="1027" />
     </state>
     <state width="1345" height="130" key="GridCell.Tab.0.bottom/0.23.1680.1027@0.0.1680.1050" timestamp="1580356078832" />
-    <state width="1353" height="147" key="GridCell.Tab.0.bottom/0.23.1680.1027@0.23.1680.1027" timestamp="1580473585676" />
-    <state width="1353" height="147" key="GridCell.Tab.0.center" timestamp="1580473585676">
+    <state width="1353" height="147" key="GridCell.Tab.0.bottom/0.23.1680.1027@0.23.1680.1027" timestamp="1580485448861" />
+    <state width="1353" height="147" key="GridCell.Tab.0.center" timestamp="1580485448861">
       <screen x="0" y="23" width="1680" height="1027" />
     </state>
     <state width="1345" height="130" key="GridCell.Tab.0.center/0.23.1680.1027@0.0.1680.1050" timestamp="1580356078828" />
-    <state width="1353" height="147" key="GridCell.Tab.0.center/0.23.1680.1027@0.23.1680.1027" timestamp="1580473585676" />
-    <state width="1353" height="147" key="GridCell.Tab.0.left" timestamp="1580473585675">
+    <state width="1353" height="147" key="GridCell.Tab.0.center/0.23.1680.1027@0.23.1680.1027" timestamp="1580485448861" />
+    <state width="1353" height="147" key="GridCell.Tab.0.left" timestamp="1580485448860">
       <screen x="0" y="23" width="1680" height="1027" />
     </state>
     <state width="1345" height="130" key="GridCell.Tab.0.left/0.0.1680.1050@0.0.1680.1050" timestamp="1580356078815" />
-    <state width="1353" height="147" key="GridCell.Tab.0.left/0.23.1680.1027@0.23.1680.1027" timestamp="1580473585675" />
-    <state width="1353" height="147" key="GridCell.Tab.0.right" timestamp="1580473585676">
+    <state width="1353" height="147" key="GridCell.Tab.0.left/0.23.1680.1027@0.23.1680.1027" timestamp="1580485448860" />
+    <state width="1353" height="147" key="GridCell.Tab.0.right" timestamp="1580485448861">
       <screen x="0" y="23" width="1680" height="1027" />
     </state>
     <state width="1345" height="130" key="GridCell.Tab.0.right/0.23.1680.1027@0.0.1680.1050" timestamp="1580356078830" />
-    <state width="1353" height="147" key="GridCell.Tab.0.right/0.23.1680.1027@0.23.1680.1027" timestamp="1580473585676" />
+    <state width="1353" height="147" key="GridCell.Tab.0.right/0.23.1680.1027@0.23.1680.1027" timestamp="1580485448861" />
     <state width="1366" height="365" key="GridCell.Tab.1.bottom" timestamp="1579787935978">
       <screen x="0" y="23" width="1680" height="1027" />
     </state>
@@ -189,18 +205,18 @@
       <screen x="0" y="23" width="1680" height="1027" />
     </state>
     <state x="429" y="308" key="extract.method.dialog/0.23.1680.1027@0.23.1680.1027" timestamp="1576908416092" />
-    <state x="322" y="298" width="666" height="486" key="find.popup" timestamp="1580364429336">
+    <state x="322" y="298" width="666" height="486" key="find.popup" timestamp="1580483777951">
       <screen x="0" y="23" width="1680" height="1027" />
     </state>
-    <state x="322" y="298" width="666" height="486" key="find.popup/0.23.1680.1027@0.23.1680.1027" timestamp="1580364429336" />
+    <state x="322" y="298" width="666" height="486" key="find.popup/0.23.1680.1027@0.23.1680.1027" timestamp="1580483777951" />
     <state x="62" y="264" key="new project wizard" timestamp="1577875297130">
       <screen x="0" y="23" width="1680" height="1027" />
     </state>
     <state x="62" y="264" key="new project wizard/0.23.1680.1027@0.23.1680.1027" timestamp="1577875297130" />
-    <state x="356" y="250" width="670" height="676" key="search.everywhere.popup" timestamp="1579753562313">
+    <state x="356" y="250" width="670" height="676" key="search.everywhere.popup" timestamp="1580482674712">
       <screen x="0" y="23" width="1680" height="1027" />
     </state>
-    <state x="356" y="250" width="670" height="676" key="search.everywhere.popup/0.23.1680.1027@0.23.1680.1027" timestamp="1579753562313" />
+    <state x="356" y="250" width="670" height="676" key="search.everywhere.popup/0.23.1680.1027@0.23.1680.1027" timestamp="1580482674712" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

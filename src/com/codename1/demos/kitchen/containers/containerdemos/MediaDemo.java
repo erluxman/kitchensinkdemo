@@ -1,0 +1,34 @@
+package com.codename1.demos.kitchen.containers.containerdemos;
+
+import com.codename1.demos.kitchen.Video;
+import com.codename1.ui.Container;
+import com.codename1.ui.Form;
+import com.codename1.ui.layouts.BorderLayout;
+
+class MediaDemo extends DemoComponent {
+
+    @Override
+    public String getImageName() {
+        return "media.png";
+    }
+
+    @Override
+    public String getSourceUrl() {
+        return "https://stackoverflow.com/questions/14807129/missing-push-notification-entitlement";
+    }
+
+    @Override
+    public String getTitle() {
+        return "Media";
+    }
+
+    @Override
+    Container getContent() {
+        return mediaContainer();
+    }
+
+    private Container mediaContainer() {
+        Form form = new Form(getTitle(), new BorderLayout());
+        return new Video().createDemo(form);
+    }
+}

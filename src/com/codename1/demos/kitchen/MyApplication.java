@@ -33,10 +33,6 @@ import com.codename1.ui.Command;
 import com.codename1.ui.Component;
 import com.codename1.ui.Container;
 import com.codename1.ui.Dialog;
-
-import static com.codename1.ui.CN.*;
-
-import com.codename1.ui.EncodedImage;
 import com.codename1.ui.FontImage;
 import com.codename1.ui.Form;
 import com.codename1.ui.Graphics;
@@ -52,6 +48,18 @@ import com.codename1.ui.layouts.LayeredLayout;
 import com.codename1.ui.plaf.Style;
 import com.codename1.ui.plaf.UIManager;
 import com.codename1.ui.util.Resources;
+
+import static com.codename1.ui.CN.CENTER;
+import static com.codename1.ui.CN.CENTER_BEHAVIOR_CENTER_ABSOLUTE;
+import static com.codename1.ui.CN.SOUTH;
+import static com.codename1.ui.CN.callSerially;
+import static com.codename1.ui.CN.execute;
+import static com.codename1.ui.CN.getCurrentForm;
+import static com.codename1.ui.CN.getPlatformName;
+import static com.codename1.ui.CN.isNativeShareSupported;
+import static com.codename1.ui.CN.isTablet;
+import static com.codename1.ui.CN.share;
+import static com.codename1.ui.CN.updateNetworkThreadCount;
 
 public class MyApplication {
     private Resources res;
@@ -226,7 +234,6 @@ public class MyApplication {
 
         Demo[] demos = new Demo[]{
                 new Layouts(),
-                new Components(),
                 new DemoComponents(),
                 new WebServices(),
                 new ClockDemo(),
