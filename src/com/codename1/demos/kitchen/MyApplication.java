@@ -25,6 +25,7 @@ package com.codename1.demos.kitchen;
 
 import com.codename1.components.ScaleImageLabel;
 import com.codename1.components.SpanLabel;
+import com.codename1.demos.kitchen.containers.containerdemos.DemoComponents;
 import com.codename1.io.Log;
 import com.codename1.io.Preferences;
 import com.codename1.ui.Button;
@@ -226,6 +227,7 @@ public class MyApplication {
         Demo[] demos = new Demo[]{
                 new Layouts(),
                 new Components(),
+                new DemoComponents(),
                 new WebServices(),
                 new ClockDemo(),
                 new Themes(),

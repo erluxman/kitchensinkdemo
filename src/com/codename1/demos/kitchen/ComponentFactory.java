@@ -75,7 +75,7 @@ import static com.codename1.ui.CN.CENTER;
 import static com.codename1.ui.CN.NORTH;
 import static com.codename1.ui.CN.SOUTH;
 
-class ComponentFactory {
+public class ComponentFactory {
 
     static Component getCard(String title, Component detailsContent, Image image) {
         Container buttonCard = getGridCard(title, image);
