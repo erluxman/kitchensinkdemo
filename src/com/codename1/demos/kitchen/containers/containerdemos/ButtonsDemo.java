@@ -22,11 +22,6 @@ class ButtonsDemo extends DemoComponent {
     }
 
     @Override
-    String getSourceUrl() {
-        return "https://erluxman.com/";
-    }
-
-    @Override
     String getTitle() {
         return "Buttons";
     }

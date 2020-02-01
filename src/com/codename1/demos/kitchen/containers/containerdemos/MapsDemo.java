@@ -17,11 +17,6 @@ class MapsDemo extends DemoComponent {
     }
 
     @Override
-    String getSourceUrl() {
-        return "https://erluxman.com/";
-    }
-
-    @Override
     String getTitle() {
         return "Maps";
     }

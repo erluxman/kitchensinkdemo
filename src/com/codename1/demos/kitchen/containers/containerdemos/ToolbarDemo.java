@@ -14,16 +14,11 @@ import com.codename1.ui.layouts.BoxLayout;
 import com.codename1.ui.list.DefaultListModel;
 import com.codename1.ui.list.ListModel;
 
-class SelectionDemo extends DemoComponent {
+class ToolbarDemo extends DemoComponent {
 
     @Override
     public String getImageName() {
         return "selection.png";
-    }
-
-    @Override
-    public String getSourceUrl() {
-        return "https://stackoverflow.com/questions/14807129/missing-push-notification-entitlement";
     }
 
     @Override

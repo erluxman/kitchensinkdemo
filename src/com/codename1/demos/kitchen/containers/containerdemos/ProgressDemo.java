@@ -14,11 +14,6 @@ class ProgressDemo extends DemoComponent {
     }
 
     @Override
-    public String getSourceUrl() {
-        return "https://stackoverflow.com/questions/14807129/missing-push-notification-entitlement";
-    }
-
-    @Override
     public String getTitle() {
         return "Progress";
     }

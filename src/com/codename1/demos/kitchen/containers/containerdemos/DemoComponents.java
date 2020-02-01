@@ -18,7 +18,7 @@ public class DemoComponents extends Demo {
                     new ButtonsDemo(),
                     new TogglesDemo(),
                     new ToggleListDemo(),
-                    new SelectionDemo(),
+                    new ToolbarDemo(),
                     new TextfieldDemo(),
                     new ContainersDemo(),
                     new DialogDemo(),

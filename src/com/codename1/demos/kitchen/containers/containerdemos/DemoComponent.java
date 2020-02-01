@@ -1,7 +1,6 @@
 package com.codename1.demos.kitchen.containers.containerdemos;
 
 import com.codename1.components.ScaleImageButton;
-import com.codename1.components.SpanLabel;
 import com.codename1.ui.Button;
 import com.codename1.ui.Component;
 import com.codename1.ui.Container;
@@ -19,6 +18,7 @@ import static com.codename1.ui.CN.execute;
 
 abstract class DemoComponent {
 
+    private final String BASE_SOURCE_URL = "https://github.com/erluxman/kitchensinkdemo/blob/master/src/";
     Resources resources;
 
     public void init(Resources resources) {
@@ -27,7 +27,9 @@ abstract class DemoComponent {
 
     abstract String getImageName();
 
-    abstract String getSourceUrl();
+    String getSourceUrl() {
+        return BASE_SOURCE_URL + this.getClass().getCanonicalName().replace(".", "/") + ".java";
+    }
 
     abstract String getTitle();
 

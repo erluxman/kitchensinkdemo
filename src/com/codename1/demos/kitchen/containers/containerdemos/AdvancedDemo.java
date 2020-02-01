@@ -24,11 +24,6 @@ class AdvancedDemo extends DemoComponent {
     }
 
     @Override
-    String getSourceUrl() {
-        return "https://erluxman.com/";
-    }
-
-    @Override
     String getTitle() {
         return "Advanced";
     }
