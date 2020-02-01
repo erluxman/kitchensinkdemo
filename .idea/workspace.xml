@@ -2,47 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="52c81d2f-2c05-4805-9a03-ae020200e403" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.cn1/localstorage/https_www.codenameone.com_0.localstorage-shm" beforeDir="false" afterPath="$PROJECT_DIR$/.cn1/localstorage/https_www.codenameone.com_0.localstorage-shm" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.cn1/localstorage/https_www.codenameone.com_0.localstorage-wal" beforeDir="false" afterPath="$PROJECT_DIR$/.cn1/localstorage/https_www.codenameone.com_0.localstorage-wal" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/kitchensinkdemo/com/codename1/demos/kitchen/MyApplication.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/kitchensinkdemo/com/codename1/demos/kitchen/MyApplication.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/kitchensinkdemo/com/codename1/demos/kitchen/charts/ChartDemosList.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/kitchensinkdemo/com/codename1/demos/kitchen/charts/ChartDemosList.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/kitchensinkdemo/com/codename1/demos/kitchen/containers/containerdemos/AdvancedDemo.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/kitchensinkdemo/com/codename1/demos/kitchen/containers/containerdemos/ButtonsDemo.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/kitchensinkdemo/com/codename1/demos/kitchen/containers/containerdemos/ChartsDemo.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/kitchensinkdemo/com/codename1/demos/kitchen/containers/containerdemos/ContainersDemo.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/kitchensinkdemo/com/codename1/demos/kitchen/containers/containerdemos/DemoComponent.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/kitchensinkdemo/com/codename1/demos/kitchen/containers/containerdemos/DemoComponents.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/kitchensinkdemo/com/codename1/demos/kitchen/containers/containerdemos/DialogDemo.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/kitchensinkdemo/com/codename1/demos/kitchen/containers/containerdemos/LabelDemo.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/kitchensinkdemo/com/codename1/demos/kitchen/containers/containerdemos/MapsDemo.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/kitchensinkdemo/com/codename1/demos/kitchen/containers/containerdemos/MediaDemo.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/kitchensinkdemo/com/codename1/demos/kitchen/containers/containerdemos/ProgressDemo.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/kitchensinkdemo/com/codename1/demos/kitchen/containers/containerdemos/SelectionDemo.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/kitchensinkdemo/com/codename1/demos/kitchen/containers/containerdemos/TextfieldDemo.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/kitchensinkdemo/com/codename1/demos/kitchen/containers/containerdemos/ToggleListDemo.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/kitchensinkdemo/com/codename1/demos/kitchen/containers/containerdemos/TogglesDemo.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/kitchensinkdemo/com/codename1/demos/kitchen/containers/containerdemos/ToolbarDemo.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/kitchensinkdemo/com/codename1/demos/kitchen/containers/urltest/TestClass1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/kitchensinkdemo/com/codename1/demos/kitchen/containers/urltest/TestClass2.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/kitchensinkdemo/com/codename1/demos/kitchen/containers/urltest/TestClass3.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/kitchensinkdemo/com/codename1/demos/kitchen/containers/urltest/UrlTesting.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/kitchensinkdemo/com/codename1/demos/kitchen/containers/urltest/UrltestBaseclass.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/codename1/demos/kitchen/charts/AbstractDemoChart.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/codename1/demos/kitchen/charts/AbstractDemoChart.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/codename1/demos/kitchen/charts/BarChartDemo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/codename1/demos/kitchen/charts/BarChartDemo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/codename1/demos/kitchen/charts/BubbleChartDemo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/codename1/demos/kitchen/charts/BubbleChartDemo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/codename1/demos/kitchen/charts/ChartDemosList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/codename1/demos/kitchen/charts/ChartDemosList.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/codename1/demos/kitchen/charts/CombinedXYChartDemo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/codename1/demos/kitchen/charts/CombinedXYChartDemo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/codename1/demos/kitchen/charts/CubicLineChartDemo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/codename1/demos/kitchen/charts/CubicLineChartDemo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/codename1/demos/kitchen/charts/DialChartDemo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/codename1/demos/kitchen/charts/DialChartDemo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/codename1/demos/kitchen/charts/DonutChartDemo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/codename1/demos/kitchen/charts/DonutChartDemo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/codename1/demos/kitchen/charts/LineChartDemo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/codename1/demos/kitchen/charts/LineChartDemo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/codename1/demos/kitchen/charts/PieChartDemo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/codename1/demos/kitchen/charts/PieChartDemo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/codename1/demos/kitchen/charts/RadarChartDemo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/codename1/demos/kitchen/charts/RadarChartDemo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/codename1/demos/kitchen/charts/RoundChartDemo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/codename1/demos/kitchen/charts/RoundChartDemo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/codename1/demos/kitchen/charts/ScatterChartDemo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/codename1/demos/kitchen/charts/ScatterChartDemo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/codename1/demos/kitchen/charts/TimeChartDemo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/codename1/demos/kitchen/charts/TimeChartDemo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/codename1/demos/kitchen/containers/SubComponent.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/codename1/demos/kitchen/componentdemos/ChartsDemo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/codename1/demos/kitchen/componentdemos/ChartsDemo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/codename1/demos/kitchen/containers/ComponentDemo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/codename1/demos/kitchen/containers/ComponentDemo.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -189,26 +151,26 @@
       <screen x="0" y="23" width="1680" height="1027" />
     </state>
     <state x="103" y="123" width="1060" height="827" key="DiffContextDialog/0.23.1680.1027@0.23.1680.1027" timestamp="1578574565023" />
-    <state width="1353" height="329" key="GridCell.Tab.0.bottom" timestamp="1580545295148">
+    <state width="1353" height="329" key="GridCell.Tab.0.bottom" timestamp="1580545887093">
       <screen x="0" y="23" width="1680" height="1027" />
     </state>
     <state width="1345" height="130" key="GridCell.Tab.0.bottom/0.23.1680.1027@0.0.1680.1050" timestamp="1580356078832" />
-    <state width="1353" height="329" key="GridCell.Tab.0.bottom/0.23.1680.1027@0.23.1680.1027" timestamp="1580545295148" />
-    <state width="1353" height="329" key="GridCell.Tab.0.center" timestamp="1580545295147">
+    <state width="1353" height="329" key="GridCell.Tab.0.bottom/0.23.1680.1027@0.23.1680.1027" timestamp="1580545887093" />
+    <state width="1353" height="329" key="GridCell.Tab.0.center" timestamp="1580545887092">
       <screen x="0" y="23" width="1680" height="1027" />
     </state>
     <state width="1345" height="130" key="GridCell.Tab.0.center/0.23.1680.1027@0.0.1680.1050" timestamp="1580356078828" />
-    <state width="1353" height="329" key="GridCell.Tab.0.center/0.23.1680.1027@0.23.1680.1027" timestamp="1580545295147" />
-    <state width="1353" height="329" key="GridCell.Tab.0.left" timestamp="1580545295147">
+    <state width="1353" height="329" key="GridCell.Tab.0.center/0.23.1680.1027@0.23.1680.1027" timestamp="1580545887092" />
+    <state width="1353" height="329" key="GridCell.Tab.0.left" timestamp="1580545887091">
       <screen x="0" y="23" width="1680" height="1027" />
     </state>
     <state width="1345" height="130" key="GridCell.Tab.0.left/0.0.1680.1050@0.0.1680.1050" timestamp="1580356078815" />
-    <state width="1353" height="329" key="GridCell.Tab.0.left/0.23.1680.1027@0.23.1680.1027" timestamp="1580545295147" />
-    <state width="1353" height="329" key="GridCell.Tab.0.right" timestamp="1580545295148">
+    <state width="1353" height="329" key="GridCell.Tab.0.left/0.23.1680.1027@0.23.1680.1027" timestamp="1580545887091" />
+    <state width="1353" height="329" key="GridCell.Tab.0.right" timestamp="1580545887092">
       <screen x="0" y="23" width="1680" height="1027" />
     </state>
     <state width="1345" height="130" key="GridCell.Tab.0.right/0.23.1680.1027@0.0.1680.1050" timestamp="1580356078830" />
-    <state width="1353" height="329" key="GridCell.Tab.0.right/0.23.1680.1027@0.23.1680.1027" timestamp="1580545295148" />
+    <state width="1353" height="329" key="GridCell.Tab.0.right/0.23.1680.1027@0.23.1680.1027" timestamp="1580545887092" />
     <state width="1353" height="365" key="GridCell.Tab.1.bottom" timestamp="1580544740657">
       <screen x="0" y="23" width="1680" height="1027" />
     </state>

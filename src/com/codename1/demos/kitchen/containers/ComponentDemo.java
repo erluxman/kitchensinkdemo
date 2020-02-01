@@ -9,14 +9,19 @@ import java.util.ArrayList;
 
 public class ComponentDemo {
     String title;
-    ArrayList<SubComponentDemo> subComponents = new ArrayList<>();
+    ArrayList<SubComponent> subComponents = new ArrayList<>();
 
     public ComponentDemo(String title) {
         this.title = title;
     }
 
     public ComponentDemo add(String title, Component body) {
-        subComponents.add(new SubComponentDemo(title, body));
+        subComponents.add(new SubComponent(title, body));
+        return this;
+    }
+
+    public ComponentDemo add(SubComponent subComponent) {
+        subComponents.add(subComponent);
         return this;
     }
 
@@ -27,7 +32,7 @@ public class ComponentDemo {
         componentDemo.add(componentTitle);
         componentDemo.setScrollableY(true);
 
-        for (SubComponentDemo subComponent : subComponents) {
+        for (SubComponent subComponent : subComponents) {
             componentDemo.add(
                     new Container(BoxLayout.y(), "demoArea")
                             .add(new Container(BoxLayout.y(), "subComponent")
@@ -37,16 +42,6 @@ public class ComponentDemo {
             );
         }
         return componentDemo;
-    }
-
-    private  static class SubComponentDemo {
-        String title;
-        Component body;
-
-        public SubComponentDemo(String title, Component body) {
-            this.title = title;
-            this.body = body;
-        }
     }
 }
 

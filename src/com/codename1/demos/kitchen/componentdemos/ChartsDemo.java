@@ -1,38 +1,58 @@
 package com.codename1.demos.kitchen.componentdemos;
 
+import com.codename1.demos.kitchen.charts.AbstractDemoChart;
+import com.codename1.demos.kitchen.charts.BarChartDemo;
+import com.codename1.demos.kitchen.charts.BubbleChartDemo;
+import com.codename1.demos.kitchen.charts.CombinedXYChartDemo;
+import com.codename1.demos.kitchen.charts.CubicLineChartDemo;
+import com.codename1.demos.kitchen.charts.DialChartDemo;
+import com.codename1.demos.kitchen.charts.DonutChartDemo;
 import com.codename1.demos.kitchen.charts.LineChartDemo;
+import com.codename1.demos.kitchen.charts.PieChartDemo;
+import com.codename1.demos.kitchen.charts.RadarChartDemo;
+import com.codename1.demos.kitchen.charts.RoundChartDemo;
+import com.codename1.demos.kitchen.charts.ScatterChartDemo;
+import com.codename1.demos.kitchen.charts.TimeChartDemo;
 import com.codename1.demos.kitchen.containers.ComponentDemo;
+import com.codename1.demos.kitchen.containers.SubComponent;
+import com.codename1.ui.Button;
 import com.codename1.ui.Container;
+import com.codename1.ui.Form;
+import com.codename1.ui.layouts.BorderLayout;
 
-import static com.codename1.demos.kitchen.charts.ChartDemosList.getBarChartButton;
-import static com.codename1.demos.kitchen.charts.ChartDemosList.getBubbleChartButton;
-import static com.codename1.demos.kitchen.charts.ChartDemosList.getCombinedXYChartButton;
-import static com.codename1.demos.kitchen.charts.ChartDemosList.getCubicLineChartButton;
-import static com.codename1.demos.kitchen.charts.ChartDemosList.getDialChartButton;
-import static com.codename1.demos.kitchen.charts.ChartDemosList.getDonutChartButton;
-import static com.codename1.demos.kitchen.charts.ChartDemosList.getPieChartButton;
-import static com.codename1.demos.kitchen.charts.ChartDemosList.getRadarChartButton;
-import static com.codename1.demos.kitchen.charts.ChartDemosList.getRoundChartButton;
-import static com.codename1.demos.kitchen.charts.ChartDemosList.getSampleChartButton;
-import static com.codename1.demos.kitchen.charts.ChartDemosList.getScatterChartButton;
-import static com.codename1.demos.kitchen.charts.ChartDemosList.getTimeChartButton;
+import static com.codename1.ui.CN.CENTER;
 
 class ChartsDemo extends DemoComponent {
-    private static Container chartsContainer() {
+    private Container chartsContainer() {
         ComponentDemo demo = new ComponentDemo("Charts");
-        demo.add("Bar Chart", getBarChartButton());
-        demo.add("Bubble Chart", getBubbleChartButton());
-        demo.add("CombinedXY Chart", getCombinedXYChartButton());
-        demo.add("CubicLine Chart", getCubicLineChartButton());
-        demo.add("Dial Chart", getDialChartButton());
-        demo.add("Donut Chart", getDonutChartButton());
-        demo.add("Line Chart", getSampleChartButton("Line Chart", new LineChartDemo()));
-        demo.add("Pie Chart", getPieChartButton());
-        demo.add("Radar Chart", getRadarChartButton());
-        demo.add("Round Chart", getRoundChartButton());
-        demo.add("Scatter Chart", getScatterChartButton());
-        demo.add("Time Chart", getTimeChartButton());
+        demo.add(getSubComp("Bar Chart", new BarChartDemo()));
+        demo.add(getSubComp("Bubble Chart", new BubbleChartDemo()));
+        demo.add(getSubComp("CombinedXY Chart", new CombinedXYChartDemo()));
+        demo.add(getSubComp("CubicLine Chart", new CubicLineChartDemo()));
+        demo.add(getSubComp("Dial Chart", new DialChartDemo()));
+        demo.add(getSubComp("Donut Chart", new DonutChartDemo()));
+        demo.add(getSubComp("LineChart", new LineChartDemo()));
+        demo.add(getSubComp("Pie Chart", new PieChartDemo()));
+        demo.add(getSubComp("Radar Chart", new RadarChartDemo()));
+        demo.add(getSubComp("Round Chart", new RoundChartDemo()));
+        demo.add(getSubComp("Scatter Chart", new ScatterChartDemo()));
+        demo.add(getSubComp("Time Chart", new TimeChartDemo()));
         return demo.generate();
+    }
+
+    SubComponent getSubComp(String title, AbstractDemoChart chart) {
+        return new SubComponent(title, getSampleChartButton(title, chart));
+    }
+
+    public Button getSampleChartButton(String chartName, AbstractDemoChart chartContent) {
+        Button showChart = new Button(chartName);
+        showChart.addActionListener(evt -> {
+            Form lineChartViewer = new Form(chartName, new BorderLayout());
+            lineChartViewer.add(CENTER, BorderLayout.center(chartContent.execute()));
+            lineChartViewer.getToolbar().setBackCommand(chartName, ee -> showChart.getComponentForm().showBack());
+            lineChartViewer.show();
+        });
+        return showChart;
     }
 
     @Override
@@ -49,6 +69,4 @@ class ChartsDemo extends DemoComponent {
     Container getContent() {
         return chartsContainer();
     }
-
-    ;
 }
