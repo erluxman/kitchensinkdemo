@@ -16,7 +16,7 @@ class LabelDemo extends DemoComponent {
 
     @Override
     public String getImageName() {
-        return "text.png";
+        return "labels.png";
     }
 
     @Override
