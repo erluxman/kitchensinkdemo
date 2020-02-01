@@ -35,12 +35,12 @@ class AdvancedDemo extends DemoComponent {
 
     private Container advancedContainer() {
         ComponentDemo demo = new ComponentDemo("Advanced");
-        BrowserComponent browserComponent = new BrowserComponent();
-
-        browserComponent.setURL("https://www.codenameone.com/");
-
         Button showBrowserComponent = new Button("Show browser");
         showBrowserComponent.addActionListener(evt -> {
+            BrowserComponent browserComponent = new BrowserComponent();
+
+            browserComponent.setURL("https://www.codenameone.com/");
+
             Form viewer = new Form("Browser Demo", new BorderLayout());
             viewer.add(CENTER, BorderLayout.center(browserComponent));
             viewer.getToolbar().setBackCommand("", ee -> showBrowserComponent.getComponentForm().showBack());
