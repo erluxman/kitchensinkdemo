@@ -1,49 +1,97 @@
 package com.codename1.demos.kitchen.containers.containerdemos;
 
-import com.codename1.components.ScaleImageLabel;
-import com.codename1.components.SpanLabel;
+import com.codename1.components.ClearableTextField;
 import com.codename1.demos.kitchen.containers.ComponentDemo;
+import com.codename1.ui.AutoCompleteTextField;
 import com.codename1.ui.Button;
-import com.codename1.ui.ComboBox;
 import com.codename1.ui.Container;
+import com.codename1.ui.FontImage;
+import com.codename1.ui.Form;
 import com.codename1.ui.Image;
 import com.codename1.ui.Label;
-import com.codename1.ui.PickerComponent;
-import com.codename1.ui.TextComponent;
+import com.codename1.ui.TextArea;
+import com.codename1.ui.TextField;
+import com.codename1.ui.Toolbar;
 import com.codename1.ui.layouts.BoxLayout;
-import com.codename1.ui.list.DefaultListModel;
-import com.codename1.ui.list.ListModel;
+
+import static com.codename1.ui.CN.execute;
 
 class ToolbarDemo extends DemoComponent {
 
     @Override
     public String getImageName() {
-        return "selection.png";
+        return "toolbar.png";
     }
 
     @Override
     public String getTitle() {
-        return "Selection";
+        return "Toolbar";
     }
 
     @Override
     Container getContent() {
-        return selectionContainer();
+        return searchBarContainer();
     }
 
-    private Container selectionContainer() {
-        ComponentDemo demo = new ComponentDemo(getTitle());
-        demo
-                .add("Combo Box", new Container(BoxLayout.y())
-                        .add(new Label("Select your favourite Player"))
-                        .add(new ComboBox<String>("Messi", "Ronaldo", "Neymar", "Mbappe")))
-                .add("Date Picker", PickerComponent.createDate(null).label("Select Birthday"))
-                .add("Time Picker", PickerComponent.createTime(0).label("Select Alarm time"))
-                .add("Date Time Picker", PickerComponent.createDateTime(null).label("Select Meeting time"))
-                .add("Minute Duration Picker", PickerComponent.createDurationMinutes(0).label("Select Duration"))
-                .add("Minute,Hour Duration Picker", PickerComponent.createDurationHoursMinutes(0, 0).label("Select Duration"))
-        ;
-        return demo.generate();
+    @Override
+    public Container getMenuItem() {
+        return searchBarContainer();
+    }
+
+    private Container searchBarContainer() {
+        Container buttonCard = getGridCard(getTitle(), resources.getImage(getImageName()));
+        Form form = getToolbarForm(getTitle(), buttonCard);
+        form.getToolbar().addMaterialCommandToRightBar("", FontImage.MATERIAL_CODE, 4, ee -> {
+            execute(getSourceUrl());
+        });
+        Button imageButton = new Button();
+        imageButton.setWidth(10);
+        imageButton.addActionListener(evt -> form.show());
+        buttonCard.setLeadComponent(imageButton);
+        return buttonCard;
+    }
+
+    private  Form getToolbarForm(String title,Container buttonCard){
+        Form searchScreen = new Form(title);
+        Button imageButton = new Button();
+        //Button showToolbarScreen = new Button("Show toolbar", "CardButton");
+        Button showSearchBar = new Button("Show searchbar");
+        Button goBack = new Button("Go back");
+        Toolbar searchBar = new Toolbar();
+        searchScreen.setToolbar(searchBar);
+        Button homeButton = new Button("Home");
+        FontImage.setMaterialIcon(homeButton, FontImage.MATERIAL_HOME);
+        searchBar.addComponentToSideMenu(homeButton);
+        Button profileButton = new Button("Profile");
+        FontImage.setMaterialIcon(profileButton, FontImage.MATERIAL_SUPERVISED_USER_CIRCLE);
+        searchBar.addComponentToSideMenu(profileButton);
+        Button settingButton = new Button("Setting");
+        FontImage.setMaterialIcon(settingButton, FontImage.MATERIAL_SETTINGS);
+        searchBar.addComponentToSideMenu(settingButton);
+        Button logoutButton = new Button("Logout");
+        FontImage.setMaterialIcon(logoutButton, FontImage.MATERIAL_LOGOUT);
+        searchBar.addComponentToSideMenu(logoutButton);
+        searchBar.setRightSideMenuCmdsAlignedToLeft(true);
+        Label searchResult = new Label();
+
+        showSearchBar.addActionListener(e -> {
+            searchBar.showSearchBar(evt -> {
+                String searchValue = (String) evt.getSource();
+                searchResult.setText(searchValue);
+            });
+        });
+
+        imageButton.setWidth(10);
+        imageButton.addActionListener(evt -> searchScreen.show());
+        buttonCard.setLeadComponent(imageButton);
+
+        goBack.addActionListener(evt -> buttonCard.getComponentForm().showBack());
+        Container buttons = new Container(BoxLayout.y());
+        buttons.add(searchResult);
+        buttons.add(showSearchBar);
+        buttons.add(goBack);
+        searchScreen.add(buttons);
+        return searchScreen;
     }
 
 }

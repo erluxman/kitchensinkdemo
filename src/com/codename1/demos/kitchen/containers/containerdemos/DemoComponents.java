@@ -18,12 +18,12 @@ public class DemoComponents extends Demo {
                     new ButtonsDemo(),
                     new TogglesDemo(),
                     new ToggleListDemo(),
-                    new ToolbarDemo(),
+                    new SelectionDemo(),
                     new TextfieldDemo(),
                     new ContainersDemo(),
                     new DialogDemo(),
                     new ProgressDemo(),
-                    new SearchBarDemo(),
+                    new ToolbarDemo(),
                     new MediaDemo()
             }
     );
