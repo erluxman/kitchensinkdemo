@@ -26,6 +26,7 @@ public class TimeChartDemo extends AbstractDemoChart {
 
     private static final int HOURS = 24;
 
+    @Override
     public Component execute() {
         int[] colors = new int[]{ColorUtil.GREEN, ColorUtil.BLUE};
         PointStyle[] styles = new PointStyle[]{PointStyle.CIRCLE, PointStyle.DIAMOND};

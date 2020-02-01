@@ -8,6 +8,7 @@ import com.codename1.ui.Component;
 
 public class DonutChartDemo extends AbstractDemoChart {
 
+    @Override
     public Component execute() {
         double[] values = new double[]{10, 9, 14, 20, 11};
         String[] titles = new String[]{"P1", "P2", "P3", "P4", "P5"};

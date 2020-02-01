@@ -11,6 +11,7 @@ import com.codename1.ui.Component;
 
 public class DialChartDemo extends AbstractDemoChart {
 
+    @Override
     public Component execute() {
         CategorySeries category = new CategorySeries("Temperature (F)");
         category.add("Maximum", 95);

@@ -19,6 +19,7 @@ import java.util.Arrays;
 import java.util.List;
 
 public class CombinedXYChartDemo extends AbstractDemoChart {
+    @Override
     public Component execute() {
         String[] titles = new String[]{"Crete Air Temperature", "Skiathos Air Temperature"};
         List<double[]> x = new ArrayList<double[]>();

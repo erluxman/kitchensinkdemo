@@ -12,6 +12,7 @@ import java.util.Arrays;
 import java.util.List;
 
 public class CubicLineChartDemo extends AbstractDemoChart {
+    @Override
     public Component execute() {
         List<double[]> x = Arrays.asList(new double[]{1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12});
         List<double[]> values = Arrays.asList(new double[]{12.3, 12, 13, 16.8, 20.4, 24.4, 26.4, 11, 23.6, 20.3, 17, 13.9});

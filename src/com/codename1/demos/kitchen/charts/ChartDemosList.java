@@ -7,12 +7,23 @@ import com.codename1.ui.layouts.BorderLayout;
 import static com.codename1.ui.CN.CENTER;
 
 public class ChartDemosList {
+    public static Button getSampleChartButton(String chartName, AbstractDemoChart chartContent) {
+        Button showChart = new Button(chartName);
+        showChart.addActionListener(evt -> {
+            Form lineChartViewer = new Form(chartName, new BorderLayout());
+            lineChartViewer.add(CENTER, BorderLayout.center(chartContent.execute()));
+            lineChartViewer.getToolbar().setBackCommand(chartName, ee -> showChart.getComponentForm().showBack());
+            lineChartViewer.show();
+        });
+        return showChart;
+    }
+
     public static Button getLineChartButton() {
         Button showLineChart = new Button("Line Chart");
-        Form lineChartViewer = new Form("Line Charts ", new BorderLayout());
-        lineChartViewer.add(CENTER, BorderLayout.center(new LineChartDemo().execute()));
-        lineChartViewer.getToolbar().setBackCommand("Line Chart", ee -> showLineChart.getComponentForm().showBack());
         showLineChart.addActionListener(evt -> {
+            Form lineChartViewer = new Form("Line Charts ", new BorderLayout());
+            lineChartViewer.add(CENTER, BorderLayout.center(new LineChartDemo().execute()));
+            lineChartViewer.getToolbar().setBackCommand("Line Chart", ee -> showLineChart.getComponentForm().showBack());
             lineChartViewer.show();
         });
         return showLineChart;
@@ -20,10 +31,10 @@ public class ChartDemosList {
 
     public static Button getCubicLineChartButton() {
         Button showCubicLineChart = new Button("Cubic Line Chart");
-        Form cubicLineChartViewer = new Form("Cubic Line Charts ", new BorderLayout());
-        cubicLineChartViewer.add(CENTER, BorderLayout.center(new CubicLineChartDemo().execute()));
-        cubicLineChartViewer.getToolbar().setBackCommand("Cubic Line Chart", ee -> showCubicLineChart.getComponentForm().showBack());
         showCubicLineChart.addActionListener(evt -> {
+            Form cubicLineChartViewer = new Form("Cubic Line Charts ", new BorderLayout());
+            cubicLineChartViewer.add(CENTER, BorderLayout.center(new CubicLineChartDemo().execute()));
+            cubicLineChartViewer.getToolbar().setBackCommand("Cubic Line Chart", ee -> showCubicLineChart.getComponentForm().showBack());
             cubicLineChartViewer.show();
         });
         return showCubicLineChart;
@@ -31,10 +42,10 @@ public class ChartDemosList {
 
     public static Button getDialChartButton() {
         Button showDialChart = new Button("Dial Chart");
-        Form dialChartViewer = new Form("Dial Charts ", new BorderLayout());
-        dialChartViewer.add(CENTER, BorderLayout.center(new DialChartDemo().execute()));
-        dialChartViewer.getToolbar().setBackCommand("Dial Chart", ee -> showDialChart.getComponentForm().showBack());
         showDialChart.addActionListener(evt -> {
+            Form dialChartViewer = new Form("Dial Charts ", new BorderLayout());
+            dialChartViewer.add(CENTER, BorderLayout.center(new DialChartDemo().execute()));
+            dialChartViewer.getToolbar().setBackCommand("Dial Chart", ee -> showDialChart.getComponentForm().showBack());
             dialChartViewer.show();
         });
         return showDialChart;
@@ -42,10 +53,10 @@ public class ChartDemosList {
 
     public static Button getBarChartButton() {
         Button showBarChart = new Button("Bar Chart");
-        Form barChartViewer = new Form("Bar Charts ", new BorderLayout());
-        barChartViewer.add(CENTER, BorderLayout.center(new BarChartDemo().execute()));
-        barChartViewer.getToolbar().setBackCommand("Bar Chart", ee -> showBarChart.getComponentForm().showBack());
         showBarChart.addActionListener(evt -> {
+            Form barChartViewer = new Form("Bar Charts ", new BorderLayout());
+            barChartViewer.add(CENTER, BorderLayout.center(new BarChartDemo().execute()));
+            barChartViewer.getToolbar().setBackCommand("Bar Chart", ee -> showBarChart.getComponentForm().showBack());
             barChartViewer.show();
         });
 
@@ -54,10 +65,10 @@ public class ChartDemosList {
 
     public static Button getBubbleChartButton() {
         Button showBubbleChart = new Button("Bubble Chart");
-        Form barChartViewer = new Form("Bubble Charts ", new BorderLayout());
-        barChartViewer.add(CENTER, BorderLayout.center(new BubbleChartDemo().execute()));
-        barChartViewer.getToolbar().setBackCommand("Bubble Chart", ee -> showBubbleChart.getComponentForm().showBack());
         showBubbleChart.addActionListener(evt -> {
+            Form barChartViewer = new Form("Bubble Charts ", new BorderLayout());
+            barChartViewer.add(CENTER, BorderLayout.center(new BubbleChartDemo().execute()));
+            barChartViewer.getToolbar().setBackCommand("Bubble Chart", ee -> showBubbleChart.getComponentForm().showBack());
             barChartViewer.show();
         });
 

@@ -12,6 +12,8 @@ import com.codename1.charts.views.RoundChart;
 import com.codename1.ui.Component;
 
 public class RoundChartDemo extends AbstractDemoChart {
+
+    @Override
     public Component execute() {
         double[] values = new double[]{12, 14, 11, 10, 19};
         int[] colors = new int[]{ColorUtil.BLUE, ColorUtil.GREEN, ColorUtil.MAGENTA, ColorUtil.YELLOW, ColorUtil.CYAN};

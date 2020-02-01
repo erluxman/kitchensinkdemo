@@ -27,6 +27,7 @@ import com.codename1.charts.renderers.XYMultipleSeriesRenderer;
 import com.codename1.charts.renderers.XYSeriesRenderer;
 import com.codename1.charts.views.AbstractChart;
 import com.codename1.charts.views.PointStyle;
+import com.codename1.ui.Component;
 import com.codename1.ui.Display;
 import com.codename1.ui.Font;
 
@@ -369,4 +370,6 @@ public abstract class AbstractDemoChart {
         c.setPanEnabled(true);
         return c;
     }
+
+    public abstract Component execute();
 }

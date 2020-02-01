@@ -11,6 +11,7 @@ import java.util.Random;
 
 public class ScatterChartDemo extends AbstractDemoChart {
 
+    @Override
     public Component execute() {
         XYMultipleSeriesDataset dataSet;
         Random r = new Random();

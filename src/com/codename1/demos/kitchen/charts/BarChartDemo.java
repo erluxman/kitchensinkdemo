@@ -9,6 +9,7 @@ import java.util.Arrays;
 import java.util.List;
 
 public class BarChartDemo extends AbstractDemoChart {
+    @Override
     public Component execute() {
         List<double[]> values = Arrays.asList(new double[]{5230, 7300, 9240, 10540, 7900, 9200, 12030, 11200, 9500, 10500,
                 11600, 13500});

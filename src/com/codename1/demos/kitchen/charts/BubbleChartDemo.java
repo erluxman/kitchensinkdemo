@@ -13,6 +13,7 @@ import java.util.Arrays;
 import java.util.List;
 
 public class BubbleChartDemo extends AbstractDemoChart {
+    @Override
     public Component execute() {
         XYMultipleSeriesDataset series = new XYMultipleSeriesDataset();
 

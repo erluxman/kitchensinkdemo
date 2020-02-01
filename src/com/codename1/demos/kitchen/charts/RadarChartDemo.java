@@ -9,6 +9,8 @@ import com.codename1.charts.views.RadarChart;
 import com.codename1.ui.Component;
 
 public class RadarChartDemo extends AbstractDemoChart {
+
+    @Override
     public Component execute() {
         double[] values = new double[]{12, 14, 11, 10, 19};
         int[] colors = new int[]{ColorUtil.BLUE, ColorUtil.GREEN, ColorUtil.MAGENTA, ColorUtil.YELLOW, ColorUtil.CYAN};
