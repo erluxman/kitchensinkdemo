@@ -14,6 +14,8 @@ import com.codename1.ui.TextField;
 import com.codename1.ui.Toolbar;
 import com.codename1.ui.layouts.BoxLayout;
 
+import static com.codename1.ui.CN.execute;
+
 class SearchBarDemo extends DemoComponent {
 
     @Override
@@ -36,11 +38,17 @@ class SearchBarDemo extends DemoComponent {
         return searchBarContainer();
     }
 
-    private Container searchBarContainer() {
+    @Override
+    public Container getMenuItem() {
+        return searchBarContainer();
+    }
 
+    private Container searchBarContainer() {
         Container buttonCard = getGridCard(getTitle(), resources.getImage(getImageName()));
         Form form = getToolbarForm(getTitle(), buttonCard);
-
+        form.getToolbar().addMaterialCommandToRightBar("", FontImage.MATERIAL_CODE, 4, ee -> {
+            execute(getSourceUrl());
+        });
         Button imageButton = new Button();
         imageButton.setWidth(10);
         imageButton.addActionListener(evt -> form.show());
@@ -48,7 +56,7 @@ class SearchBarDemo extends DemoComponent {
         return buttonCard;
     }
 
-    private   Form getToolbarForm(String title,Container buttonCard){
+    private  Form getToolbarForm(String title,Container buttonCard){
         Form searchScreen = new Form(title);
         Button imageButton = new Button();
         //Button showToolbarScreen = new Button("Show toolbar", "CardButton");
