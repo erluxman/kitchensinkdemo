@@ -36,15 +36,17 @@ abstract class DemoComponent {
 
     public Container getMenuItem() {
         Container buttonCard = getGridCard(getTitle(), resources.getImage(getImageName()));
-        Form form = getForm(getTitle(), getContent(), buttonCard);
-        connectCardWithForm(buttonCard, form);
+        connectCardWithForm(buttonCard);
         return buttonCard;
     }
 
-    private void connectCardWithForm(Container gridButton, Form form) {
+    private void connectCardWithForm(Container gridButton) {
         Button imageButton = new Button();
         imageButton.setWidth(10);
-        imageButton.addActionListener(evt -> form.show());
+        imageButton.addActionListener(evt -> {
+            Form form = getForm(getTitle(), getContent(), gridButton);
+            form.show();
+        });
         gridButton.setLeadComponent(imageButton);
     }
 
