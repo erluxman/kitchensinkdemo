@@ -25,7 +25,7 @@ package com.codename1.demos.kitchen;
 
 import com.codename1.components.ScaleImageLabel;
 import com.codename1.components.SpanLabel;
-import com.codename1.demos.kitchen.containers.containerdemos.DemoComponents;
+import com.codename1.demos.kitchen.componentdemos.DemoComponents;
 import com.codename1.io.Log;
 import com.codename1.io.Preferences;
 import com.codename1.ui.Button;

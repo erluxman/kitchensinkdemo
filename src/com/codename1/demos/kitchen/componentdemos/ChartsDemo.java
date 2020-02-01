@@ -1,7 +1,6 @@
-package com.codename1.demos.kitchen.containers.containerdemos;
+package com.codename1.demos.kitchen.componentdemos;
 
 import com.codename1.demos.kitchen.containers.ComponentDemo;
-import com.codename1.ui.Component;
 import com.codename1.ui.Container;
 
 import static com.codename1.demos.kitchen.charts.ChartDemosList.getBarChartButton;

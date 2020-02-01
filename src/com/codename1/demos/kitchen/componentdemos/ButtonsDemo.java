@@ -1,4 +1,4 @@
-package com.codename1.demos.kitchen.containers.containerdemos;
+package com.codename1.demos.kitchen.componentdemos;
 
 import com.codename1.components.MultiButton;
 import com.codename1.components.ScaleImageButton;

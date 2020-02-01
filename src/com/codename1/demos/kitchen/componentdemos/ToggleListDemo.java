@@ -1,20 +1,13 @@
-package com.codename1.demos.kitchen.containers.containerdemos;
+package com.codename1.demos.kitchen.componentdemos;
 
 import com.codename1.components.CheckBoxList;
 import com.codename1.components.RadioButtonList;
-import com.codename1.components.ScaleImageLabel;
-import com.codename1.components.SpanLabel;
 import com.codename1.components.SwitchList;
 import com.codename1.demos.kitchen.containers.ComponentDemo;
-import com.codename1.ui.Button;
 import com.codename1.ui.Container;
-import com.codename1.ui.Image;
-import com.codename1.ui.Label;
-import com.codename1.ui.TextComponent;
 import com.codename1.ui.layouts.BoxLayout;
 import com.codename1.ui.layouts.FlowLayout;
 import com.codename1.ui.list.DefaultListModel;
-import com.codename1.ui.list.ListModel;
 
 class ToggleListDemo extends DemoComponent {
 
