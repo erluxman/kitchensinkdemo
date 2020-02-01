@@ -2,13 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="52c81d2f-2c05-4805-9a03-ae020200e403" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.cn1/localstorage/https_www.codenameone.com_0.localstorage-shm" beforeDir="false" afterPath="$PROJECT_DIR$/.cn1/localstorage/https_www.codenameone.com_0.localstorage-shm" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.cn1/localstorage/https_www.codenameone.com_0.localstorage-wal" beforeDir="false" afterPath="$PROJECT_DIR$/.cn1/localstorage/https_www.codenameone.com_0.localstorage-wal" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/nbproject/project.properties" beforeDir="false" afterPath="$PROJECT_DIR$/nbproject/project.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/kitchesinkdemo/com/codename1/demos/kitchen/containers/containerdemos/SearchBarDemo.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/codename1/demos/kitchen/containers/containerdemos/LabelDemo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/codename1/demos/kitchen/containers/containerdemos/LabelDemo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/theme.res" beforeDir="false" afterPath="$PROJECT_DIR$/src/theme.res" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/kitchesinkdemo.iml" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -41,13 +37,16 @@
     <property name="android.project.structure.proportion" value="0.15" />
     <property name="android.sdk.path" value="$USER_HOME$/Library/Android/sdk" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/com/codename1/demos/kitchen/charts" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
     <property name="node.js.path.for.package.tslint" value="project" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
+    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.0" />
     <property name="restartRequiresConfirmation" value="false" />
     <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
   </component>
@@ -70,7 +69,7 @@
   <component name="RunManager" selected="Codename One.Run in Device Simulator">
     <configuration name="UrlTesting" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.codename1.demos.kitchen.containers.urltest.UrlTesting" />
-      <module name="kitchesinkdemo" />
+      <module name="kitchensinkdemo" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="com.codename1.demos.kitchen.containers.urltest.*" />
@@ -152,26 +151,26 @@
       <screen x="0" y="23" width="1680" height="1027" />
     </state>
     <state x="103" y="123" width="1060" height="827" key="DiffContextDialog/0.23.1680.1027@0.23.1680.1027" timestamp="1578574565023" />
-    <state width="1353" height="329" key="GridCell.Tab.0.bottom" timestamp="1580543384851">
+    <state width="1353" height="329" key="GridCell.Tab.0.bottom" timestamp="1580543418168">
       <screen x="0" y="23" width="1680" height="1027" />
     </state>
     <state width="1345" height="130" key="GridCell.Tab.0.bottom/0.23.1680.1027@0.0.1680.1050" timestamp="1580356078832" />
-    <state width="1353" height="329" key="GridCell.Tab.0.bottom/0.23.1680.1027@0.23.1680.1027" timestamp="1580543384851" />
-    <state width="1353" height="329" key="GridCell.Tab.0.center" timestamp="1580543384850">
+    <state width="1353" height="329" key="GridCell.Tab.0.bottom/0.23.1680.1027@0.23.1680.1027" timestamp="1580543418168" />
+    <state width="1353" height="329" key="GridCell.Tab.0.center" timestamp="1580543418167">
       <screen x="0" y="23" width="1680" height="1027" />
     </state>
     <state width="1345" height="130" key="GridCell.Tab.0.center/0.23.1680.1027@0.0.1680.1050" timestamp="1580356078828" />
-    <state width="1353" height="329" key="GridCell.Tab.0.center/0.23.1680.1027@0.23.1680.1027" timestamp="1580543384850" />
-    <state width="1353" height="329" key="GridCell.Tab.0.left" timestamp="1580543384850">
+    <state width="1353" height="329" key="GridCell.Tab.0.center/0.23.1680.1027@0.23.1680.1027" timestamp="1580543418167" />
+    <state width="1353" height="329" key="GridCell.Tab.0.left" timestamp="1580543418166">
       <screen x="0" y="23" width="1680" height="1027" />
     </state>
     <state width="1345" height="130" key="GridCell.Tab.0.left/0.0.1680.1050@0.0.1680.1050" timestamp="1580356078815" />
-    <state width="1353" height="329" key="GridCell.Tab.0.left/0.23.1680.1027@0.23.1680.1027" timestamp="1580543384850" />
-    <state width="1353" height="329" key="GridCell.Tab.0.right" timestamp="1580543384851">
+    <state width="1353" height="329" key="GridCell.Tab.0.left/0.23.1680.1027@0.23.1680.1027" timestamp="1580543418166" />
+    <state width="1353" height="329" key="GridCell.Tab.0.right" timestamp="1580543418167">
       <screen x="0" y="23" width="1680" height="1027" />
     </state>
     <state width="1345" height="130" key="GridCell.Tab.0.right/0.23.1680.1027@0.0.1680.1050" timestamp="1580356078830" />
-    <state width="1353" height="329" key="GridCell.Tab.0.right/0.23.1680.1027@0.23.1680.1027" timestamp="1580543384851" />
+    <state width="1353" height="329" key="GridCell.Tab.0.right/0.23.1680.1027@0.23.1680.1027" timestamp="1580543418167" />
     <state width="1366" height="365" key="GridCell.Tab.1.bottom" timestamp="1579787935978">
       <screen x="0" y="23" width="1680" height="1027" />
     </state>
@@ -188,10 +187,10 @@
       <screen x="0" y="23" width="1680" height="1027" />
     </state>
     <state width="1366" height="365" key="GridCell.Tab.1.right/0.23.1680.1027@0.23.1680.1027" timestamp="1579787935978" />
-    <state x="192" y="175" key="SettingsEditor" timestamp="1580363704007">
+    <state x="192" y="175" key="SettingsEditor" timestamp="1580543568013">
       <screen x="0" y="23" width="1680" height="1027" />
     </state>
-    <state x="192" y="175" key="SettingsEditor/0.23.1680.1027@0.23.1680.1027" timestamp="1580363704007" />
+    <state x="192" y="175" key="SettingsEditor/0.23.1680.1027@0.23.1680.1027" timestamp="1580543568013" />
     <state x="465" y="204" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1580528682121">
       <screen x="0" y="23" width="1680" height="1027" />
     </state>
@@ -200,10 +199,10 @@
       <screen x="0" y="23" width="1680" height="1027" />
     </state>
     <state x="429" y="308" key="extract.method.dialog/0.23.1680.1027@0.23.1680.1027" timestamp="1576908416092" />
-    <state x="322" y="298" width="815" height="486" key="find.popup" timestamp="1580529854348">
+    <state x="322" y="298" width="815" height="486" key="find.popup" timestamp="1580543526879">
       <screen x="0" y="23" width="1680" height="1027" />
     </state>
-    <state x="322" y="298" width="815" height="486" key="find.popup/0.23.1680.1027@0.23.1680.1027" timestamp="1580529854348" />
+    <state x="322" y="298" width="815" height="486" key="find.popup/0.23.1680.1027@0.23.1680.1027" timestamp="1580543526879" />
     <state x="62" y="264" key="new project wizard" timestamp="1577875297130">
       <screen x="0" y="23" width="1680" height="1027" />
     </state>

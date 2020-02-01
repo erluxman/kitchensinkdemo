@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/kitchesinkdemo.iml" filepath="$PROJECT_DIR$/kitchesinkdemo.iml" />
+      <module fileurl="file://$PROJECT_DIR$/kitchensinkdemo.iml" filepath="$PROJECT_DIR$/kitchensinkdemo.iml" />
     </modules>
   </component>
 </project>
