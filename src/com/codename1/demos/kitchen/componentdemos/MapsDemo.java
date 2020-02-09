@@ -24,6 +24,9 @@ import com.codename1.ui.plaf.Style;
 import static com.codename1.ui.CN.CENTER;
 
 class MapsDemo extends DemoComponent {
+
+    String mapComponentInfo ="";
+    String googleMapInfo ="";
     @Override
     String getImageName() {
         return "maps.png";
@@ -42,8 +45,8 @@ class MapsDemo extends DemoComponent {
     private Container mapsContainer() {
         ComponentDemo demo = new ComponentDemo(getTitle());
 
-        demo.add("MapComponent", getMapComponentButton());
-        demo.add("GoogleMap", getGoogleMapButton());
+        demo.add("MapComponent", getMapComponentButton(),mapComponentInfo,MapComponent.class);
+        demo.add("GoogleMap", getGoogleMapButton(),googleMapInfo,MapContainer.class);
         return demo.generate();
     }
 
@@ -147,6 +150,5 @@ class MapsDemo extends DemoComponent {
                         FlowLayout.encloseBottom(btnMoveCamera, btnAddMarker, btnAddPath, btnClearAll)
                 )
         );
-
     }
 }

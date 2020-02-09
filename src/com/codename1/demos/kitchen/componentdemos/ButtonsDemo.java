@@ -1,5 +1,6 @@
 package com.codename1.demos.kitchen.componentdemos;
 
+import com.codename1.components.FloatingActionButton;
 import com.codename1.components.MultiButton;
 import com.codename1.components.ScaleImageButton;
 import com.codename1.components.ShareButton;
@@ -16,6 +17,17 @@ import com.codename1.ui.list.DefaultListModel;
 import com.codename1.ui.list.ListModel;
 
 class ButtonsDemo extends DemoComponent {
+    private String buttonInfo = "Button is the base class for several UI widgets allowing clickability." +
+            "It has 3 states: rollover, pressed and the default state. Button can also have an " +
+            "ActionListener that react when the Button is clicked or handle actions via a Command." +
+            "Button has the Button UIID by default.";
+    private String spanButtonInfo = "A complex button similar to MultiButton that breaks lines automatically and looks like a regular button (more or less). Unlike the multi button the span button has the UIID style of a button.";
+    private String multiButtonInfo = "A powerful button like component that allows multiple rows/and an icon to be added every row/icon can have its own UIID. Internally the multi-button is a container with a lead component. Up to 4 rows are supported.";
+    private String scaleImageButtonInfo = "Button that simplifies the usage of scale to fill/fit. This is effectively equivalent to just setting the style image on a button but more convenient for some special circumstances. One major difference is that preferred size equals the image in this case.";
+    private String fabInfo = "Floating action buttons are a material design element used to promote a special action in a Form. They are represented as a floating circle with a flat icon floating above the UI typically in the bottom right area.";
+    private String shareButtonInfo = "The share button allows sharing a String or an image either thru the defined sharing services or thru the native OS sharing support. On Android & iOS the native sharing API is invoked for this class." +
+            "The code below demonstrates image sharing, notice that an image must be stored using the FileSystemStorage API and shouldn't use a different API like Storage";
+
     @Override
     String getImageName() {
         return "buttons.png";
@@ -111,13 +123,13 @@ class ButtonsDemo extends DemoComponent {
 
         ShareButton shareButton = new ShareButton();
         shareButton.setText("Share the file");
-
-        demo.add("Button", simpleButton)
-                .add("Span Button", spanButton)
-                .add("Multi Button", multiButton)
-                .add("Scale Image Button", scaleImageContainer)
-                .add("Floating Action Button", FloatingActionButtonDemo.getInstance(resources))
-                .add("Share Button", shareButton);
+        Button fab = FloatingActionButtonDemo.getInstance(resources);
+        demo.add("Button", simpleButton, buttonInfo, Button.class)
+                .add("Span Button", spanButton, spanButtonInfo, SpanButton.class)
+                .add("Multi Button", multiButton, multiButtonInfo, MultiButton.class)
+                .add("Scale Image Button", scaleImageContainer, scaleImageButtonInfo, ScaleImageButton.class)
+                .add("Floating Action Button", fab, fabInfo, FloatingActionButton.class)
+                .add("Share Button", shareButton, shareButtonInfo, ShareButton.class);
         return demo.generate();
     }
 
