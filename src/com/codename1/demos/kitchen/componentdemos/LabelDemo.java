@@ -14,14 +14,11 @@ import com.codename1.ui.list.ListModel;
 
 class LabelDemo extends DemoComponent {
 
+    String labelInfo = "Allows displaying a single line of text and icon (both optional) with different alignment options. This class is a base class for several components allowing them to declare alignment/icon appearance universally.";
+
     @Override
     public String getImageName() {
         return "labels.png";
-    }
-
-    @Override
-    public String getTitle() {
-        return "Labels";
     }
 
     @Override
@@ -72,9 +69,13 @@ class LabelDemo extends DemoComponent {
         demo.add("Label", new Label("This is label"))
                 .add("Span Label", new SpanLabel("Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scramble"))
                 .add("Scale Image Label", scaleImageContainer)
-                .add("Floating Hint", floatingText)
-        ;
+                .add("Floating Hint", floatingText);
         return demo.generate();
+    }
+
+    @Override
+    public String getTitle() {
+        return "Labels";
     }
 
 }

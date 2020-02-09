@@ -2,10 +2,17 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="52c81d2f-2c05-4805-9a03-ae020200e403" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/out/production/kitchensinkdemo/com/codename1/demos/kitchen/containers/SubComponentInfo.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/codename1/demos/kitchen/containers/SubComponentInfo.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/nbproject/project.properties" beforeDir="false" afterPath="$PROJECT_DIR$/nbproject/project.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/kitchensinkdemo/com/codename1/demos/kitchen/componentdemos/MapsDemo.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/kitchensinkdemo/com/codename1/demos/kitchen/componentdemos/MapsDemo.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/kitchensinkdemo/com/codename1/demos/kitchen/containers/ComponentDemo.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/kitchensinkdemo/com/codename1/demos/kitchen/containers/ComponentDemo.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/kitchensinkdemo/com/codename1/demos/kitchen/containers/SubComponent.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/kitchensinkdemo/com/codename1/demos/kitchen/containers/SubComponent.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/codename1/demos/kitchen/componentdemos/DemoComponent.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/codename1/demos/kitchen/componentdemos/DemoComponent.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/codename1/demos/kitchen/componentdemos/LabelDemo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/codename1/demos/kitchen/componentdemos/LabelDemo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/codename1/demos/kitchen/componentdemos/TogglesDemo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/codename1/demos/kitchen/componentdemos/TogglesDemo.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/codename1/demos/kitchen/containers/ComponentDemo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/codename1/demos/kitchen/containers/ComponentDemo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/codename1/demos/kitchen/containers/SubComponent.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/codename1/demos/kitchen/containers/SubComponent.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -49,20 +56,21 @@
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.0" />
     <property name="restartRequiresConfirmation" value="false" />
-    <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
+    <property name="settings.editor.selected.configurable" value="preferences.sourceCode.Java" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/src/com/codename1/demos/kitchen/charts" />
+    <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/src" />
       <recent name="$PROJECT_DIR$" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.codename1.demos.kitchen.containers" />
       <recent name="com.codename1.demos.kitchen.containers.containerdemos" />
       <recent name="com.codename1.demos.kitchen.charts" />
       <recent name="com.codename1.demos.kitchen.map" />
     </key>
-    <key name="MoveFile.RECENT_KEYS">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/com/codename1/demos/kitchen/charts" />
       <recent name="$PROJECT_DIR$/src" />
       <recent name="$PROJECT_DIR$" />
     </key>
@@ -152,26 +160,26 @@
       <screen x="0" y="23" width="1680" height="1027" />
     </state>
     <state x="103" y="123" width="1060" height="827" key="DiffContextDialog/0.23.1680.1027@0.23.1680.1027" timestamp="1578574565023" />
-    <state width="1353" height="329" key="GridCell.Tab.0.bottom" timestamp="1581222055658">
+    <state width="1353" height="329" key="GridCell.Tab.0.bottom" timestamp="1581230438081">
       <screen x="0" y="23" width="1680" height="1027" />
     </state>
     <state width="1345" height="130" key="GridCell.Tab.0.bottom/0.23.1680.1027@0.0.1680.1050" timestamp="1580356078832" />
-    <state width="1353" height="329" key="GridCell.Tab.0.bottom/0.23.1680.1027@0.23.1680.1027" timestamp="1581222055658" />
-    <state width="1353" height="329" key="GridCell.Tab.0.center" timestamp="1581222055657">
+    <state width="1353" height="329" key="GridCell.Tab.0.bottom/0.23.1680.1027@0.23.1680.1027" timestamp="1581230438081" />
+    <state width="1353" height="329" key="GridCell.Tab.0.center" timestamp="1581230438080">
       <screen x="0" y="23" width="1680" height="1027" />
     </state>
     <state width="1345" height="130" key="GridCell.Tab.0.center/0.23.1680.1027@0.0.1680.1050" timestamp="1580356078828" />
-    <state width="1353" height="329" key="GridCell.Tab.0.center/0.23.1680.1027@0.23.1680.1027" timestamp="1581222055657" />
-    <state width="1353" height="329" key="GridCell.Tab.0.left" timestamp="1581222055656">
+    <state width="1353" height="329" key="GridCell.Tab.0.center/0.23.1680.1027@0.23.1680.1027" timestamp="1581230438080" />
+    <state width="1353" height="329" key="GridCell.Tab.0.left" timestamp="1581230438080">
       <screen x="0" y="23" width="1680" height="1027" />
     </state>
     <state width="1345" height="130" key="GridCell.Tab.0.left/0.0.1680.1050@0.0.1680.1050" timestamp="1580356078815" />
-    <state width="1353" height="329" key="GridCell.Tab.0.left/0.23.1680.1027@0.23.1680.1027" timestamp="1581222055656" />
-    <state width="1353" height="329" key="GridCell.Tab.0.right" timestamp="1581222055657">
+    <state width="1353" height="329" key="GridCell.Tab.0.left/0.23.1680.1027@0.23.1680.1027" timestamp="1581230438080" />
+    <state width="1353" height="329" key="GridCell.Tab.0.right" timestamp="1581230438081">
       <screen x="0" y="23" width="1680" height="1027" />
     </state>
     <state width="1345" height="130" key="GridCell.Tab.0.right/0.23.1680.1027@0.0.1680.1050" timestamp="1580356078830" />
-    <state width="1353" height="329" key="GridCell.Tab.0.right/0.23.1680.1027@0.23.1680.1027" timestamp="1581222055657" />
+    <state width="1353" height="329" key="GridCell.Tab.0.right/0.23.1680.1027@0.23.1680.1027" timestamp="1581230438081" />
     <state width="1353" height="365" key="GridCell.Tab.1.bottom" timestamp="1580568778677">
       <screen x="0" y="23" width="1680" height="1027" />
     </state>
@@ -188,10 +196,10 @@
       <screen x="0" y="23" width="1680" height="1027" />
     </state>
     <state width="1353" height="365" key="GridCell.Tab.1.right/0.23.1680.1027@0.23.1680.1027" timestamp="1580568778676" />
-    <state x="192" y="175" key="SettingsEditor" timestamp="1580543568013">
+    <state x="192" y="175" key="SettingsEditor" timestamp="1581227559961">
       <screen x="0" y="23" width="1680" height="1027" />
     </state>
-    <state x="192" y="175" key="SettingsEditor/0.23.1680.1027@0.23.1680.1027" timestamp="1580543568013" />
+    <state x="192" y="175" key="SettingsEditor/0.23.1680.1027@0.23.1680.1027" timestamp="1581227559961" />
     <state x="465" y="204" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1580546988381">
       <screen x="0" y="23" width="1680" height="1027" />
     </state>
@@ -200,10 +208,10 @@
       <screen x="0" y="23" width="1680" height="1027" />
     </state>
     <state x="429" y="308" key="extract.method.dialog/0.23.1680.1027@0.23.1680.1027" timestamp="1576908416092" />
-    <state x="322" y="298" width="815" height="486" key="find.popup" timestamp="1581221099976">
+    <state x="322" y="298" width="815" height="486" key="find.popup" timestamp="1581226687356">
       <screen x="0" y="23" width="1680" height="1027" />
     </state>
-    <state x="322" y="298" width="815" height="486" key="find.popup/0.23.1680.1027@0.23.1680.1027" timestamp="1581221099976" />
+    <state x="322" y="298" width="815" height="486" key="find.popup/0.23.1680.1027@0.23.1680.1027" timestamp="1581226687356" />
     <state x="62" y="264" key="new project wizard" timestamp="1577875297130">
       <screen x="0" y="23" width="1680" height="1027" />
     </state>

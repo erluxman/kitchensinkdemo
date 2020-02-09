@@ -18,29 +18,32 @@ import static com.codename1.ui.CN.execute;
 
 abstract class DemoComponent {
 
-    private final String BASE_SOURCE_URL = "https://github.com/erluxman/kitchensinkdemo/blob/master/src/";
     Resources resources;
 
     public void init(Resources resources) {
         this.resources = resources;
     }
 
-    abstract String getImageName();
-
-    String getSourceUrl() {
-        return BASE_SOURCE_URL + this.getClass().getCanonicalName().replace(".", "/") + ".java";
-    }
-
-    abstract String getTitle();
-
-    abstract Container getContent();
-
-
     public Container getMenuItem() {
         Container buttonCard = getGridCard(getTitle(), resources.getImage(getImageName()));
         connectCardWithForm(buttonCard);
         return buttonCard;
     }
+
+    protected Container getGridCard(String title, Image image) {
+        Container buttonCard = new Container(BoxLayout.y());
+        buttonCard.setUIID("gridcard");
+        ScaleImageButton scaleImageButton = new ScaleImageButton(image);
+        scaleImageButton.setPreferredSize(new Dimension(200, 200));
+        buttonCard.add(scaleImageButton);
+        Label titleLabel = new Label(title);
+        buttonCard.add(new Container(BoxLayout.xCenter()).add(titleLabel));
+        return buttonCard;
+    }
+
+    abstract String getTitle();
+
+    abstract String getImageName();
 
     private void connectCardWithForm(Container gridButton) {
         Button imageButton = new Button();
@@ -62,14 +65,10 @@ abstract class DemoComponent {
         return form;
     }
 
-    protected Container getGridCard(String title, Image image) {
-        Container buttonCard = new Container(BoxLayout.y());
-        buttonCard.setUIID("gridcard");
-        ScaleImageButton scaleImageButton = new ScaleImageButton(image);
-        scaleImageButton.setPreferredSize(new Dimension(200, 200));
-        buttonCard.add(scaleImageButton);
-        Label titleLabel = new Label(title);
-        buttonCard.add(new Container(BoxLayout.xCenter()).add(titleLabel));
-        return buttonCard;
+    abstract Container getContent();
+
+    String getSourceUrl() {
+        String BASE_SOURCE_URL = "https://github.com/erluxman/kitchensinkdemo/blob/master/src/";
+        return BASE_SOURCE_URL + this.getClass().getCanonicalName().replace(".", "/") + ".java";
     }
 }
