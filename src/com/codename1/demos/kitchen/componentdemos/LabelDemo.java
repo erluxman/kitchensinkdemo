@@ -15,7 +15,12 @@ import com.codename1.ui.list.ListModel;
 class LabelDemo extends DemoComponent {
 
     String labelInfo = "Allows displaying a single line of text and icon (both optional) with different alignment options. This class is a base class for several components allowing them to declare alignment/icon appearance universally.";
-
+    String spanLabelInfo = "A multi line label component that can be easily localized, this is simply based on a text area combined with a label";
+    String scaleImageLabelInfo = "Label that simplifies the usage of scale to fill/fit. This is effectively equivalent to just setting the style image on a label but more convenient for some special circumstances. One major difference is that preferred size equals the image in this case." +
+            "The default UIID for this component is Label";
+    String floatingHintInfo = "TextComponent Encapsulates a text field and label into a single component. This allows the UI to adapt for iOS/Android behavior differences and support features like floating hint when necessary. It also includes platform specific error handling logic." +
+            "It is highly recommended to use text components in the context of a TextModeLayout This allows the layout to implicitly adapt to the on-top mode and use a box layout Y mode for iOS and other platforms." +
+            "This class supports several theme constants:";
     @Override
     public String getImageName() {
         return "labels.png";
@@ -66,10 +71,13 @@ class LabelDemo extends DemoComponent {
 
         TextComponent floatingText = new TextComponent();
         floatingText.labelAndHint("Full name");
-        demo.add("Label", new Label("This is label"))
-                .add("Span Label", new SpanLabel("Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scramble"))
-                .add("Scale Image Label", scaleImageContainer)
-                .add("Floating Hint", floatingText);
+
+        Label label = new Label("This is Label");
+        SpanLabel spanLabel = new SpanLabel("Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scramble");
+        demo.add("Label", label, labelInfo)
+                .add("Span Label", spanLabel,spanLabelInfo)
+                .add("Scale Image Label", scaleImageContainer, scaleImageLabelInfo,ScaleImageLabel.class)
+                .add("Floating Hint", floatingText, floatingHintInfo);
         return demo.generate();
     }
 

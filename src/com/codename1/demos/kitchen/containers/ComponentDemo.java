@@ -42,6 +42,11 @@ public class ComponentDemo {
         return this;
     }
 
+    public ComponentDemo add(String title, Component body, String info) {
+        subComponents.add(new SubComponent(title, body, info));
+        return this;
+    }
+
     public Container generate() {
         Label componentTitle = new Label(title, "componentTitle");
 

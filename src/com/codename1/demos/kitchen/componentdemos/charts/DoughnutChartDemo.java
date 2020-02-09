@@ -6,7 +6,7 @@ import com.codename1.charts.util.ColorUtil;
 import com.codename1.charts.views.DoughnutChart;
 import com.codename1.ui.Component;
 
-public class DonutChartDemo extends AbstractDemoChart {
+public class DoughnutChartDemo extends AbstractDemoChart {
 
     @Override
     public Component execute() {
