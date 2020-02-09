@@ -16,6 +16,8 @@ class TogglesDemo extends DemoComponent {
 
     private String radioButtonInfo = "CheckBox is a button that can be selected or deselected and displays its state to the user. Check out RadioButton for a more exclusive selection approach. Both components support a toggle button mode using the Button.setToggle(boolean) API.";
 
+    private  String onOffButtonInfo = "The on/off switch is a checkbox of sort (although it derives container) that represents its state as a switch each of which has a short label associated with it. It has two types: Android and iOS. The types differ in the way that they are rendered. The Android type (the default) is just a button with a label that can be moved/dragged between the two states. The iOS version is more elaborate due to the look of that platform.";
+    private  String switchInfo = "The on/off switch is a checkbox of sort (although it derives container) that represents its state as a switch When using the Android native theme, this implementation follows the Material Design Switch guidelines: https://material.io/guidelines/components/selection-controls.html#selection-controls-radio-button\n";
     @Override
     public String getImageName() {
         return "toggles.png";
@@ -51,8 +53,8 @@ class TogglesDemo extends DemoComponent {
         demo
                 .add("CheckBox", checkBoxes, checkBoxInfo,CheckBox.class)
                 .add(new SubComponent("Radio Button", radioButtons,radioButtonInfo,RadioButton.class))
-                .add("ON/OFF Switch", new OnOffSwitch())
-                .add("Switch", new Switch());
+                .add("ON/OFF Switch", new OnOffSwitch(),onOffButtonInfo,OnOffSwitch.class)
+                .add("Switch", new Switch(),switchInfo,Switch.class);
         return demo.generate();
     }
 

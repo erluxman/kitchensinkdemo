@@ -11,14 +11,13 @@ import com.codename1.ui.list.DefaultListModel;
 
 class ToggleListDemo extends DemoComponent {
 
+    private String switchListInfo = "A list of switches.";
+    private String checkBoxListInfo = "A list of Check Boxes.";
+    private String radioButtonListInfo = "A list of Radio Buttons.";
+
     @Override
     public String getImageName() {
         return "togglelist.png";
-    }
-
-    @Override
-    public String getTitle() {
-        return "Toggle List";
     }
 
     @Override
@@ -47,10 +46,14 @@ class ToggleListDemo extends DemoComponent {
         radioButtonListContainer.add(radioButtonList);
 
         demo
-                .add("Switch List(Flow)", switchListContainer)
-                .add("Check Box List(Flow)", checkBoxListContainer)
-                .add("RadioButton List(Layout Y)", radioButtonListContainer);
+                .add("Switch List(Flow)", switchListContainer, switchListInfo, SwitchList.class)
+                .add("Check Box List(Flow)", checkBoxListContainer, checkBoxListInfo, CheckBoxList.class)
+                .add("RadioButton List(Layout Y)", radioButtonListContainer, radioButtonListInfo, RadioButtonList.class);
         return demo.generate();
     }
 
+    @Override
+    public String getTitle() {
+        return "Toggle List";
+    }
 }
