@@ -1,8 +1,6 @@
-package com.codename1.demos.kitchen.charts;
+package com.codename1.demos.kitchen.componentdemos.charts;
 
 import com.codename1.charts.models.CategorySeries;
-import com.codename1.charts.models.MultipleCategorySeries;
-import com.codename1.charts.renderers.DefaultRenderer;
 import com.codename1.charts.renderers.DialRenderer;
 import com.codename1.charts.renderers.SimpleSeriesRenderer;
 import com.codename1.charts.util.ColorUtil;

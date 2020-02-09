@@ -33,6 +33,7 @@ public class ComponentDemo {
         componentDemo.setScrollableY(true);
 
         for (SubComponent subComponent : subComponents) {
+
             componentDemo.add(
                     new Container(BoxLayout.y(), "demoArea")
                             .add(new Container(BoxLayout.y(), "subComponent")

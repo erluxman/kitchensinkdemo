@@ -1,10 +1,9 @@
-package com.codename1.demos.kitchen.charts;
+package com.codename1.demos.kitchen.componentdemos.charts;
 
 import com.codename1.charts.models.XYMultipleSeriesDataset;
 import com.codename1.charts.renderers.XYMultipleSeriesRenderer;
 import com.codename1.charts.util.ColorUtil;
 import com.codename1.charts.views.CubicLineChart;
-import com.codename1.charts.views.LineChart;
 import com.codename1.charts.views.PointStyle;
 import com.codename1.ui.Component;
 

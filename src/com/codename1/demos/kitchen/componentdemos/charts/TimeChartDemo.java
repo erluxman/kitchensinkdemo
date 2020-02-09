@@ -1,4 +1,4 @@
-package com.codename1.demos.kitchen.charts;
+package com.codename1.demos.kitchen.componentdemos.charts;
 
 import com.codename1.charts.models.XYMultipleSeriesDataset;
 import com.codename1.charts.renderers.XYMultipleSeriesRenderer;
@@ -6,7 +6,6 @@ import com.codename1.charts.renderers.XYSeriesRenderer;
 import com.codename1.charts.util.ColorUtil;
 import com.codename1.charts.util.MathHelper;
 import com.codename1.charts.views.PointStyle;
-import com.codename1.charts.views.ScatterChart;
 import com.codename1.charts.views.TimeChart;
 import com.codename1.ui.Component;
 import com.codename1.ui.Display;
@@ -14,7 +13,6 @@ import com.codename1.ui.Display;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
-import java.util.Random;
 
 public class TimeChartDemo extends AbstractDemoChart {
     private XYMultipleSeriesDataset dataSet;

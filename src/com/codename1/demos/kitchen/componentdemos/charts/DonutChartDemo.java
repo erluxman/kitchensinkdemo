@@ -1,4 +1,4 @@
-package com.codename1.demos.kitchen.charts;
+package com.codename1.demos.kitchen.componentdemos.charts;
 
 import com.codename1.charts.models.MultipleCategorySeries;
 import com.codename1.charts.renderers.DefaultRenderer;

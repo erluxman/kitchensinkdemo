@@ -1,16 +1,12 @@
-package com.codename1.demos.kitchen.charts;
+package com.codename1.demos.kitchen.componentdemos.charts;
 
 import com.codename1.charts.models.XYMultipleSeriesDataset;
 import com.codename1.charts.models.XYValueSeries;
 import com.codename1.charts.renderers.XYMultipleSeriesRenderer;
 import com.codename1.charts.renderers.XYSeriesRenderer;
 import com.codename1.charts.util.ColorUtil;
-import com.codename1.charts.views.BarChart;
 import com.codename1.charts.views.BubbleChart;
 import com.codename1.ui.Component;
-
-import java.util.Arrays;
-import java.util.List;
 
 public class BubbleChartDemo extends AbstractDemoChart {
     @Override

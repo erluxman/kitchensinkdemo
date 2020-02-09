@@ -1,13 +1,10 @@
-package com.codename1.demos.kitchen.charts;
+package com.codename1.demos.kitchen.componentdemos.charts;
 
 import com.codename1.charts.compat.Canvas;
 import com.codename1.charts.compat.Paint;
 import com.codename1.charts.models.CategorySeries;
 import com.codename1.charts.renderers.DefaultRenderer;
-import com.codename1.charts.renderers.DialRenderer;
 import com.codename1.charts.util.ColorUtil;
-import com.codename1.charts.util.MathHelper;
-import com.codename1.charts.views.PieChart;
 import com.codename1.charts.views.RoundChart;
 import com.codename1.ui.Component;
 
