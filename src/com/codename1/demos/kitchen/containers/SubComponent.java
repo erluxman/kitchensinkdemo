@@ -5,23 +5,40 @@ import com.codename1.ui.Component;
 public class SubComponent {
     String title;
     Component body;
-    SubComponentInfo subComponentInfo;
+    String componentInfo;
+    Class componentClass;
 
-
+    /**
+     * <p>Use this method if the component whose JavaDocs is to be displayed is the
+     * outermost container/component and there is no info about the component
+     *
+     * @author @erluxman
+     */
     public SubComponent(String title, Component body) {
-        this(title, body, new SubComponentInfo("Blank Info", body.getClass()));
+        this(title, body, "Blank Info", body.getClass());
     }
 
-    public SubComponent(String title, Component body, SubComponentInfo subComponentInfo) {
+    /**
+     * <p>Use this method if the component whose JavaDocs is to be displayed is not the
+     * outermost container/component.
+     *
+     * @author @erluxman
+     */
+    public SubComponent(String title, Component body, String subComponentInfo, Class javaClass) {
         this.title = title;
         this.body = body;
-        this.subComponentInfo = subComponentInfo;
+        this.componentClass = javaClass;
+        this.componentInfo = subComponentInfo;
     }
 
-    public SubComponent(String title, Component body, String subComponentInfo,Class javaClass) {
-        this.title = title;
-        this.body = body;
-        this.subComponentInfo = new SubComponentInfo(subComponentInfo,javaClass);
+    /**
+     * <p>Use this method if the component whose JavaDocs is to be displayed is the
+     * outermost container/component.
+     *
+     * @author @erluxman
+     */
+    public SubComponent(String title, Component body, String componentInfo) {
+        this(title, body, componentInfo, body.getClass());
     }
 
 }

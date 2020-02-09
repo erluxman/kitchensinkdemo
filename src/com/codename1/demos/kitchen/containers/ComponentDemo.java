@@ -1,5 +1,6 @@
 package com.codename1.demos.kitchen.containers;
 
+import com.codename1.components.SpanLabel;
 import com.codename1.ui.Button;
 import com.codename1.ui.Component;
 import com.codename1.ui.Container;
@@ -78,11 +79,11 @@ public class ComponentDemo {
         Image icon = FontImage.createMaterial(FontImage.MATERIAL_INFO, "subComponentLabel", 5).toImage();
         Button infoButton = new Button(icon);
         infoButton.addActionListener(evt -> {
-            Label info = new Label(subComponent.subComponentInfo.info, "subComponent");
+            SpanLabel info = new SpanLabel(subComponent.componentInfo, "subComponent");
             Form form = new Form(subComponent.title, new BorderLayout());
             Button toJavaDocs = new Button("See Javadocs");
             toJavaDocs.addActionListener(evt1 -> {
-                execute(getJavaDocsUrl(subComponent.subComponentInfo.javaFile));
+                execute(getJavaDocsUrl(subComponent.componentClass));
             });
             form.add(SOUTH, toJavaDocs);
             form.add(CENTER, info);

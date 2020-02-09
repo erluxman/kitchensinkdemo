@@ -4,7 +4,6 @@ import com.codename1.components.OnOffSwitch;
 import com.codename1.components.Switch;
 import com.codename1.demos.kitchen.containers.ComponentDemo;
 import com.codename1.demos.kitchen.containers.SubComponent;
-import com.codename1.demos.kitchen.containers.SubComponentInfo;
 import com.codename1.ui.CheckBox;
 import com.codename1.ui.Container;
 import com.codename1.ui.Label;
