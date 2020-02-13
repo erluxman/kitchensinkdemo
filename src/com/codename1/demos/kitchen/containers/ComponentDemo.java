@@ -86,7 +86,7 @@ public class ComponentDemo {
         infoButton.addActionListener(evt -> {
             SpanLabel info = new SpanLabel(subComponent.componentInfo, "subComponent");
             Form form = new Form(subComponent.title, new BorderLayout());
-            Button toJavaDocs = new Button("See Javadocs");
+            Button toJavaDocs = new Button("See More");
             toJavaDocs.addActionListener(evt1 -> {
                 execute(getJavaDocsUrl(subComponent.componentClass));
             });

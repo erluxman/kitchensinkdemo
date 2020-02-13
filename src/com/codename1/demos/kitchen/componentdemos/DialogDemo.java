@@ -20,6 +20,25 @@ import static com.codename1.ui.CN.SOUTH;
 
 class DialogDemo extends DemoComponent {
 
+    String interactionInfo = "Unlike a regular dialog the interaction dialog only looks like a dialog, it resides in the layered pane and can be used to implement features where interaction with the background form is still required.\n" +
+            "Since this code is designed for interaction all \"dialogs\" created thru here are modless and never block.\n";
+    String dialogInfo = "A dialog is a form that occupies a part of the screen and appears as a modal entity to the developer. Dialogs allow us to prompt users for information and rely on the information being available on the next line after the show method.\n" +
+            "\n" +
+            "Modality indicates that a dialog will block the calling thread even if the calling thread is the EDT. Notice that a dialog will not release the block until dispose is called even if show() from another form is called! Events are still performed thanks to the Display.invokeAndBlock(java.lang.Runnable) capability of the Display class.\n" +
+            "\n" +
+            "To determine the size of the dialog use the show method that accepts 4 integer values, notice that these values accept margin from the four sides rather than x, y, width and height values!\n" +
+            "\n" +
+            "It's important to style a Dialog using getDialogStyle() or setDialogUIID(java.lang.String) methods rather than styling the dialog object directly.\n" +
+            "\n" +
+            "The Dialog class also includes support for popup dialog which is a dialog type that is positioned next to a component or screen area and points an arrow at that location.\n" +
+            "\n";
+    String sheetInfo = "A light-weight dialog that slides up from the bottom of the screen on mobile devices. Sheets include a \"title\" bar, with a back/close button, a title label, and a \"commands container\" (getCommandsContainer()) which allows you to insert your own custom components (usually buttons) in the upper right.\n" +
+            "Custom content should be placed inside the content pane which can be retrieved via getContentPane()\n" +
+            "\n" +
+            "Usage\n" +
+            "The general usage is to create new Sheet instance (or subclass), then call show() to make it appear over the current form. If a different sheet that is currently being displayed, then calling show() will replace it.";
+    String toastInfo = "An API to present status messages to the user in an unobtrusive manner. This is useful if there are background tasks that need to display information to the user. E.g. If a network request fails, of let the user know that \"Jobs are being synchronized\".";
+
     @Override
     public String getImageName() {
         return "dialog.png";
@@ -65,12 +84,6 @@ class DialogDemo extends DemoComponent {
         buttonRow.add(confirmDelivery).add(wrongPackage);
         interactionContent.add(SOUTH, buttonRow);
 
-
-        //Container interactionContent = new Container(BoxLayout.yCenter());
-        //interactionContent.add(new Container(BoxLayout.xRight()).add(ignore));
-        //interactionContent.add();
-        //interactionContent.addComponent(confirmDelivery);
-        //interactionContent.addComponent(wrongPackage);
         interactionDialog.addComponent(interactionContent);
         interactionDialog.setLayout(new LayeredLayout());
         openInteractionDialog.addActionListener(evt -> interactionDialog.show(200, 200, 100, 100));
@@ -142,10 +155,10 @@ class DialogDemo extends DemoComponent {
             ToastBar.showMessage("Hello from Toastbar", FontImage.MATERIAL_INFO);
         });
 
-        demo.add("Interaction Dialog", openInteractionDialog);
-        demo.add("Dialog", openDialog);
-        demo.add("Sheet", openSheetButton);
-        demo.add("ToastBar", showToastBar);
+        demo.add("Interaction Dialog", openInteractionDialog, interactionInfo, InteractionDialog.class);
+        demo.add("Dialog", openDialog, dialogInfo, Dialog.class);
+        demo.add("Sheet", openSheetButton, sheetInfo, Sheet.class);
+        demo.add("ToastBar", showToastBar, toastInfo, ToastBar.class);
         return demo.generate();
     }
 
